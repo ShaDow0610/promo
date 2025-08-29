@@ -2,7 +2,7 @@
     import VanillaTilt from 'vanilla-tilt';
     import gsap from 'gsap';
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import { onBeforeUnmount, onMounted, ref } from 'vue';
+    import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 
     gsap.registerPlugin(ScrollTrigger)
 
@@ -26,7 +26,9 @@
         {icon:"fa-solid fa-shield", title:"Fiabilite", text:"plateforme recuptees, securite et paiments rapides."},
         {icon:"fa-solid fa-chart-line", title:"Gains optimises", text:"Promos regulieres, cashbackks, cotes competitives."}
     ]
-    onMounted(()=>{
+    onMounted(async ()=>{
+        await nextTick()
+
         gsap.from(sectionEl.value.querySelectorAll(".bmk-head"),{
             opacity:0, y:20, duration:0.8, stagger:0.1, ease:"power3.out", 
             scrollTrigger : {trigger:sectionEl.value, start: "top 80%"}
@@ -40,7 +42,7 @@
             y:30 , opacity:0, duration:0.8, ease:"power3.out",stagger:0.08, 
             scrollTrigger:{trigger:sectionEl.value,start:"top 65%"}
         })
-        if(!isTouch){
+        if(!isTouch && logoCards.value.length > 0){
             VanillaTilt.init(logoCards.value,{
                 max:15,
                 speed:400,
