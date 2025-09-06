@@ -11,7 +11,7 @@
     </div>
 
     <!-- Sélecteur langue -->
-    <div ref="langRef" class="absolute top-2 right-3 z-10 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
+    <div ref="langRef" class="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
       <i class="fa-solid fa-globe text-sm"></i>
       <select
         class="bg-black/30 backdrop-blur border border-gray-700/70 text-xs sm:text-sm rounded-lg px-2 py-1 focus:outline-none focus:border-yellow-400/80"
