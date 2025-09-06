@@ -42,7 +42,7 @@
         <!-- close -->
         <button
           @click="closeModal"
-          class="absolute top-3 right-3 text-gray-600 hover:text-black"
+          class="absolute top-3 right-3 text-gray-600 hover:text-black z-10"
         >
           ✕
         </button>
