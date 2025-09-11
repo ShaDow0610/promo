@@ -3,17 +3,22 @@
     class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0b0b0c] text-white"
     aria-label="Bienvenue sur Bet PronostikerX"
   >
-    <!-- Fond -->
-    <div class="absolute inset-0 pointer-events-none">
+    <!-- Fond (inchangé visuellement) -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute inset-0 bg-gradient-to-b from-black via-[#0e0e11] to-black opacity-100"></div>
       <div class="absolute inset-0 opacity-25 bg-[radial-gradient(60%_40%_at_50%_40%,rgba(255,200,80,0.25),transparent_70%)]"></div>
       <div class="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+
+      <!-- plume de transition pour fondre vers la section suivante -->
+      <div class="pointer-events-none absolute bottom-0 inset-x-0 h-28 bg-[linear-gradient(to_top,rgba(0,0,0,0.9),rgba(0,0,0,0))]"></div>
     </div>
 
     <!-- Sélecteur langue -->
     <div ref="langRef" class="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
-      <i class="fa-solid fa-globe text-sm"></i>
+      <i class="fa-solid fa-globe text-sm" aria-hidden="true"></i>
+      <label class="sr-only" for="lang">Choix de langue</label>
       <select
+        id="lang"
         class="bg-black/30 backdrop-blur border border-gray-700/70 text-xs sm:text-sm rounded-lg px-2 py-1 focus:outline-none focus:border-yellow-400/80"
         aria-label="Choix de langue"
       >
@@ -27,7 +32,9 @@
     <!-- Contenu -->
     <div class="relative z-10 w-full max-w-6xl px-5 sm:px-8 text-center">
       <!-- Marqueur -->
-      <div class="mx-auto mb-4 sm:mb-6 w-max px-3 py-1 rounded-full border border-yellow-400/20 bg-yellow-400/5 text-[10px] sm:text-xs tracking-widest text-yellow-300/90">
+      <div
+        class="mx-auto mb-4 sm:mb-6 w-max px-3 py-1 rounded-full border border-yellow-400/20 bg-yellow-400/5 text-[10px] sm:text-xs tracking-widest text-yellow-300/90"
+      >
         PREMIUM • SPORT • BONUS
       </div>
 
@@ -56,7 +63,7 @@
                  text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                  ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition"
         >
-          <i class="fa-solid fa-rocket-launch mr-2"></i> Commencer à gagner
+          <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i> Commencer à gagner
         </button>
 
         <!-- Boutons secondaires -->
@@ -67,7 +74,7 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-book-open mr-2"></i> Instructions
+          <i class="fa-solid fa-book-open mr-2" aria-hidden="true"></i> Instructions
         </button>
 
         <button
@@ -77,7 +84,7 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-chart-line mr-2"></i> Résultats clients
+          <i class="fa-solid fa-chart-line mr-2" aria-hidden="true"></i> Résultats clients
         </button>
 
         <button
@@ -87,7 +94,7 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-user-plus mr-2"></i> Créer un compte
+          <i class="fa-solid fa-user-plus mr-2" aria-hidden="true"></i> Créer un compte
         </button>
       </div>
 
@@ -128,6 +135,10 @@ const isTouch = typeof window !== "undefined"
   ? window.matchMedia("(pointer: coarse)").matches
   : false
 
+const prefersReduced = typeof window !== "undefined"
+  ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  : false
+
 function setBtnRef (el, i) {
   if (!el) return
   btnRefs.value[i] = el
@@ -143,40 +154,44 @@ let tiltInstances = []
 onMounted(async () => {
   await nextTick()
 
-  if (langRef.value) {
-    gsap.from(langRef.value, { y: -24, opacity: 0, duration: 0.9, ease: "power3.out" })
-  }
-  if (titleRef.value) {
-    gsap.from(titleRef.value, { scale: 0.92, opacity: 0, duration: 1.1, ease: "power3.out" })
-  }
-  if (subtitleRef.value) {
-    gsap.from(subtitleRef.value, { y: 12, opacity: 0, delay: 0.15, duration: 0.7, ease: "power2.out" })
-  }
+  // Animations d’entrée (conservées, avec corrections)
+  if (!prefersReduced) {
+    if (langRef.value) {
+      gsap.from(langRef.value, { y: -24, opacity: 0, duration: 0.9, ease: "power3.out" })
+    }
+    if (titleRef.value) {
+      gsap.from(titleRef.value, { scale: 0.92, opacity: 0, duration: 1.1, ease: "power3.out" })
+    }
+    if (subtitleRef.value) {
+      gsap.from(subtitleRef.value, { y: 12, opacity: 0, delay: 0.15, duration: 0.7, ease: "power2.out" })
+    }
 
-  const targets = btnRefs.value.filter(Boolean)
-  if (targets.length) {
-    gsap.from(targets, {
-      y: 18,
-      opacity: 1,
-      delay: 0.25,
-      duration: 0.7,
-      ease: "back.out(1.6)",
-      stagger: 0.12,
-    })
-  }
-
-  if (!isTouch) {
-    tiltInstances = targets.map(el => {
-      VanillaTilt.init(el, {
-        max: 14,
-        speed: 350,
-        scale: 1.02,
-        glare: true,
-        "max-glare": 0.25,
-        perspective: 900,
+    const targets = btnRefs.value.filter(Boolean)
+    if (targets.length) {
+      gsap.from(targets, {
+        y: 18,
+        opacity: 0,           // ⚠️ correction: 0 et non 1
+        delay: 0.25,
+        duration: 0.7,
+        ease: "back.out(1.6)",
+        stagger: 0.12,
       })
-      return el.vanillaTilt
-    })
+    }
+
+    // Tilt (desktop)
+    if (!isTouch && targets.length) {
+      tiltInstances = targets.map(el => {
+        VanillaTilt.init(el, {
+          max: 14,
+          speed: 350,
+          scale: 1.02,
+          glare: true,
+          "max-glare": 0.25,
+          perspective: 900,
+        })
+        return el.vanillaTilt
+      })
+    }
   }
 })
 
@@ -187,6 +202,13 @@ onBeforeUnmount(() => {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Manrope:wght@400;700&display=swap');
+
 .font-display{ font-family: 'Orbitron', system-ui, sans-serif; }
 body{ font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; }
+
+/* focus visible */
+button:focus-visible, select:focus-visible {
+  outline: 2px solid rgba(247, 215, 116, 0.7);
+  outline-offset: 2px;
+}
 </style>
