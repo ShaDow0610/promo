@@ -170,7 +170,7 @@ onMounted(async () => {
     if (targets.length) {
       gsap.from(targets, {
         y: 18,
-        opacity: 0,           // ⚠️ correction: 0 et non 1
+        opacity: 1,           // ⚠️ correction: 0 et non 1
         delay: 0.25,
         duration: 0.7,
         ease: "back.out(1.6)",
