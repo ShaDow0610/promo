@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger" // ← named import is safest
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const particlesContainer = ref(null)
@@ -11,12 +11,42 @@ const prefersReduced =
   typeof window !== "undefined" &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
-// Demo data (unchanged)
+// ====== DATA (mets tes vraies URLs + logos) ======
 const bookmakers = [
-  { name: "Melbet", logo: "/logo.png", code: "Viva2025", note: "Bonus jusqu’à 200%" },
-  { name: "1xbet",  logo: "/logo.png", code: "Viva2025", note: "100% sur le premier dépôt" },
-  { name: "1win",   logo: "/logo.png", code: "Viva2025", note: "Jusqu’à 500$ de bonus" },
+  {
+    name: "1win",
+    logo: "/1win.png",
+    code: "GLE44",
+    note: "Jusqu’à 500$ de bonus",
+    quickUrl: "https://ton-lien-1win-rapide",
+    fullUrl: "https://ton-lien-1win-complet",
+  },
+  {
+    name: "1xbet",
+    logo: "/1xbet.jpg",
+    code: "GLE44",
+    note: "100% sur le premier dépôt",
+    quickUrl: "https://ton-lien-1xbet-rapide",
+    fullUrl: "https://ton-lien-1xbet-complet",
+  },
+  {
+    name: "Melbet",
+    logo: "/melbet.png",
+    code: "GLE44",
+    note: "Bonus jusqu’à 200%",
+    quickUrl: "https://ton-lien-melbet-rapide",
+    fullUrl: "https://ton-lien-melbet-complet",
+  },
+  {
+    name: "Betwinner",
+    logo: "/betwinner.webp",
+    code: "GLE44",
+    note: "Offres boostées & cashbacks",
+    quickUrl: "https://ton-lien-betwinner-rapide",
+    fullUrl: "https://ton-lien-betwinner-complet",
+  },
 ]
+
 const reasons = [
   { icon: "fa-solid fa-gift",       title: "Bonus musclés",   text: "Codes promo exclusifs pour maximiser le premier dépôt." },
   { icon: "fa-solid fa-shield",     title: "Fiabilité",       text: "Plateformes réputées, sécurité et paiements rapides." },
@@ -24,7 +54,7 @@ const reasons = [
 ]
 
 onMounted(() => {
-  // Particules dorées (identique, juste un petit guard)
+  // Particules dorées
   const host = particlesContainer.value
   if (host && !prefersReduced) {
     const isMobile = window.innerWidth < 768
@@ -56,7 +86,7 @@ onMounted(() => {
 
   if (prefersReduced) return
 
-  // ✅ FIX: use toArray without generics and store result first
+  // Anim des cartes logos
   const logoCards = gsap.utils.toArray(".bookmaker")
   logoCards.forEach((card) => {
     const reveal = (dir = "down") => {
@@ -104,24 +134,16 @@ onBeforeUnmount(() => {
 })
 </script>
 
-
 <template>
   <section id="bookmakers" class="relative w-full text-white overflow-hidden py-14 sm:py-16">
-    <!-- BACKGROUND : cohérent avec la section 1 -->
+    <!-- BACKGROUND -->
     <div class="absolute inset-0 -z-10">
-      <!-- plume haute qui fond la section 1 vers celle-ci -->
       <div class="absolute top-0 inset-x-0 h-24 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.85),rgba(0,0,0,0))]"></div>
-
-      <!-- même famille de tons + animation lente -->
       <div class="absolute inset-0 bg-gradient-to-b from-black via-[#0e0e11] to-black"></div>
       <div class="absolute inset-0 opacity-20 bg-[radial-gradient(60%_40%_at_50%_30%,rgba(255,200,80,0.20),transparent_70%)]"></div>
       <div class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:48px_48px]"></div>
       <div class="absolute inset-0 animate-bgShift"></div>
-
-      <!-- particules -->
       <div ref="particlesContainer" class="absolute inset-0 pointer-events-none"></div>
-
-      <!-- plume basse vers la section suivante -->
       <div class="pointer-events-none absolute bottom-0 inset-x-0 h-24 bg-[linear-gradient(to_top,rgba(0,0,0,0.9),rgba(0,0,0,0))]"></div>
     </div>
 
@@ -138,28 +160,61 @@ onBeforeUnmount(() => {
         </p>
       </header>
 
-      <!-- Logos grid (mobile-first) -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-14">
+      <!-- Grid logos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-14">
         <article
           v-for="b in bookmakers"
           :key="b.name"
-          class="bookmaker bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 text-center shadow-xl backdrop-blur-[2px]"
+          class="bookmaker bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 text-center shadow-xl backdrop-blur-[2px] flex flex-col"
         >
-          <img :src="b.logo" :alt="b.name" class="h-12 sm:h-14 md:h-16 mx-auto mb-3 sm:mb-4 object-contain" />
+          <!-- Logo cadré -->
+          <div class="logo-box w-25 h-25 mx-auto mb-3 sm:mb-4  rounded-xl border border-white/10 bg-black/30 overflow-hidden">
+            <img :src="b.logo" :alt="b.name" class="w-full h-full object-contain sm:h-14 md:h-16 mx-auto mb-3 sm:mb-4" />
+          </div>
+
           <h3 class="text-lg sm:text-xl font-bold">{{ b.name }}</h3>
           <p class="text-xs sm:text-sm text-gray-300 mt-1">{{ b.note }}</p>
 
-          <div
-            class="mt-3 inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-300 border border-yellow-400/30
-                   px-3 py-1 rounded-full text-xs sm:text-sm font-semibold"
-          >
-            <i class="fa-solid fa-ticket"></i>
-            CODE : {{ b.code }}
+          <!-- Actions + Code (3 colonnes sur sm+, stack sur mobile) -->
+          <div class="mt-4">
+            <div class="flex flex-col sm:grid sm:grid-cols-3 sm:items-center gap-2 sm:gap-3">
+              <!-- Inscription rapide -->
+              <a
+                class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+                       bg-emerald-500/15 text-emerald-300 border border-emerald-400/30 hover:bg-emerald-500/25 transition"
+                :href="b.quickUrl" target="_blank" rel="noopener"
+                aria-label="Inscription rapide"
+              >
+                <i class="fa-solid fa-bolt mr-1.5"></i>
+                Inscription Rapide
+              </a>
+
+              <!-- Code promo (au centre) -->
+              <div
+                class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+                       bg-yellow-500/10 text-yellow-300 border border-yellow-400/30"
+                aria-label="Code promo"
+              >
+                <i class="fa-solid fa-ticket mr-1.5"></i>
+                CODE : {{ b.code }}
+              </div>
+
+              <!-- Inscription complète -->
+              <a
+                class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+                       bg-sky-500/15 text-sky-300 border border-sky-400/30 hover:bg-sky-500/25 transition"
+                :href="b.fullUrl" target="_blank" rel="noopener"
+                aria-label="Inscription complète"
+              >
+                <i class="fa-solid fa-list-check mr-1.5"></i>
+                Inscription Complète
+              </a>
+            </div>
           </div>
         </article>
       </div>
 
-      <!-- Reasons : carrousel horizontal sur mobile, grille à partir de md -->
+      <!-- Reasons (carrousel mobile, grille desktop) -->
       <div class="md:hidden mb-2 text-center text-[11px] text-gray-400 select-none">Glisse →</div>
       <div class="md:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory no-scrollbar mb-10">
         <div class="flex gap-4">
@@ -203,7 +258,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* Anim shift lent pour harmoniser avec la section 1 */
+/* BG shift (cohérent) */
 @keyframes bgShift {
   0% { background: linear-gradient(120deg, #050505 0%, #0b0b0c 40%, #020202 100%); background-size: 200% 200%; background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -221,7 +276,17 @@ onBeforeUnmount(() => {
   will-change: transform, opacity;
 }
 
-/* Masquer scrollbars horizontal sur mobile */
+/* Logos cadrés (même taille visuelle) */
+.logo-box {
+
+  aspect-ratio: 5/2; /* large bandeau logo */
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* No scrollbar horizontal mobile */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section
     class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0b0b0c] text-white"
-    aria-label="Bienvenue sur Bet PronostikerX"
+    :aria-label="t('heroSection.aria.heroLabel', { brand: t('heroSection.brand') })"
   >
     <!-- Fond (inchangé visuellement) -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -16,13 +16,15 @@
     <!-- Sélecteur langue -->
     <div ref="langRef" class="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
       <i class="fa-solid fa-globe text-sm" aria-hidden="true"></i>
-      <label class="sr-only" for="lang">Choix de langue</label>
+      <label class="sr-only" for="lang">{{ t('heroSection.aria.langSelect') }}</label>
       <select
         id="lang"
         class="bg-black/30 backdrop-blur border border-gray-700/70 text-xs sm:text-sm rounded-lg px-2 py-1 focus:outline-none focus:border-yellow-400/80"
         aria-label="Choix de langue"
+        :value="locale"
+        @change="change($event.target.value)"
       >
-        <option value="fr">🇫🇷 Français</option>
+        <option value="fr">{{t('heroSection.lang.fr')}}</option>
         <option value="en">🇬🇧 English</option>
         <option value="es">🇪🇸 Español</option>
         <option value="ru">🇷🇺 Русский</option>
@@ -35,7 +37,7 @@
       <div
         class="mx-auto mb-4 sm:mb-6 w-max px-3 py-1 rounded-full border border-yellow-400/20 bg-yellow-400/5 text-[10px] sm:text-xs tracking-widest text-yellow-300/90"
       >
-        PREMIUM • SPORT • BONUS
+        {{ t('heroSection.hero.marker') }}
       </div>
 
       <!-- Titre -->
@@ -57,13 +59,13 @@
         <!-- CTA principal -->
         <button
           :ref="(el) => setBtnRef(el, 0)"
-          @click="scrollTo('game')"
+          @click="scrollTo('predictions')"
           class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-bold
                  bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A]
                  text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                  ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition"
         >
-          <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i> Commencer à gagner
+          <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i> Appel fortune hack
         </button>
 
         <!-- Boutons secondaires -->
@@ -89,12 +91,12 @@
 
         <button
           :ref="(el) => setBtnRef(el, 3)"
-          @click="scrollTo('signup')"
+          @click="scrollTo('bookmakers')"
           class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-semibold
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-user-plus mr-2" aria-hidden="true"></i> Créer un compte
+          <i class="fa-solid fa-user-plus mr-2" aria-hidden="true"></i> Nos bookmakers
         </button>
       </div>
 
@@ -124,13 +126,17 @@
 <script setup>
 import { ref, onMounted, nextTick, onBeforeUnmount } from "vue"
 import gsap from "gsap"
+import { useI18n } from "vue-i18n"
 import VanillaTilt from "vanilla-tilt"
+import { setLocaleAsync } from "../i18n"
+
 
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 const langRef = ref(null)
 const btnRefs = ref([])
 
+const { t, locale } = useI18n({ useScope: 'global' })
 const isTouch = typeof window !== "undefined"
   ? window.matchMedia("(pointer: coarse)").matches
   : false
@@ -139,6 +145,10 @@ const prefersReduced = typeof window !== "undefined"
   ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
   : false
 
+
+function change (next){
+    setLocaleAsync(next)
+}
 function setBtnRef (el, i) {
   if (!el) return
   btnRefs.value[i] = el

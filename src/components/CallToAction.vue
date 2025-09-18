@@ -64,7 +64,7 @@
               class="inline-flex items-center justify-center rounded-full px-5 py-2.5 font-semibold bg-emerald-500 text-black hover:brightness-110 active:brightness-95 transition"
               @click="openModal"
             >
-              <i class="fa-solid fa-play mr-2"></i> Ouvrir la démo
+              <i class="fa-solid fa-play mr-2"></i> Ouvrir la Hack
             </button>
             <p class="text-xs text-gray-400">* Démonstration pédagogique — pas le jeu réel.</p>
           </div>
@@ -82,7 +82,7 @@
               <i class="fa-solid fa-apple-whole"></i>
             </div>
             <div>
-              <p class="font-semibold leading-tight">Apple of Fortune — Démo Pronostic</p>
+              <p class="font-semibold leading-tight">Apple of Fortune — hack</p>
               <p class="text-xs text-gray-400">3 révélations max · Compte à rebours 10:00</p>
             </div>
           </div>
@@ -155,7 +155,7 @@ import { ref, computed, onBeforeUnmount, nextTick } from 'vue'
 import gsap from 'gsap'
 
 // ===== Config =====
-const telegramUrl = 'https://t.me/ton_canal' // <-- remplace
+const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // <-- remplace
 const rows = 8
 const cols = 8
 const maxReveals = 3

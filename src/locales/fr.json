@@ -1,0 +1,216 @@
+{
+  "heroSection":{
+    "brand": "Bet PronostikerX",
+
+    "aria": {
+      "heroLabel": "Bienvenue sur {brand}",
+      "langSelect": "Choix de langue"
+    },
+
+    "lang": {
+      "fr": "fr Français",
+      "en": "English",
+      "es": "Español",
+      "ru": "Русский"
+    },
+
+    "hero": {
+      "marker": "PREMIUM • SPORT • BONUS",
+      "headline": "Bienvenue sur {brand}",
+      "subtitle": "Accède à des {promo} puissants et des {instructions} pour capitaliser tes pronostics.",
+      "subtitlePromo": "codes promo",
+      "subtitleInstructions": "instructions claires"
+    },
+
+    "buttons": {
+      "ctaPrimary": "Appel fortune hack",
+      "instructions": "Instructions",
+      "results": "Résultats clients",
+      "bookmakers": "Nos bookmakers"
+    },
+
+    "stats": {
+      "countries": {
+        "label": "PAYS COUVERTS",
+        "value": "150+"
+      },
+      "deposits": {
+        "label": "DÉPÔTS BOOSTÉS",
+        "value": "$2.5M+"
+      },
+      "players": {
+        "label": "JOUEURS ACTIFS",
+        "value": "15 000+"
+      },
+      "success": {
+        "label": "TAUX DE SUCCÈS",
+        "value": "87%"
+      }
+    }
+   },
+  "bookmakersSection": {
+    "header": {
+      "title_html": "⚡ Pourquoi ces <span class=\"text-yellow-400\">bookmakers</span> ?",
+      "subtitle_html": "Sélectionnés pour leurs <span class=\"text-yellow-300\">bonus</span>, leur <span class=\"text-yellow-300\">fiabilité</span> et des <span class=\"text-yellow-300\">gains</span> mieux valorisés."
+    },
+    "cards": {
+      "quickSignup": "Inscription Rapide",
+      "fullSignup": "Inscription Complète",
+      "codeLabel": "CODE : {code}",
+      "aria": {
+        "quick": "Inscription rapide",
+        "full": "Inscription complète",
+        "code": "Code promo"
+      }
+    },
+    "mobile": {
+      "hint": "Glisse →"
+    },
+    "reasons": {
+      "bonus": {
+        "title": "Bonus musclés",
+        "text": "Codes promo exclusifs pour maximiser le premier dépôt."
+      },
+      "trust": {
+        "title": "Fiabilité",
+        "text": "Plateformes réputées, sécurité et paiements rapides."
+      },
+      "value": {
+        "title": "Gains optimisés",
+        "text": "Promos régulières, cashbacks, cotes compétitives."
+      }
+    },
+    "brands": {
+      "1win": {
+        "name": "1win",
+        "note": "Jusqu’à 500$ de bonus"
+      },
+      "1xbet": {
+        "name": "1xbet",
+        "note": "100% sur le premier dépôt"
+      },
+      "Melbet": {
+        "name": "Melbet",
+        "note": "Bonus jusqu’à 200%"
+      },
+      "Betwinner": {
+        "name": "Betwinner",
+        "note": "Offres boostées & cashbacks"
+      }
+    }
+  },
+  "instructionsSection": {
+    "ariaLabel": "Comment ça marche",
+    "hint": {
+      "desktop": "Clique sur une icône pour voir les détails",
+      "mobile": "Swipe/Touch pour voir"
+    },
+    "header": {
+      "title": "Comment ça marche ?"
+    },
+    "timeline": {
+      "aria": {
+        "openStep": "Ouvrir le détail de l’étape",
+        "closeModal": "Fermer"
+      },
+      "swipeHelper": "Swipe ◀ ▶"
+    },
+    "steps": [
+      {
+        "title": "Apple of Fortune — Hack (démo)",
+        "text": "Repère précisément où se trouve la pomme à chaque tour.",
+        "details": "Dans cette démonstration pédagogique, nous te montrons comment lire nos pronostics pour Apple of Fortune. Tu vois l’emplacement suggéré de la pomme, étape par étape…"
+      },
+      {
+        "title": "Inscription avec code promo",
+        "text": "Entre notre code pour débloquer immédiatement les bonus.",
+        "details": "Crée ton compte puis saisis le code promo…"
+      },
+      {
+        "title": "Pronostics de matchs et autres sports",
+        "text": "Analyses quotidiennes et sélections à valeur.",
+        "details": "Stats, contexte, bankroll…"
+      },
+      {
+        "title": "Joue & gagne",
+        "text": "Parie intelligemment, encaisse, fais évoluer ta bankroll.",
+        "details": "Discipline, retraits réguliers, gestion du risque…"
+      }
+    ]
+  },
+  "resultsSection": {
+    "ariaLabel": "Résultats des joueurs",
+    "title": "Résultats des joueurs",
+    "marquee": {
+      "ariaLabel": "Résultats défilants des joueurs"
+    },
+    "card": {
+      "alt": {
+        "screenshot": "Capture du pari de {name}",
+        "avatar": "Avatar de {name}"
+      },
+      "labels": {
+        "stake": "Mise :",
+        "gain": "Gain :"
+      },
+      "percentPrefix": "+{percent}%",
+      "hoverOverlay": "Survol pour agrandir"
+    },
+    "legend": "Captures d’écran fournies par les joueurs — à titre illustratif.",
+    "modal": {
+      "closeAria": "Fermer",
+      "prevAria": "Précédent",
+      "nextAria": "Suivant",
+      "swipeHint": "Swipe ◀ ▶",
+      "alt": {
+        "screenshot": "Capture du pari de {name}"
+      },
+      "infoLine": "Mise {bet}$ • Gain {win}$ • +{percent}%"
+    }
+  },
+  "predictionsSection": {
+    "ariaLabel": "Section des pronostics et démos",
+    "bg": {
+      "seamTop": "Fondu vers la section précédente",
+      "seamBottom": "Fondu vers la section suivante"
+    },
+    "footballCard": {
+      "title": "Pronostics Foot offerts",
+      "description": "Rejoins le canal pour des pronos quotidiens, des analyses et des codes bonus.",
+      "bullets": [
+        "Sélection rigoureuse des matchs",
+        "Gestion de bankroll & conseils",
+        "Notifications Telegram en temps réel"
+      ],
+      "ctaJoin": "Rejoindre le canal",
+      "ctaJoinAria": "Ouvrir le canal Telegram"
+    },
+    "demoCard": {
+      "title": "Démo Pronostic — Apple of Fortune",
+      "description": "Révèle jusqu’à 3 cases : une par ligne, du bas vers le haut, avec colonne aléatoire sur chaque ligne. Pour la suite → Telegram 😉",
+      "ctaOpen": "Ouvrir la Hack",
+      "note": "* Démonstration pédagogique — pas le jeu réel."
+    },
+    "modal": {
+      "headerTitle": "Apple of Fortune — hack",
+      "headerSubtitle": "3 révélations max · Compte à rebours 10:00",
+      "closeAria": "Fermer",
+      "controls": {
+        "timeRemainingLabel": "Temps restant :",
+        "timeRemainingValue": "{mm}:{ss}",
+        "start": "Commencer",
+        "reveal": "Montrer la pomme"
+      },
+      "board": {
+        "revealsCounter": "Révélations : {count} / {max}"
+      },
+      "finished": {
+        "text": "Démo terminée. Pour voir la suite des pronostics en direct :",
+        "ctaJoin": "Rejoindre le canal"
+      },
+      "footnote": "* Démonstration pédagogique — pas un jeu d’argent."
+    }
+  }
+}
+
+
