@@ -146,7 +146,7 @@
 "ariaLabel": "Résultats des joueurs",
 "title": "Résultats des joueurs",
 "marquee": {
-"ariaLabel": "Résultats défilants des joueurs"
+"ariaLabel1": "Résultats défilants des joueurs"
 },
 "card": {
 "alt": {
@@ -169,7 +169,8 @@
 "alt": {
 "screenshot": "Capture du pari de {name}"
 },
-"infoLine": "Mise {bet}$ • Gain {win}$ • +{percent}%"
+"infoLine": "Mise ",
+"infoLine1":"Gain "
 }
 },
 "predictionsSection": {
