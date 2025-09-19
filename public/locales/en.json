@@ -1,28 +1,36 @@
 {
 "heroSection": {
-"brand": "Bet PronostikerX",
+"brand": "ULTIMATE PRONOS",
 "aria": {
 "heroLabel": "Welcome to {brand}",
-"langSelect": "Language selection"
+"langSelect": "Choose language"
 },
 "lang": {
-"fr": "Français",
-"en": "English",
-"es": "Español",
-"ru": "Русский"
-},
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
 "hero": {
-"marker": "PREMIUM • SPORT • BONUS",
-"headline": "Welcome to {brand}",
-"subtitle": "Get powerful {promo} and {instructions} to capitalize on your picks.",
+"marker": "PREMIUM • PICKS • BONUSES",
+"headline": "Sports predictions — {brand}",
+"subtitleBefore": "Get",
 "subtitlePromo": "promo codes",
-"subtitleInstructions": "clear instructions"
+"subtitleMiddle": "that work and",
+"subtitleInstructions": "clear instructions",
+"subtitleAfter": "to grow your betting results."
 },
 "buttons": {
-"ctaPrimary": "Apple of Fortune hack",
-"instructions": "Instructions",
-"results": "Client results",
-"bookmakers": "Our bookmakers"
+"ctaPrimary": "Discover the Apple of Fortune hack",
+"instructions": "See instructions",
+"results": "View client results",
+"bookmakers": "Our partner bookmakers"
 },
 "stats": {
 "countries": {
@@ -31,7 +39,7 @@
 },
 "deposits": {
 "label": "BOOSTED DEPOSITS",
-"value": "2.5M+"
+"value": "$2.5M+"
 },
 "players": {
 "label": "ACTIVE PLAYERS",
@@ -45,12 +53,19 @@
 },
 "bookmakersSection": {
 "header": {
-"title_html": "⚡ Why these ?",
-"subtitle_html": "Selected for their ."
+"title_html": "⚡ Our ",
+"title_html1": "bookmakers",
+"title_html2": "of choice",
+"subtitle_html1": "Selected for their ",
+"subtitle_html2": "welcome bonuses,",
+"subtitle_html3": " their ",
+"subtitle_html4": "reliability ",
+"subtitle_html5": "and for ",
+"subtitle_html6": "better-valued returns"
 },
 "cards": {
-"quickSignup": "Quick Sign-Up",
-"fullSignup": "Full Sign-Up",
+"quickSignup": "Quick sign-up",
+"fullSignup": "Full sign-up",
 "codeLabel": "CODE: {code}",
 "aria": {
 "quick": "Quick sign-up",
@@ -63,22 +78,22 @@
 },
 "reasons": {
 "bonus": {
-"title": "Bigger bonuses",
-"text": "Exclusive promo codes to maximize your first deposit."
+"title": "Exclusive bonuses",
+"text": "Use dedicated codes to maximize your first deposit."
 },
 "trust": {
 "title": "Reliability",
-"text": "Reputable platforms, security, and fast payouts."
+"text": "Trusted brands, enhanced security, fast payouts."
 },
 "value": {
-"title": "Optimized returns",
-"text": "Regular promos, cashbacks, and competitive odds."
+"title": "Optimized value",
+"text": "Regular promos, cashbacks, competitive odds."
 }
 },
 "brands": {
 "1win": {
 "name": "1win",
-"note": "Up to 500 bonus"
+"note": "Up to $500 bonus"
 },
 "1xbet": {
 "name": "1xbet",
@@ -97,7 +112,7 @@
 "instructionsSection": {
 "ariaLabel": "How it works",
 "hint": {
-"desktop": "Click an icon to see details",
+"desktop": "Click an icon to view details",
 "mobile": "Swipe/Touch to view"
 },
 "header": {
@@ -110,100 +125,111 @@
 },
 "swipeHelper": "Swipe ◀ ▶"
 },
-"steps": [
-{
-"title": "Apple of Fortune — Hack (demo)",
-"text": "Pinpoint exactly where the apple is each round.",
-"details": "In this educational demo, we show you how to read our Apple of Fortune picks. You see the suggested apple location, step by step…"
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "Locate the apple precisely each round.",
+"details": "This hack helps you identify the exact apple position each turn on Apple of Fortune: precise spot, selection logic, and best practices to maximize returns."
 },
-{
-"title": "Sign-up with promo code",
-"text": "Enter our code to instantly unlock bonuses.",
-"details": "Create your account, then enter the promo code…"
+"two": {
+"title": "Sign-up with a promo code",
+"text": "Enter our code and unlock your bonuses.",
+"details": "Create your account in minutes, apply the promo code, and activate reserved offers. Step-by-step guidance and clear terms."
 },
-{
-"title": "Match predictions & other sports",
-"text": "Daily analysis and value selections.",
-"details": "Stats, context, bankroll…"
+"three": {
+"title": "Match predictions and other sports",
+"text": "Daily analysis and value picks.",
+"details": "Form, stats, context, bankroll management: bet with method, not guesswork."
 },
-{
+"four": {
 "title": "Play & win",
-"text": "Bet smart, cash out, grow your bankroll.",
-"details": "Discipline, regular withdrawals, risk management…"
+"text": "Bet smart and cash out calmly.",
+"details": "Discipline, risk control, and regular withdrawals to grow your bankroll over time."
 }
-]
+}
 },
 "resultsSection": {
-"ariaLabel": "Players’ results",
-"title": "Players’ results",
+"ariaLabel": "Player results",
+"title": "Earnings from our players",
 "marquee": {
-"ariaLabel": "Scrolling players’ results"
+"ariaLabel1": "Scrolling player results"
 },
 "card": {
 "alt": {
-"screenshot": "{name}’s bet screenshot",
-"avatar": "{name}’s avatar"
+"screenshot": "Bet slip from {name}",
+"avatar": "Avatar of {name}"
 },
 "labels": {
 "stake": "Stake:",
-"gain": "Win:"
+"gain": "Return:"
 },
 "percentPrefix": "+{percent}%",
 "hoverOverlay": "Hover to enlarge"
 },
-"legend": "Screenshots provided by players — for illustration only.",
+"legend": "Screens shared by players — illustrative examples of potential returns.",
 "modal": {
 "closeAria": "Close",
 "prevAria": "Previous",
 "nextAria": "Next",
 "swipeHint": "Swipe ◀ ▶",
 "alt": {
-"screenshot": "{name}’s bet screenshot"
+"screenshot": "Bet slip from {name}"
 },
-"infoLine": "Stake {bet} • Win {win} • +{percent}%"
+"infoLine": "Stake",
+"infoLine1": "Return"
 }
 },
 "predictionsSection": {
-"ariaLabel": "Predictions & demos section",
+"ariaLabel": "Predictions section and Apple of Fortune — Ultimate Hack",
 "bg": {
 "seamTop": "Fade from previous section",
 "seamBottom": "Fade to next section"
 },
 "footballCard": {
-"title": "Free football picks",
-"description": "Join the channel for daily picks, analysis, and bonus codes.",
-"bullets": [
-"Carefully curated matches",
-"Bankroll management & tips",
-"Real-time Telegram notifications"
-],
+"title": "Free football predictions",
+"description1": "Join the channel for ",
+"description2": "daily picks",
+"description3": ", ",
+"description4": "reliable analysis",
+"description5": " and ",
+"description6": "exclusive bonus codes",
+"bullets": {
+"bullets1": "Rigorous match selection",
+"bullets2": "Bankroll management and tips",
+"bullets3": "Real-time Telegram alerts"
+},
 "ctaJoin": "Join the channel",
-"ctaJoinAria": "Open the Telegram channel"
+"ctaJoinAria": "Open Telegram channel"
 },
 "demoCard": {
-"title": "Prediction demo — Apple of Fortune",
-"description": "Reveal up to 3 tiles: one per row, bottom to top, with a random column on each row. For the rest → Telegram 😉",
+"title": "Apple of Fortune Hack",
+"description": "Reveal the ",
+"description1": "exact cells ",
+"description2": "where you’ll find ",
+"description3": "the ",
+"description4": "apple",
+"description5": " and win every round. Join my Telegram for premium access to the Apple of Fortune Ultimate Hack 😉",
 "ctaOpen": "Open the hack",
-"note": "Educational demo — not the actual game."
+"note": "Apple of Fortune — Ultimate Hack."
 },
 "modal": {
-"headerTitle": "Apple of Fortune — hack",
-"headerSubtitle": "3 reveals max · 10:00 countdown",
+"headerTitle": "Apple of Fortune — Hack",
+"headerSubtitle": "Boost your chances with our advanced hack",
 "closeAria": "Close",
 "controls": {
-"timeRemainingLabel": "Time remaining:",
+"timeRemainingLabel": "Time left:",
 "timeRemainingValue": "{mm}:{ss}",
 "start": "Start",
-"reveal": "Reveal the apple"
+"reveal": "Show the apple"
 },
 "board": {
 "revealsCounter": "Reveals: {count} / {max}"
 },
 "finished": {
-"text": "Demo finished. To see live picks next:",
+"text": "No turns left. To use the full hack:",
 "ctaJoin": "Join the channel"
 },
-"footnote": " Educational demo — not gambling."
+"footnote": "Apple of Fortune — Ultimate Hack."
 }
 }
 }

@@ -1,0 +1,235 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "{brand} पर आपका स्वागत है",
+"langSelect": "भाषा चुनें"
+},
+"lang": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
+"hero": {
+"marker": "प्रीमियम • प्रेडिक्शन • बोनस",
+"headline": "खेल सट्टा प्रेडिक्शन — {brand}",
+"subtitleBefore": "पाएं",
+"subtitlePromo": "प्रोमो कोड",
+"subtitleMiddle": "शक्तिशाली और",
+"subtitleInstructions": "स्पष्ट निर्देश",
+"subtitleAfter": "ताकि आपके प्रेडिक्शन अधिक लाभ दें।"
+},
+"buttons": {
+"ctaPrimary": "Apple of Fortune हैक जानें",
+"instructions": "निर्देश देखें",
+"results": "ग्राहक परिणाम देखें",
+"bookmakers": "हमारे पार्टनर बुकमेकर"
+},
+"stats": {
+"countries": {
+"label": "कवर्ड देश",
+"value": "150+"
+},
+"deposits": {
+"label": "बूस्टेड डिपॉज़िट",
+"value": "$2.5M+"
+},
+"players": {
+"label": "सक्रिय खिलाड़ी",
+"value": "15 000+"
+},
+"success": {
+"label": "सफलता दर",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ हमारे ",
+"title_html1": "बुकमेकर",
+"title_html2": "अनुशंसित",
+"subtitle_html1": "चुने गए उनके ",
+"subtitle_html2": "वेलकम बोनस,",
+"subtitle_html3": " उनकी ",
+"subtitle_html4": "विश्वसनीयता ",
+"subtitle_html5": "और ",
+"subtitle_html6": "बेहतर रिटर्न के लिए"
+},
+"cards": {
+"quickSignup": "त्वरित साइन-अप",
+"fullSignup": "पूर्ण साइन-अप",
+"codeLabel": "कोड: {code}",
+"aria": {
+"quick": "त्वरित साइन-अप",
+"full": "पूर्ण साइन-अप",
+"code": "प्रोमो कोड"
+}
+},
+"mobile": {
+"hint": "स्वाइप करें →"
+},
+"reasons": {
+"bonus": {
+"title": "एक्सक्लूसिव बोनस",
+"text": "समर्पित कोड से अपने पहले डिपॉज़िट को अधिकतम करें।"
+},
+"trust": {
+"title": "विश्वसनीयता",
+"text": "मान्य ब्रांड, मजबूत सुरक्षा और तेज़ भुगतान।"
+},
+"value": {
+"title": "बेहतर वैल्यू",
+"text": "नियमित प्रमो, कैशबैक और प्रतिस्पर्धी ऑड्स।"
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "बोनस $500 तक"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "पहले डिपॉज़िट पर 100%"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "बोनस 200% तक"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "बूस्टेड ऑफर और कैशबैक"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "यह कैसे काम करता है",
+"hint": {
+"desktop": "विवरण देखने के लिए किसी आइकन पर क्लिक करें",
+"mobile": "देखने के लिए स्वाइप/टच करें"
+},
+"header": {
+"title": "यह कैसे काम करता है?"
+},
+"timeline": {
+"aria": {
+"openStep": "चरण का विवरण खोलें",
+"closeModal": "बंद करें"
+},
+"swipeHelper": "स्वाइप ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — अल्टिमेट हैक",
+"text": "हर चाल में सेब को सटीक पहचानें।",
+"details": "यह हैक Apple of Fortune में हर चाल पर सेब की सटीक पोज़िशन, चयन की लॉजिक और बेहतर लाभ के लिए सर्वोत्तम तरीके समझने में मदद करता है।"
+},
+"two": {
+"title": "प्रोमो कोड के साथ साइन-अप",
+"text": "हमारा कोड डालें और बोनस अनलॉक करें।",
+"details": "कुछ मिनटों में खाता बनाएं, प्रोमो कोड दर्ज करें और आरक्षित ऑफर सक्रिय करें। चरण-दर-चरण गाइड और स्पष्ट शर्तें।"
+},
+"three": {
+"title": "मैच और अन्य खेलों के प्रेडिक्शन",
+"text": "दैनिक विश्लेषण और वैल्यू चयन।",
+"details": "फॉर्म, आँकड़े, संदर्भ और बैंक-रोल प्रबंधन: अनुमान नहीं, विधि से दांव लगाएं।"
+},
+"four": {
+"title": "खेलें और कमाएँ",
+"text": "समझदारी से दांव लगाएँ और निश्चिंत होकर निकासी करें।",
+"details": "अनुशासन, जोखिम प्रबंधन और नियमित विदड्रॉ से समय के साथ बैंक-रोल बढ़ाएँ।"
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "खिलाड़ियों के परिणाम",
+"title": "हमारे खिलाड़ियों की कमाई",
+"marquee": {
+"ariaLabel1": "खिलाड़ियों के स्क्रॉलिंग परिणाम"
+},
+"card": {
+"alt": {
+"screenshot": "{name} की शर्त की स्क्रीनशॉट",
+"avatar": "{name} का अवतार"
+},
+"labels": {
+"stake": "दांव:",
+"gain": "जीत:"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "होवर पर बड़ा करें"
+},
+"legend": "खिलाड़ियों द्वारा प्रदान की गई स्क्रीनशॉट — संभावित कमाई के उदाहरण।",
+"modal": {
+"closeAria": "बंद करें",
+"prevAria": "पिछला",
+"nextAria": "अगला",
+"swipeHint": "स्वाइप ◀ ▶",
+"alt": {
+"screenshot": "{name} की शर्त की स्क्रीनशॉट"
+},
+"infoLine": "दांव",
+"infoLine1": "जीत"
+}
+},
+"predictionsSection": {
+"ariaLabel": "प्रेडिक्शन सेक्शन और Apple of Fortune — अल्टिमेट हैक",
+"bg": {
+"seamTop": "पिछले सेक्शन की ट्रांज़िशन",
+"seamBottom": "अगले सेक्शन की ट्रांज़िशन"
+},
+"footballCard": {
+"title": "फ्री फुटबॉल प्रेडिक्शन",
+"description1": "हमारे चैनल से जुड़ें ",
+"description2": "दैनिक प्रेडिक्शन",
+"description3": ", ",
+"description4": "विश्वसनीय विश्लेषण",
+"description5": " और ",
+"description6": "एक्सक्लूसिव प्रोमो कोड के लिए",
+"bullets": {
+"bullets1": "मैचों का कठोर चयन",
+"bullets2": "बैंक-रोल प्रबंधन और सुझाव",
+"bullets3": "टेलीग्राम पर रियल-टाइम सूचनाएँ"
+},
+"ctaJoin": "चैनल जॉइन करें",
+"ctaJoinAria": "टेलीग्राम चैनल खोलें"
+},
+"demoCard": {
+"title": "Apple of Fortune हैक",
+"description": "प्रकट करें ",
+"description1": "सटीक खानों ",
+"description2": "जहाँ ",
+"description3": "",
+"description4": "सेब है",
+"description5": " और निरंतर जीतें। प्रीमियम एक्सेस के लिए हमारे टेलीग्राम चैनल से जुड़ें 😉",
+"ctaOpen": "हैक खोलें",
+"note": "Apple of Fortune — अल्टिमेट हैक।"
+},
+"modal": {
+"headerTitle": "Apple of Fortune — हैक",
+"headerSubtitle": "हमारे एडवांस्ड हैक से अपनी संभावनाएँ बढ़ाएँ",
+"closeAria": "बंद करें",
+"controls": {
+"timeRemainingLabel": "शेष समय:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "शुरू करें",
+"reveal": "सेब दिखाएँ"
+},
+"board": {
+"revealsCounter": "रिवील: {count} / {max}"
+},
+"finished": {
+"text": "अब चालें शेष नहीं। पूर्ण हैक उपयोग के लिए:",
+"ctaJoin": "चैनल जॉइन करें"
+},
+"footnote": "Apple of Fortune — अल्टिमेट हैक।"
+}
+}
+}

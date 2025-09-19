@@ -19,7 +19,7 @@ const bookmakers = [
   {
     name: t('bookmakersSection.brands.1win.name'),
     logo: "/1win.png",
-    code: t('bookmakersSection.cards.aria.code'),
+    code: "GLE44",
     note: t('bookmakersSection.brands.1win.note'),
     quickUrl: "https://ton-lien-1win-rapide",
     fullUrl: "https://ton-lien-1win-complet",
@@ -27,7 +27,7 @@ const bookmakers = [
   {
     name: t('bookmakersSection.brands.1xbet.name'),
     logo: "/1xbet.jpg",
-    code: t('bookmakersSection.cards.aria.code'),
+    code: "GLE44",
     note: t('bookmakersSection.brands.1xbet.note'),
     quickUrl: "https://ton-lien-1xbet-rapide",
     fullUrl: "https://ton-lien-1xbet-complet",
@@ -35,7 +35,7 @@ const bookmakers = [
   {
     name: t('bookmakersSection.brands.Melbet.name'),
     logo: "/melbet.png",
-    code: t('bookmakersSection.cards.aria.code'),
+    code: "GLE44",
     note: t('bookmakersSection.brands.Melbet.note'),
     quickUrl: "https://ton-lien-melbet-rapide",
     fullUrl: "https://ton-lien-melbet-complet",
@@ -43,7 +43,7 @@ const bookmakers = [
   {
     name: t('bookmakersSection.brands.Betwinner.name'),
     logo: "/betwinner.webp",
-    code: t('bookmakersSection.cards.aria.code'),
+    code: "GLE44",
     note: t('bookmakersSection.brands.Betwinner.note'),
     quickUrl: "https://ton-lien-betwinner-rapide",
     fullUrl: "https://ton-lien-betwinner-complet",

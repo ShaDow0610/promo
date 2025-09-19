@@ -66,9 +66,9 @@
                 <div class="flex-1">
                   <p class="font-semibold text-base sm:text-lg leading-tight">{{ r.name }}</p>
                   <p class="text-xs sm:text-sm text-gray-300">
-                    Mise :
+                    {{ t('resultsSection.card.labels.stake') }} :
                     <span class="text-yellow-400 font-bold">{{ r.bet }}$</span>
-                    &nbsp;→&nbsp; Gain :
+                    &nbsp;→&nbsp; {{ t('resultsSection.card.labels.stake') }} :
                     <span class="text-green-400 font-bold">{{ r.win }}$</span>
                   </p>
                 </div>
@@ -84,7 +84,7 @@
 
       <!-- Légende -->
       <p class="mt-6 text-center text-xs text-gray-400">
-        Captures d’écran fournies par les joueurs — à titre illustratif.
+        {{  t('resultsSection.legend') }}
       </p>
     </div>
 
@@ -127,7 +127,7 @@
           <!-- swipe hint mobile -->
           <div class="absolute bottom-2 inset-x-0 flex justify-center sm:hidden">
             <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/35 text-white">
-              Swipe ◀ ▶
+             {{ t('resultsSection.modal.swipeHint') }}
             </span>
           </div>
         </div>
@@ -142,8 +142,8 @@
           <div class="flex-1">
             <p class="font-semibold">{{ results[activeIndex].name }}</p>
             <p class="text-sm text-gray-300">
-              Mise <span class="text-yellow-400 font-bold">{{ results[activeIndex].bet }}$</span>
-              • Gain <span class="text-green-400 font-bold">{{ results[activeIndex].win }}$</span>
+              {{ t('resultsSection.modal.infoLine') }} <span class="text-yellow-400 font-bold">{{ results[activeIndex].bet }}$</span>
+              • {{ t('resultsSection.modal.infoLine1') }} <span class="text-green-400 font-bold">{{ results[activeIndex].win }}$</span>
               • +{{ Math.round((results[activeIndex].win / results[activeIndex].bet - 1) * 100) }}%
             </p>
           </div>

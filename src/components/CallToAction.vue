@@ -18,18 +18,18 @@
               <i class="fa-solid fa-futbol text-lg sm:text-xl"></i>
             </div>
             <div>
-              <h3 class="text-xl sm:text-2xl font-extrabold">Pronostics Foot offerts</h3>
+              <h3 class="text-xl sm:text-2xl font-extrabold">{{ t('predictionsSection.footballCard.title') }}</h3>
               <p class="text-sm sm:text-base text-gray-300">
-                Rejoins le canal pour des <span class="text-yellow-300 font-semibold">pronos quotidiens</span>,
-                des <span class="text-yellow-300 font-semibold">analyses</span> et des <span class="text-yellow-300 font-semibold">codes bonus</span>.
+                {{ t('predictionsSection.footballCard.description1') }}<span class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description2') }}</span>{{ t('predictionsSection.footballCard.description3') }}
+                <span class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description5') }}</span> {{ t('predictionsSection.footballCard.description5') }}<span class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description6') }}</span>.
               </p>
             </div>
           </header>
 
           <ul class="text-sm text-gray-300 space-y-1.5 mb-5">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Sélection rigoureuse des matchs</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Gestion de bankroll & conseils</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> Notifications Telegram en temps réel</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> {{ t('predictionsSection.footballCard.bullets.bullets1') }}</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> {{ t('predictionsSection.footballCard.bullets.bullets2') }}</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> {{ t('predictionsSection.footballCard.bullets.bullets3') }}</li>
           </ul>
 
           <a
@@ -40,7 +40,7 @@
                    text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                    ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition"
           >
-            <i class="fa-brands fa-telegram mr-2"></i> Rejoindre le canal
+            <i class="fa-brands fa-telegram mr-2"></i> {{ t('predictionsSection.footballCard.ctaJoin') }}
           </a>
         </article>
 
@@ -51,22 +51,22 @@
               <i class="fa-solid fa-apple-whole text-lg sm:text-xl"></i>
             </div>
             <div>
-              <h3 class="text-xl sm:text-2xl font-extrabold">Démo Pronostic — Apple of Fortune</h3>
+              <h3 class="text-xl sm:text-2xl font-extrabold">{{ t('predictionsSection.demoCard.title') }}</h3>
               <p class="text-sm sm:text-base text-gray-300">
-                Révèle <span class="text-yellow-300 font-semibold">jusqu’à 3 cases</span> : **une par ligne**, du bas vers le haut,
-                avec <span class="text-yellow-300 font-semibold">colonne aléatoire</span> sur chaque ligne. Pour la suite → Telegram 😉
+                {{ t('predictionsSection.demoCard.description') }} <span class="text-yellow-300 font-semibold">{{ t('predictionsSection.demoCard.description1') }}</span> {{ t('predictionsSection.demoCard.description2') }}
+                {{ t('predictionsSection.demoCard.description3') }}<span class="text-yellow-300 font-semibold">{{ t('predictionsSection.demoCard.description4') }}</span> {{ t('predictionsSection.demoCard.description5') }}
               </p>
             </div>
           </header>
 
           <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
             <button
-              class="inline-flex items-center justify-center rounded-full px-5 py-2.5 font-semibold bg-emerald-500 text-black hover:brightness-110 active:brightness-95 transition"
+              class="inline-flex items-center justify-center rounded-full px-1 py-2.5 font-semibold bg-emerald-500 text-black hover:brightness-110 active:brightness-95 transition"
               @click="openModal"
             >
-              <i class="fa-solid fa-play mr-2"></i> Ouvrir la Hack
+              <i class="fa-solid fa-play mr-2"></i> {{ t('predictionsSection.demoCard.ctaOpen') }}
             </button>
-            <p class="text-xs text-gray-400">* Démonstration pédagogique — pas le jeu réel.</p>
+            <p class="text-xs text-gray-400"> {{ t('predictionsSection.demoCard.note') }}</p>
           </div>
         </article>
       </div>
@@ -82,8 +82,8 @@
               <i class="fa-solid fa-apple-whole"></i>
             </div>
             <div>
-              <p class="font-semibold leading-tight">Apple of Fortune — hack</p>
-              <p class="text-xs text-gray-400">3 révélations max · Compte à rebours 10:00</p>
+              <p class="font-semibold leading-tight">{{ t('predictionsSection.modal.headerTitle') }}</p>
+              <p class="text-xs text-gray-400">{{ t('predictionsSection.modal.headerSubtitle') }}</p>
             </div>
           </div>
           <button @click="closeModal" class="p-2 text-gray-300 hover:text-white" aria-label="Fermer">✕</button>
@@ -92,15 +92,15 @@
         <!-- Controls -->
         <div class="px-4 sm:px-5 py-3 flex items-center justify-between gap-3 border-b border-white/10 bg-[#0f1012]">
           <div class="text-sm">
-            <span class="text-gray-300">Temps restant :</span>
+            <span class="text-gray-300">{{ t('predictionsSection.modal.controls.timeRemainingLabel') }}</span>
             <span class="ml-2 font-mono font-bold" :class="timeDanger ? 'text-red-400' : 'text-yellow-300'">{{ timeLeftFormatted }}</span>
           </div>
           <div class="flex items-center gap-2">
             <button class="rounded-full px-4 py-2 bg-yellow-500 text-black font-semibold disabled:opacity-50" @click="startDemo" :disabled="running">
-              Commencer
+             {{ t('predictionsSection.modal.controls.start') }}
             </button>
             <button class="rounded-full px-4 py-2 bg-emerald-500 text-black font-semibold disabled:opacity-50" @click="revealApple" :disabled="!running || revealedCount >= maxReveals || locked">
-              Montrer la pomme
+             {{ t('predictionsSection.modal.controls.reveal') }}
             </button>
           </div>
         </div>
@@ -133,15 +133,15 @@
             <!-- Footer -->
             <div class="mt-4 sm:mt-5 text-center">
               <p v-if="!locked" class="text-xs sm:text-sm text-gray-400">
-                Révélations : <span class="text-yellow-300 font-semibold">{{ revealedCount }}</span> / {{ maxReveals }}
+               {{ t('predictionsSection.modal.board.revealsCounter') }} <span class="text-yellow-300 font-semibold">{{ revealedCount }}</span> / {{ maxReveals }}
               </p>
               <div v-else class="mt-3">
-                <p class="text-sm sm:text-base text-gray-200 mb-3">Démo terminée. Pour voir la suite des pronostics en direct :</p>
+                <p class="text-sm sm:text-base text-gray-200 mb-3">{{ t('predictionsSection.modal.finished.text') }}</p>
                 <a :href="telegramUrl" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-bold bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)] ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition">
-                  <i class="fa-brands fa-telegram mr-2"></i> Rejoindre le canal
+                  <i class="fa-brands fa-telegram mr-2"></i> {{ t('predictionsSection.modal.finished.ctaJoin') }}
                 </a>
               </div>
-              <p class="mt-3 text-[11px] text-gray-500 italic">* Démonstration pédagogique — pas un jeu d’argent.</p>
+              <p class="mt-3 text-[11px] text-gray-500 italic">* {{ t('predictionsSection.modal.footnote') }}</p>
             </div>
           </div>
         </div>
@@ -153,7 +153,10 @@
 <script setup>
 import { ref, computed, onBeforeUnmount, nextTick } from 'vue'
 import gsap from 'gsap'
+import { useI18n } from 'vue-i18n'
 
+
+const { t } = useI18n()
 // ===== Config =====
 const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // <-- remplace
 const rows = 8

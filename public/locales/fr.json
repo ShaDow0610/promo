@@ -1,24 +1,30 @@
 {
 "heroSection": {
-"brand": "PronostikerX",
+"brand": "ULTIMATE PRONOS",
 "aria": {
 "heroLabel": "Bienvenue sur {brand}",
 "langSelect": "Choisir la langue"
 },
 "lang": {
-"fr": "Français",
-"en": "English",
-"es": "Español",
-"ru": "Русский"
-},
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
 "hero": {
 "marker": "PREMIUM • PRONOS • BONUS",
 "headline": "Pronostics sportifs — {brand}",
 "subtitleBefore": "Accède à des",
 "subtitlePromo": "codes promo",
-"subtitleMiddle": "puissants et des",
+"subtitleMiddle": "puissants et à des",
 "subtitleInstructions": "instructions claires",
-"subtitleAfter": "pour capitaliser tes pronostics."
+"subtitleAfter": "pour faire fructifier tes pronostics."
 },
 "buttons": {
 "ctaPrimary": "Découvrir le hack Apple of Fortune",
@@ -48,14 +54,14 @@
 "bookmakersSection": {
 "header": {
 "title_html": "⚡ Nos ",
-"title_html1":"bookmakers",
-"title_html2":"recommandés",
+"title_html1": "bookmakers",
+"title_html2": "recommandés",
 "subtitle_html1": "Choisis pour leurs ",
-"subtitle_html2":"bonus de bienvenue",
-"subtitle_html3":" leur ",
-"subtitle_html4":"fiabilité ",
-"subtitle_html5":"et des ",
-"subtitle_html6":"gains mieux valorisés"
+"subtitle_html2": "bonus de bienvenue,",
+"subtitle_html3": " leur ",
+"subtitle_html4": "fiabilité ",
+"subtitle_html5": "et pour des ",
+"subtitle_html6": "gains mieux valorisés"
 },
 "cards": {
 "quickSignup": "Inscription rapide",
@@ -64,7 +70,7 @@
 "aria": {
 "quick": "Inscription rapide",
 "full": "Inscription complète",
-"code": "Viva"
+"code": "Code promo"
 }
 },
 "mobile": {
@@ -80,7 +86,7 @@
 "text": "Marques reconnues, sécurité renforcée et paiements rapides."
 },
 "value": {
-"title": "Gains optimisés",
+"title": "Valeur optimisée",
 "text": "Promos régulières, cashbacks et cotes compétitives."
 }
 },
@@ -120,22 +126,22 @@
 "swipeHelper": "Swipe ◀ ▶"
 },
 "steps": {
-"one":{
-"title": "Apple of Fortune — Hack (démo)",
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
 "text": "Repère précisément la pomme à chaque tour.",
-"details": "Cette démo pédagogique t’apprend à lire nos pronos Apple of Fortune : position suggérée, logique du choix et bonnes pratiques pour éviter les erreurs."
+"details": "Ce hack t’aide à connaître l’emplacement exact de la pomme à chaque tour sur Apple of Fortune : position précise, logique du choix et bonnes pratiques pour maximiser tes gains."
 },
-"two":{
+"two": {
 "title": "Inscription avec code promo",
 "text": "Entre notre code et débloque tes bonus.",
-"details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas, conditions claires."
+"details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas et conditions claires."
 },
-"three":{
+"three": {
 "title": "Pronostics de matchs et autres sports",
 "text": "Analyses quotidiennes et sélections à valeur.",
 "details": "Forme, statistiques, contexte, gestion de bankroll : parie avec méthode plutôt qu’au feeling."
 },
-"four":{
+"four": {
 "title": "Joue & gagne",
 "text": "Parie intelligemment et encaisse sereinement.",
 "details": "Discipline, gestion du risque et retraits réguliers pour faire progresser ta bankroll dans le temps."
@@ -144,7 +150,7 @@
 },
 "resultsSection": {
 "ariaLabel": "Résultats des joueurs",
-"title": "Résultats des joueurs",
+"title": "Gains de nos différents joueurs",
 "marquee": {
 "ariaLabel1": "Résultats défilants des joueurs"
 },
@@ -160,7 +166,7 @@
 "percentPrefix": "+{percent}%",
 "hoverOverlay": "Survol pour agrandir"
 },
-"legend": "Captures fournies par les joueurs — visuels à titre illustratif.",
+"legend": "Captures fournies par les joueurs — exemples illustratifs de gains possibles.",
 "modal": {
 "closeAria": "Fermer",
 "prevAria": "Précédent",
@@ -169,36 +175,46 @@
 "alt": {
 "screenshot": "Capture du pari de {name}"
 },
-"infoLine": "Mise ",
-"infoLine1":"Gain "
+"infoLine": "Mise",
+"infoLine1": "Gain"
 }
 },
 "predictionsSection": {
-"ariaLabel": "Section des pronostics et démos",
+"ariaLabel": "Section des pronostics et Apple of Fortune — Ultimate Hack",
 "bg": {
 "seamTop": "Fondu vers la section précédente",
 "seamBottom": "Fondu vers la section suivante"
 },
 "footballCard": {
 "title": "Pronostics foot offerts",
-"description": "Rejoins le canal pour des pronos quotidiens, des analyses fiables et des codes bonus exclusifs.",
-"bullets": [
-"Sélection rigoureuse des matchs",
-"Gestion de bankroll et conseils",
-"Notifications Telegram en temps réel"
-],
+"description1": "Rejoins le canal pour ",
+"description2": "des pronos quotidiens",
+"description3": ", des ",
+"description4": "analyses fiables",
+"description5": " et des ",
+"description6": "codes bonus exclusifs",
+"bullets": {
+"bullets1": "Sélection rigoureuse des matchs",
+"bullets2": "Gestion de bankroll et conseils",
+"bullets3": "Notifications Telegram en temps réel"
+},
 "ctaJoin": "Rejoindre le canal",
 "ctaJoinAria": "Ouvrir le canal Telegram"
 },
 "demoCard": {
-"title": "Démo Pronostic — Apple of Fortune",
-"description": "Révèle jusqu’à 3 cases : une par ligne, du bas vers le haut, avec colonne aléatoire sur chaque ligne. Pour la suite → Telegram 😉",
+"title": "Hack Apple of Fortune",
+"description": "Révèle les ",
+"description1": "cases exactes ",
+"description2": "où se trouve ",
+"description3": "la ",
+"description4": "pomme",
+"description5": " et gagne à chaque coup. Rejoins mon canal Telegram pour un accès premium à l’Ultimate Hack d’Apple of Fortune 😉",
 "ctaOpen": "Ouvrir le hack",
-"note": "* Démonstration pédagogique — pas le jeu réel."
+"note": "Apple of Fortune — Ultimate Hack."
 },
 "modal": {
-"headerTitle": "Apple of Fortune — hack",
-"headerSubtitle": "3 révélations max · Compte à rebours 10:00",
+"headerTitle": "Apple of Fortune — Hack",
+"headerSubtitle": "Maximise tes chances avec notre hack avancé",
 "closeAria": "Fermer",
 "controls": {
 "timeRemainingLabel": "Temps restant :",
@@ -210,10 +226,10 @@
 "revealsCounter": "Révélations : {count} / {max}"
 },
 "finished": {
-"text": "Démo terminée. Pour suivre nos pronos en direct :",
+"text": "Plus de coups restants. Pour utiliser le hack complet :",
 "ctaJoin": "Rejoindre le canal"
 },
-"footnote": "* Démonstration pédagogique — pas un jeu d’argent."
+"footnote": "Apple of Fortune — Ultimate Hack."
 }
 }
 }

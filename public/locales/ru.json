@@ -1,0 +1,235 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "Добро пожаловать в {brand}",
+"langSelect": "Выберите язык"
+},
+"lang": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
+"hero": {
+"marker": "PREMIUM • ПРОГНОЗЫ • БОНУСЫ",
+"headline": "Спортивные прогнозы — {brand}",
+"subtitleBefore": "Получайте",
+"subtitlePromo": "промокоды",
+"subtitleMiddle": "которые работают и",
+"subtitleInstructions": "понятные инструкции",
+"subtitleAfter": "чтобы повышать результаты ставок."
+},
+"buttons": {
+"ctaPrimary": "Ознакомиться с хаком Apple of Fortune",
+"instructions": "Смотреть инструкции",
+"results": "Смотреть результаты клиентов",
+"bookmakers": "Наши партнерские букмекеры"
+},
+"stats": {
+"countries": {
+"label": "СТРАНЫ ОХВАТА",
+"value": "150+"
+},
+"deposits": {
+"label": "УСИЛЕННЫЕ ДЕПОЗИТЫ",
+"value": "$2.5M+"
+},
+"players": {
+"label": "АКТИВНЫЕ ИГРОКИ",
+"value": "15,000+"
+},
+"success": {
+"label": "ПОКАЗАТЕЛЬ УСПЕХА",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ Наши ",
+"title_html1": "букмекеры",
+"title_html2": "по выбору",
+"subtitle_html1": "Выбраны за ",
+"subtitle_html2": "приветственные бонусы,",
+"subtitle_html3": " их ",
+"subtitle_html4": "надежность ",
+"subtitle_html5": "и ",
+"subtitle_html6": "более выгодные выплаты"
+},
+"cards": {
+"quickSignup": "Быстрая регистрация",
+"fullSignup": "Полная регистрация",
+"codeLabel": "КОД: {code}",
+"aria": {
+"quick": "Быстрая регистрация",
+"full": "Полная регистрация",
+"code": "Промокод"
+}
+},
+"mobile": {
+"hint": "Свайп →"
+},
+"reasons": {
+"bonus": {
+"title": "Эксклюзивные бонусы",
+"text": "Используйте выделенные коды, чтобы увеличить первый депозит."
+},
+"trust": {
+"title": "Надежность",
+"text": "Проверенные бренды, усиленная защита и быстрые выплаты."
+},
+"value": {
+"title": "Оптимальная ценность",
+"text": "Регулярные акции, кэшбэк и конкурентные коэффициенты."
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "Бонус до $500"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "100% на первый депозит"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "Бонус до 200%"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "Усиленные акции и кэшбэк"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "Как это работает",
+"hint": {
+"desktop": "Нажмите на иконку, чтобы увидеть детали",
+"mobile": "Свайп/тач для просмотра"
+},
+"header": {
+"title": "Как это работает?"
+},
+"timeline": {
+"aria": {
+"openStep": "Открыть детали шага",
+"closeModal": "Закрыть"
+},
+"swipeHelper": "Свайп ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "Находите яблоко точно в каждом раунде.",
+"details": "Этот хак помогает определить точное положение яблока в Apple of Fortune: место, логика выбора и лучшие практики для максимизации возврата."
+},
+"two": {
+"title": "Регистрация с промокодом",
+"text": "Введите наш код и откройте бонусы.",
+"details": "Создайте аккаунт за несколько минут, примените промокод и активируйте зарезервированные предложения. Пошаговые подсказки и понятные условия."
+},
+"three": {
+"title": "Прогнозы на матчи и другие виды спорта",
+"text": "Ежедневная аналитика и value-пики.",
+"details": "Форма, статистика, контекст, управление банкроллом: ставьте по методике, а не на удачу."
+},
+"four": {
+"title": "Играйте и выигрывайте",
+"text": "Ставьте разумно и выводите спокойно.",
+"details": "Дисциплина, контроль риска и регулярные выводы — растите банкролл со временем."
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "Результаты игроков",
+"title": "Доходы наших игроков",
+"marquee": {
+"ariaLabel1": "Прокручиваемые результаты игроков"
+},
+"card": {
+"alt": {
+"screenshot": "Купон ставки {name}",
+"avatar": "Аватар {name}"
+},
+"labels": {
+"stake": "Ставка:",
+"gain": "Выплата:"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "Наведите для увеличения"
+},
+"legend": "Скриншоты от игроков — иллюстративные примеры возможных выплат.",
+"modal": {
+"closeAria": "Закрыть",
+"prevAria": "Назад",
+"nextAria": "Вперед",
+"swipeHint": "Свайп ◀ ▶",
+"alt": {
+"screenshot": "Купон ставки {name}"
+},
+"infoLine": "Ставка",
+"infoLine1": "Выплата"
+}
+},
+"predictionsSection": {
+"ariaLabel": "Раздел прогнозов и Apple of Fortune — Ultimate Hack",
+"bg": {
+"seamTop": "Переход от предыдущего раздела",
+"seamBottom": "Переход к следующему разделу"
+},
+"footballCard": {
+"title": "Бесплатные прогнозы на футбол",
+"description1": "Присоединяйтесь к каналу для ",
+"description2": "ежедневных прогнозов",
+"description3": ", ",
+"description4": "надежной аналитики",
+"description5": " и ",
+"description6": "эксклюзивных промокодов",
+"bullets": {
+"bullets1": "Строгий отбор матчей",
+"bullets2": "Управление банкроллом и советы",
+"bullets3": "Оповещения Telegram в реальном времени"
+},
+"ctaJoin": "Вступить в канал",
+"ctaJoinAria": "Открыть канал Telegram"
+},
+"demoCard": {
+"title": "Хак Apple of Fortune",
+"description": "Раскройте ",
+"description1": "точные ячейки ",
+"description2": "где находится ",
+"description3": "",
+"description4": "яблоко",
+"description5": " и выигрывайте каждый раунд. Присоединяйтесь к моему Telegram для премиум-доступа к Ultimate Hack Apple of Fortune 😉",
+"ctaOpen": "Открыть хак",
+"note": "Apple of Fortune — Ultimate Hack."
+},
+"modal": {
+"headerTitle": "Apple of Fortune — Хак",
+"headerSubtitle": "Повышайте шансы с нашим продвинутым хаком",
+"closeAria": "Закрыть",
+"controls": {
+"timeRemainingLabel": "Осталось времени:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "Старт",
+"reveal": "Показать яблоко"
+},
+"board": {
+"revealsCounter": "Открыто: {count} / {max}"
+},
+"finished": {
+"text": "Ходы закончились. Чтобы использовать полный хак:",
+"ctaJoin": "Вступить в канал"
+},
+"footnote": "Apple of Fortune — Ultimate Hack."
+}
+}
+}

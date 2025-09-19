@@ -1,0 +1,229 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "Bem-vindo ao {brand}",
+"langSelect": "Escolher idioma"
+},
+"lang": {
+"fr": "Francês",
+"en": "Inglês",
+"es": "Espanhol",
+"ru": "Russo"
+},
+"hero": {
+"marker": "PREMIUM • PROGNÓSTICOS • BÓNUS",
+"headline": "Prognósticos desportivos — {brand}",
+"subtitleBefore": "Acede a",
+"subtitlePromo": "códigos promocionais",
+"subtitleMiddle": "poderosos e a",
+"subtitleInstructions": "instruções claras",
+"subtitleAfter": "para potenciar os teus prognósticos."
+},
+"buttons": {
+"ctaPrimary": "Descobrir o hack Apple of Fortune",
+"instructions": "Ver instruções",
+"results": "Ver resultados de clientes",
+"bookmakers": "Os nossos bookmakers parceiros"
+},
+"stats": {
+"countries": {
+"label": "PAÍSES COBERTOS",
+"value": "150+"
+},
+"deposits": {
+"label": "DEPÓSITOS POTENCIADOS",
+"value": "$2.5M+"
+},
+"players": {
+"label": "JOGADORES ATIVOS",
+"value": "15 000+"
+},
+"success": {
+"label": "TAXA DE SUCESSO",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ Os nossos ",
+"title_html1": "bookmakers",
+"title_html2": "recomendados",
+"subtitle_html1": "Escolhidos pelos ",
+"subtitle_html2": "bónus de boas-vindas,",
+"subtitle_html3": " pela ",
+"subtitle_html4": "fiabilidade ",
+"subtitle_html5": "e por ",
+"subtitle_html6": "maior valorização dos ganhos"
+},
+"cards": {
+"quickSignup": "Registo rápido",
+"fullSignup": "Registo completo",
+"codeLabel": "CÓDIGO: {code}",
+"aria": {
+"quick": "Registo rápido",
+"full": "Registo completo",
+"code": "Código promocional"
+}
+},
+"mobile": {
+"hint": "Desliza →"
+},
+"reasons": {
+"bonus": {
+"title": "Bónus exclusivos",
+"text": "Tira partido de códigos dedicados para maximizar o primeiro depósito."
+},
+"trust": {
+"title": "Fiabilidade",
+"text": "Marcas reconhecidas, segurança reforçada e pagamentos rápidos."
+},
+"value": {
+"title": "Valor otimizado",
+"text": "Promoções regulares, cashbacks e cotações competitivas."
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "Até $500 em bónus"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "100% no primeiro depósito"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "Bónus até 200%"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "Ofertas reforçadas e cashbacks"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "Como funciona",
+"hint": {
+"desktop": "Clica num ícone para ver detalhes",
+"mobile": "Swipe/Toque para ver"
+},
+"header": {
+"title": "Como funciona?"
+},
+"timeline": {
+"aria": {
+"openStep": "Abrir detalhe da etapa",
+"closeModal": "Fechar"
+},
+"swipeHelper": "Desliza ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "Encontra a maçã com precisão em cada jogada.",
+"details": "Este hack ajuda-te a conhecer a posição exata da maçã em cada jogada no Apple of Fortune: localização, lógica da escolha e boas práticas para maximizar ganhos."
+},
+"two": {
+"title": "Registo com código promocional",
+"text": "Introduz o nosso código e desbloqueia os bónus.",
+"details": "Cria a conta em minutos, introduz o código e ativa as ofertas reservadas. Guia passo a passo e condições claras."
+},
+"three": {
+"title": "Prognósticos de jogos e outros desportos",
+"text": "Análises diárias e seleções de valor.",
+"details": "Forma, estatísticas, contexto e gestão de banca: aposta com método, não por impulso."
+},
+"four": {
+"title": "Joga e ganha",
+"text": "Aposta com inteligência e levanta com tranquilidade.",
+"details": "Disciplina, gestão de risco e levantamentos regulares para fazer crescer a banca ao longo do tempo."
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "Resultados dos jogadores",
+"title": "Ganhos dos nossos jogadores",
+"marquee": {
+"ariaLabel1": "Resultados deslizantes dos jogadores"
+},
+"card": {
+"alt": {
+"screenshot": "Captura da aposta de {name}",
+"avatar": "Avatar de {name}"
+},
+"labels": {
+"stake": "Aposta :",
+"gain": "Ganho :"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "Ampliar ao pairar"
+},
+"legend": "Capturas fornecidas pelos jogadores — exemplos ilustrativos de ganhos possíveis.",
+"modal": {
+"closeAria": "Fechar",
+"prevAria": "Anterior",
+"nextAria": "Seguinte",
+"swipeHint": "Desliza ◀ ▶",
+"alt": {
+"screenshot": "Captura da aposta de {name}"
+},
+"infoLine": "Aposta",
+"infoLine1": "Ganho"
+}
+},
+"predictionsSection": {
+"ariaLabel": "Secção de prognósticos e Apple of Fortune — Ultimate Hack",
+"bg": {
+"seamTop": "Transição da secção anterior",
+"seamBottom": "Transição para a secção seguinte"
+},
+"footballCard": {
+"title": "Prognósticos de futebol gratuitos",
+"description1": "Junta-te ao canal para ",
+"description2": "prognósticos diários",
+"description3": ", ",
+"description4": "análises fiáveis",
+"description5": " e ",
+"description6": "códigos promocionais exclusivos",
+"bullets": {
+"bullets1": "Seleção rigorosa de jogos",
+"bullets2": "Gestão de banca e conselhos",
+"bullets3": "Notificações Telegram em tempo real"
+},
+"ctaJoin": "Aderir ao canal",
+"ctaJoinAria": "Abrir o canal Telegram"
+},
+"demoCard": {
+"title": "Hack Apple of Fortune",
+"description": "Revela os ",
+"description1": "quadrados exatos ",
+"description2": "onde está ",
+"description3": "",
+"description4": "a maçã",
+"description5": " e ganha com consistência. Junta-te ao nosso canal Telegram para acesso premium ao Ultimate Hack 😉",
+"ctaOpen": "Abrir o hack",
+"note": "Apple of Fortune — Ultimate Hack."
+},
+"modal": {
+"headerTitle": "Apple of Fortune — Hack",
+"headerSubtitle": "Aumenta as tuas probabilidades com o nosso hack avançado",
+"closeAria": "Fechar",
+"controls": {
+"timeRemainingLabel": "Tempo restante:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "Iniciar",
+"reveal": "Revelar a maçã"
+},
+"board": {
+"revealsCounter": "Revelações: {count} / {max}"
+},
+"finished": {
+"text": "Sem jogadas restantes. Para usar o hack completo:",
+"ctaJoin": "Aderir ao canal"
+},
+"footnote": "Apple of Fortune — Ultimate Hack."
+}
+}
+}

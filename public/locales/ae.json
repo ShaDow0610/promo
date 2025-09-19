@@ -1,0 +1,235 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "مرحبًا بك في {brand}",
+"langSelect": "اختر اللغة"
+},
+"lang": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
+"hero": {
+"marker": "PREMIUM • التوقعات • المكافآت",
+"headline": "توقعات رياضية — {brand}",
+"subtitleBefore": "احصل على",
+"subtitlePromo": "أكواد ترويجية",
+"subtitleMiddle": "فعّالة و",
+"subtitleInstructions": "إرشادات واضحة",
+"subtitleAfter": "لتحسين نتائج رهاناتك."
+},
+"buttons": {
+"ctaPrimary": "استكشف تهكير Apple of Fortune",
+"instructions": "عرض الإرشادات",
+"results": "عرض نتائج العملاء",
+"bookmakers": "شركاؤنا من شركات المراهنات"
+},
+"stats": {
+"countries": {
+"label": "الدول المشمولة",
+"value": "150+"
+},
+"deposits": {
+"label": "إيداعات مُعزَّزة",
+"value": "$2.5M+"
+},
+"players": {
+"label": "لاعبون نشطون",
+"value": "15,000+"
+},
+"success": {
+"label": "نسبة النجاح",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ شركاؤنا ",
+"title_html1": "من المراهنين",
+"title_html2": "الموصى بهم",
+"subtitle_html1": "مختارون بسبب ",
+"subtitle_html2": "مكافآت الترحيب،",
+"subtitle_html3": " و",
+"subtitle_html4": "موثوقيتهم ",
+"subtitle_html5": "و",
+"subtitle_html6": "عوائد أفضل للاعب"
+},
+"cards": {
+"quickSignup": "تسجيل سريع",
+"fullSignup": "تسجيل كامل",
+"codeLabel": "الكود: {code}",
+"aria": {
+"quick": "تسجيل سريع",
+"full": "تسجيل كامل",
+"code": "كود ترويجي"
+}
+},
+"mobile": {
+"hint": "اسحب →"
+},
+"reasons": {
+"bonus": {
+"title": "مكافآت حصرية",
+"text": "استخدم أكواد مخصصة لتعزيز إيداعك الأول."
+},
+"trust": {
+"title": "موثوقية",
+"text": "علامات موثوقة، أمان محسّن ومدفوعات سريعة."
+},
+"value": {
+"title": "قيمة مُحسّنة",
+"text": "عروض منتظمة، كاش باك واحتمالات تنافسية."
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "حتى $500 مكافأة"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "‎100% على أول إيداع"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "مكافأة حتى ‎200%‎"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "عروض مُعزَّزة وكاش باك"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "كيف يعمل",
+"hint": {
+"desktop": "انقر على الأيقونة لعرض التفاصيل",
+"mobile": "اسحب/المس للعرض"
+},
+"header": {
+"title": "كيف يعمل؟"
+},
+"timeline": {
+"aria": {
+"openStep": "فتح تفاصيل الخطوة",
+"closeModal": "إغلاق"
+},
+"swipeHelper": "اسحب ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "اعثر على التفاحة بدقّة في كل جولة.",
+"details": "يساعدك هذا الاختراق على تحديد موقع التفاحة بدقة في Apple of Fortune: الموضع، منطق الاختيار وأفضل الممارسات لتعظيم العائد."
+},
+"two": {
+"title": "تسجيل باستخدام كود ترويجي",
+"text": "أدخل كودنا وافتح مكافآتك.",
+"details": "أنشئ حسابك خلال دقائق، طبّق الكود وفعّل العروض المحجوزة. إرشادات خطوة بخطوة وشروط واضحة."
+},
+"three": {
+"title": "توقعات للمباريات ورياضات أخرى",
+"text": "تحليلات يومية واختيارات ذات قيمة.",
+"details": "الجاهزية، الإحصاءات، السياق وإدارة البنك رول: راهن منهجيًا لا عشوائيًا."
+},
+"four": {
+"title": "العب واربح",
+"text": "راهِن بذكاء واسحب أرباحك بثقة.",
+"details": "انضباط، تحكم بالمخاطر وسحوبات منتظمة لتنمية البنك رول مع الوقت."
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "نتائج اللاعبين",
+"title": "أرباح لاعبينا",
+"marquee": {
+"ariaLabel1": "شريط نتائج اللاعبين المتحرك"
+},
+"card": {
+"alt": {
+"screenshot": "قسيمة رهان {name}",
+"avatar": "صورة {name}"
+},
+"labels": {
+"stake": "الرهان:",
+"gain": "الأرباح:"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "مرّر للتكبير"
+},
+"legend": "لقطات مقدّمة من اللاعبين — أمثلة توضيحية للأرباح المحتملة.",
+"modal": {
+"closeAria": "إغلاق",
+"prevAria": "السابق",
+"nextAria": "التالي",
+"swipeHint": "اسحب ◀ ▶",
+"alt": {
+"screenshot": "قسيمة رهان {name}"
+},
+"infoLine": "الرهان",
+"infoLine1": "الأرباح"
+}
+},
+"predictionsSection": {
+"ariaLabel": "قسم التوقعات وApple of Fortune — Ultimate Hack",
+"bg": {
+"seamTop": "تلاشي من القسم السابق",
+"seamBottom": "تلاشي إلى القسم التالي"
+},
+"footballCard": {
+"title": "توقعات كرة قدم مجانية",
+"description1": "انضم إلى القناة للحصول على ",
+"description2": "توقعات يومية",
+"description3": " و",
+"description4": "تحليلات موثوقة",
+"description5": " و",
+"description6": "أكواد ترويجية حصرية",
+"bullets": {
+"bullets1": "اختيار صارم للمباريات",
+"bullets2": "إدارة البنك رول ونصائح",
+"bullets3": "تنبيهات تيليغرام بالوقت الفعلي"
+},
+"ctaJoin": "انضم إلى القناة",
+"ctaJoinAria": "فتح قناة تيليغرام"
+},
+"demoCard": {
+"title": "اختراق Apple of Fortune",
+"description": "اكشف ",
+"description1": "الخلايا الدقيقة ",
+"description2": "حيث توجد ",
+"description3": "",
+"description4": "التفاحة",
+"description5": " واربح كل جولة. انضم إلى قناتي على تيليغرام للوصول المميز إلى Ultimate Hack لـ Apple of Fortune 😉",
+"ctaOpen": "افتح الاختراق",
+"note": "Apple of Fortune — Ultimate Hack."
+},
+"modal": {
+"headerTitle": "Apple of Fortune — اختراق",
+"headerSubtitle": "عزّز فرصك باختراقنا المتقدم",
+"closeAria": "إغلاق",
+"controls": {
+"timeRemainingLabel": "الوقت المتبقي:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "ابدأ",
+"reveal": "أظهر التفاحة"
+},
+"board": {
+"revealsCounter": "الكشوف: {count} / {max}"
+},
+"finished": {
+"text": "انتهت المحاولات. لاستخدام النسخة الكاملة:",
+"ctaJoin": "انضم إلى القناة"
+},
+"footnote": "Apple of Fortune — Ultimate Hack."
+}
+}
+}

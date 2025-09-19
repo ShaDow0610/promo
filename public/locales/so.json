@@ -1,0 +1,235 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "Ku soo dhowow {brand}",
+"langSelect": "Dooro luqadda"
+},
+"lang": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
+"hero": {
+"marker": "PREMIUM • SAADAAL • GUNNO",
+"headline": "Saadaasha ciyaaraha — {brand}",
+"subtitleBefore": "Hel",
+"subtitlePromo": "koodhadh promo",
+"subtitleMiddle": "wax-ku-ool iyo",
+"subtitleInstructions": "tilmaamo cad",
+"subtitleAfter": "si aad u wanaajiso natiijooyinkaaga."
+},
+"buttons": {
+"ctaPrimary": "Soo ogow hack-ga Apple of Fortune",
+"instructions": "Eeg tilmaamaha",
+"results": "Eeg natiijooyinka macaamiisha",
+"bookmakers": "Bukmakeerada aan la shaqeyno"
+},
+"stats": {
+"countries": {
+"label": "DALAL LA GAARAY",
+"value": "150+"
+},
+"deposits": {
+"label": "DEBAAJIYO LA KORDHIYAY",
+"value": "$2.5M+"
+},
+"players": {
+"label": "CIYAARTOY FIRFIRCOON",
+"value": "15 000+"
+},
+"success": {
+"label": "HEER GUUL",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ La-hawlgalayaal ",
+"title_html1": "bukmakeeradayada",
+"title_html2": "la taliyo",
+"subtitle_html1": "Waxaa loo doortay ",
+"subtitle_html2": "gunnooyinka soo-dhaweynta,",
+"subtitle_html3": " iyo",
+"subtitle_html4": " kalsoonidooda ",
+"subtitle_html5": "iyo ",
+"subtitle_html6": "soo celin ka wanaagsan ciyaartoyda"
+},
+"cards": {
+"quickSignup": "Isdiiwaan gelin degdeg ah",
+"fullSignup": "Isdiiwaan gelin buuxa",
+"codeLabel": "KOD: {code}",
+"aria": {
+"quick": "Isdiiwaan gelin degdeg ah",
+"full": "Isdiiwaan gelin buuxa",
+"code": "Koodh promo"
+}
+},
+"mobile": {
+"hint": "Sii jiid →"
+},
+"reasons": {
+"bonus": {
+"title": "Gunnada gaarka ah",
+"text": "Ka faa’iidayso koodhadh khaas ah si aad u kordhiso deebaajigaaga ugu horreeya."
+},
+"trust": {
+"title": "Kalsooni",
+"text": "Astaamo la yaqaan, amni la xoojiyay, iyo bixino degdeg ah."
+},
+"value": {
+"title": "Qiime la hagaajiyay",
+"text": "Promos joogto ah, cashback, iyo qiyaaso tartan leh."
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "Ilaa $500 gunno"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "100% deebaaji koowaad"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "Ilaa 200% gunno"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "Dalabyo la xoojiyay & cashback"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "Sida ay u shaqeyso",
+"hint": {
+"desktop": "Guji astaanta si aad u aragto faahfaahinta",
+"mobile": "Sii jiid/taabo si aad u aragto"
+},
+"header": {
+"title": "Sida ay u shaqeyso?"
+},
+"timeline": {
+"aria": {
+"openStep": "Fur faahfaahinta tallaabada",
+"closeModal": "Xir"
+},
+"swipeHelper": "Sii jiid ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "Ka hel tufaaxa meel sax ah mar kasta.",
+"details": "Hack-gani wuxuu kaa caawinayaa inaad ogaato goobta saxda ah ee tufaaxa heerkasta: booska, caqliga xulashada, iyo hab-raacyo lagu kordhiyo faa’iidada."
+},
+"two": {
+"title": "Isdiiwaan gelin iyadoo la adeegsanayo koodh promo",
+"text": "Geli koodhkeenna oo fur gunnadaada.",
+"details": "Abaalmarinno si dhakhso leh: samee akoon, geli koodhka, oo dhaqaaji dalabyada gaarka ah. Hagitaan cad oo tallaabo-tallaabo ah."
+},
+"three": {
+"title": "Saadaasha kulamada iyo ciyaaraha kale",
+"text": "Falanqayn maalinle ah iyo xulashooyin qiimo leh.",
+"details": "Ku saley falanqaynta qaabka, tirakoobka, macnaha guud, iyo maaraynta bankroll-ka: ku sharad si nidaamsan, ma aha dareen keliya."
+},
+"four": {
+"title": "Ciyaar & guul",
+"text": "U sharad si caqli ah, si nabad ah u soo saar.",
+"details": "Nidaam, maaraynta khatarta, iyo bixino joogto ah si aad u kobciso bankroll-ka wakhti ka dib."
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "Natiijooyinka ciyaartoyda",
+"title": "Guulaha ciyaartoydeenna",
+"marquee": {
+"ariaLabel1": "Socodka natiijooyinka ciyaartoyda"
+},
+"card": {
+"alt": {
+"screenshot": "Sawirka bet-ka {name}",
+"avatar": "Avatar-ka {name}"
+},
+"labels": {
+"stake": "Maalgelin :",
+"gain": "Guul :"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "Ballaarin markaad dul istaagto"
+},
+"legend": "Sawirrada waxaa bixiyay ciyaartoyda — tusaalooyin suuragal ah oo guul ah.",
+"modal": {
+"closeAria": "Xir",
+"prevAria": "Kan hore",
+"nextAria": "Kan xiga",
+"swipeHint": "Sii jiid ◀ ▶",
+"alt": {
+"screenshot": "Sawirka bet-ka {name}"
+},
+"infoLine": "Maalgelin",
+"infoLine1": "Guul"
+}
+},
+"predictionsSection": {
+"ariaLabel": "Qaybta saadaalinta iyo Apple of Fortune — Ultimate Hack",
+"bg": {
+"seamTop": "Kala-guur qaybtii hore",
+"seamBottom": "Kala-guur qaybta xigta"
+},
+"footballCard": {
+"title": "Saadaalinta kubadda cagta bilaash ah",
+"description1": "Ku biir kanaalka, ",
+"description2": "saadaalin maalinle",
+"description3": " iyo ",
+"description4": "falanqayn la isku halayn karo",
+"description5": " iyo ",
+"description6": "koodhadh promo gaar ah",
+"bullets": {
+"bullets1": "Xulasho kulammo oo adag",
+"bullets2": "Maaraynta bankroll & talooyin",
+"bullets3": "Ogeysiisyo Telegram — waqtiga dhabta ah"
+},
+"ctaJoin": "Ku biir kanaalka",
+"ctaJoinAria": "Fur kanaalka Telegram"
+},
+"demoCard": {
+"title": "Apple of Fortune Hack",
+"description": "Soo bandhig ",
+"description1": "xaashiyaha saxda ah ",
+"description2": "halka ay ku taallo ",
+"description3": "",
+"description4": "tufaaxa",
+"description5": " oo hel faa’iido joogto ah. Ku biir kanaalkayaga Telegram si aad u hesho gelitaan premium ee Ultimate Hack 😉",
+"ctaOpen": "Fur hack-ga",
+"note": "Apple of Fortune — Ultimate Hack."
+},
+"modal": {
+"headerTitle": "Apple of Fortune — Hack",
+"headerSubtitle": "Kordhi fursadahaaga adigoo adeegsanaya hack horumarsan",
+"closeAria": "Xir",
+"controls": {
+"timeRemainingLabel": "Waqtiga haray:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "Bilaab",
+"reveal": "Muuji tufaaxa"
+},
+"board": {
+"revealsCounter": "Furitaan: {count} / {max}"
+},
+"finished": {
+"text": "Tijaabo ma harto. Si aad u isticmaaldo nooca buuxa:",
+"ctaJoin": "Ku biir kanaalka"
+},
+"footnote": "Apple of Fortune — Ultimate Hack."
+}
+}
+}

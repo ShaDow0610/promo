@@ -28,6 +28,12 @@
         <option value="en">{{t('heroSection.lang.en')}}</option>
         <option value="es">{{t('heroSection.lang.es')}}</option>
         <option value="ru">{{t('heroSection.lang.ru')}}</option>
+        <option value="ae">{{t('heroSection.lang.ae')}}</option>
+        <option value="az">{{t('heroSection.lang.az')}}</option>
+        <option value="in">{{t('heroSection.lang.in')}}</option>
+        <option value="so">{{t('heroSection.lang.so')}}</option>
+        <option value="tr">{{t('heroSection.lang.tr')}}</option>
+        <option value="in">{{t('heroSection.lang.hi')}}</option>
       </select>
     </div>
 

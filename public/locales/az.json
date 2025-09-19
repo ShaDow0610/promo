@@ -1,0 +1,235 @@
+{
+"heroSection": {
+"brand": "ULTIMATE PRONOS",
+"aria": {
+"heroLabel": "{brand}-ə xoş gəlmisiniz",
+"langSelect": "Dili seçin"
+},
+"lang": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "pt": "Português",
+    "ar": "العربية",
+    "tr": "Türkçe",
+    "az": "Azərbaycan dili",
+    "so": "Soomaaliga",
+    "hi": "हिन्दी"
+  },
+"hero": {
+"marker": "PREMIUM • PROQNOZ • BONUS",
+"headline": "İdman proqnozları — {brand}",
+"subtitleBefore": "Əldə et",
+"subtitlePromo": "promo kodlar",
+"subtitleMiddle": "effektiv və",
+"subtitleInstructions": "aydın təlimatlar",
+"subtitleAfter": "mərc nəticələrini yaxşılaşdırmaq üçün."
+},
+"buttons": {
+"ctaPrimary": "Apple of Fortune hack-ini kəşf et",
+"instructions": "Təlimatlara bax",
+"results": "Müştəri nəticələrinə bax",
+"bookmakers": "Tərəfdaş bukmekerlərimiz"
+},
+"stats": {
+"countries": {
+"label": "ƏHATƏ OLUNAN ÖLKƏLƏR",
+"value": "150+"
+},
+"deposits": {
+"label": "GÜCLƏNDİRİLMİŞ DEPOZİTLƏR",
+"value": "$2.5M+"
+},
+"players": {
+"label": "AKTİV OYUNÇULAR",
+"value": "15 000+"
+},
+"success": {
+"label": "UĞUR FAİZİ",
+"value": "87%"
+}
+}
+},
+"bookmakersSection": {
+"header": {
+"title_html": "⚡ Tərəfdaş ",
+"title_html1": "bukmekerlərimiz",
+"title_html2": "tövsiyə olunur",
+"subtitle_html1": "Seçiliblər ",
+"subtitle_html2": "qarşılama bonuslarına görə,",
+"subtitle_html3": " və",
+"subtitle_html4": "etibarlılığına görə ",
+"subtitle_html5": "və ",
+"subtitle_html6": "oyunçu üçün daha yaxşı gəlirlərə görə"
+},
+"cards": {
+"quickSignup": "Sürətli qeydiyyat",
+"fullSignup": "Tam qeydiyyat",
+"codeLabel": "KOD: {code}",
+"aria": {
+"quick": "Sürətli qeydiyyat",
+"full": "Tam qeydiyyat",
+"code": "Promo kod"
+}
+},
+"mobile": {
+"hint": "Sürüşdür →"
+},
+"reasons": {
+"bonus": {
+"title": "Eksklüziv bonuslar",
+"text": "İlk depozitini maksimuma çıxarmaq üçün xüsusi kodlardan faydalan."
+},
+"trust": {
+"title": "Etibarlılıq",
+"text": "Tanınmış brendlər, gücləndirilmiş təhlükəsizlik və sürətli ödənişlər."
+},
+"value": {
+"title": "Dəyər optimallaşdırılıb",
+"text": "Daimi promoslar, keşbek və rəqabətli əmsallar."
+}
+},
+"brands": {
+"1win": {
+"name": "1win",
+"note": "500$-dək bonus"
+},
+"1xbet": {
+"name": "1xbet",
+"note": "İlk depozitə 100%"
+},
+"Melbet": {
+"name": "Melbet",
+"note": "200%-dək bonus"
+},
+"Betwinner": {
+"name": "Betwinner",
+"note": "Gücləndirilmiş təkliflər və keşbek"
+}
+}
+},
+"instructionsSection": {
+"ariaLabel": "Necə işləyir",
+"hint": {
+"desktop": "Detalları görmək üçün ikonaya klikləyin",
+"mobile": "Baxmaq üçün sürüşdürün/Toxunun"
+},
+"header": {
+"title": "Necə işləyir?"
+},
+"timeline": {
+"aria": {
+"openStep": "Addımın detalları",
+"closeModal": "Bağla"
+},
+"swipeHelper": "Sürüşdür ◀ ▶"
+},
+"steps": {
+"one": {
+"title": "Apple of Fortune — Ultimate Hack",
+"text": "Hər turda almanı dəqiq tap.",
+"details": "Bu hack Apple of Fortune-də almanın dəqiq yerini müəyyənləşdirməyə kömək edir: mövqe, seçimin məntiqi və gəliri artırmaq üçün ən yaxşı təcrübələr."
+},
+"two": {
+"title": "Promo kodla qeydiyyat",
+"text": "Kodumuzu daxil et və bonuslarını aç.",
+"details": "Bir neçə dəqiqəyə hesab yarat, promo kodu tətbiq et və ayrılmış təklifləri aktivləşdir. Addım-addım bələdçi və şəffaf şərtlər."
+},
+"three": {
+"title": "Matç və digər idman proqnozları",
+"text": "Gündəlik analizlər və dəyərli seçimlər.",
+"details": "Formaya, statistikalara, kontekstə və bankroll idarəsinə əsaslan: impulsla deyil, metodla mərc et."
+},
+"four": {
+"title": "Oyna və qazan",
+"text": "Ağılla mərc et, qazancı etibarlı çıxar.",
+"details": "Nizam-intizam, riskin idarəsi və müntəzəm çıxarışlarla bankrollu zamanla artır."
+}
+}
+},
+"resultsSection": {
+"ariaLabel": "Oyunçu nəticələri",
+"title": "Oyunçularımızın qazancı",
+"marquee": {
+"ariaLabel1": "Oyunçu nəticələrinin axını"
+},
+"card": {
+"alt": {
+"screenshot": "{name} mərc kuponu",
+"avatar": "{name} avatarı"
+},
+"labels": {
+"stake": "Mərcləmə:",
+"gain": "Qazanc:"
+},
+"percentPrefix": "+{percent}%",
+"hoverOverlay": "Böyütmək üçün üzərinə gətir"
+},
+"legend": "Şəkillər oyunçular tərəfindən təqdim edilib — mümkün qazanc nümunələridir.",
+"modal": {
+"closeAria": "Bağla",
+"prevAria": "Əvvəlki",
+"nextAria": "Növbəti",
+"swipeHint": "Sürüşdür ◀ ▶",
+"alt": {
+"screenshot": "{name} mərc kuponu"
+},
+"infoLine": "Mərcləmə",
+"infoLine1": "Qazanc"
+}
+},
+"predictionsSection": {
+"ariaLabel": "Proqnozlar və Apple of Fortune — Ultimate Hack bölməsi",
+"bg": {
+"seamTop": "Öncəki bölmədən keçid",
+"seamBottom": "Növbəti bölməyə keçid"
+},
+"footballCard": {
+"title": "Pulsuz futbol proqnozları",
+"description1": "Kanala qoşul, ",
+"description2": "gündəlik proqnozlar",
+"description3": " və ",
+"description4": "etibarlı analizlər",
+"description5": " və ",
+"description6": "eksklüziv promo kodlar əldə et",
+"bullets": {
+"bullets1": "Oyunların ciddi seçimi",
+"bullets2": "Bankroll idarəsi və məsləhətlər",
+"bullets3": "Telegram bildirişləri — real vaxtda"
+},
+"ctaJoin": "Kanala qoşul",
+"ctaJoinAria": "Telegram kanalını aç"
+},
+"demoCard": {
+"title": "Apple of Fortune Hack",
+"description": "Açıqla ",
+"description1": "dəqiq xanaları ",
+"description2": "harada yerləşdiyini ",
+"description3": "",
+"description4": "alma",
+"description5": " və hər turda üstünlük qazan. Apple of Fortune Ultimate Hack üçün premium girişə Telegram kanalımıza qoşul 😉",
+"ctaOpen": "Hack-i aç",
+"note": "Apple of Fortune — Ultimate Hack."
+},
+"modal": {
+"headerTitle": "Apple of Fortune — Hack",
+"headerSubtitle": "İmkanlarını inkişaf etmiş hack ilə artır",
+"closeAria": "Bağla",
+"controls": {
+"timeRemainingLabel": "Qalan vaxt:",
+"timeRemainingValue": "{mm}:{ss}",
+"start": "Başla",
+"reveal": "Almanı göstər"
+},
+"board": {
+"revealsCounter": "Açılışlar: {count} / {max}"
+},
+"finished": {
+"text": "Cəhd qalmadı. Tam versiyadan istifadə üçün:",
+"ctaJoin": "Kanala qoşul"
+},
+"footnote": "Apple of Fortune — Ultimate Hack."
+}
+}
+}
