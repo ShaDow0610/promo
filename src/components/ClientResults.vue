@@ -14,7 +14,7 @@
 
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">
-        {{ t('resultsSection.ariaLabel') }}
+        Résultats des joueurs
       </h2>
 
       <!-- Bande défilante -->
@@ -157,7 +157,6 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useI18n } from "vue-i18n"
 gsap.registerPlugin(ScrollTrigger)
 
 /** Démo — remplace par tes vraies images */
@@ -169,7 +168,6 @@ const results = [
   { name: "Lucas",  bet: 15,  win: 70,  avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
 ]
 
-const {t} = useI18n
 const marquee = ref(null)
 const sectionRef = ref(null)
 const particlesEl = ref(null)
