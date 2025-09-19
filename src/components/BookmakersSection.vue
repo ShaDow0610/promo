@@ -3,7 +3,10 @@ import { ref, onMounted, onBeforeUnmount } from "vue"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
+import { useI18n } from 'vue-i18n'
 
+
+const { t } = useI18n()
 const particlesContainer = ref(null)
 let particleEls = []
 
@@ -14,43 +17,43 @@ const prefersReduced =
 // ====== DATA (mets tes vraies URLs + logos) ======
 const bookmakers = [
   {
-    name: "1win",
+    name: t('bookmakersSection.brands.1win.name'),
     logo: "/1win.png",
-    code: "GLE44",
-    note: "Jusqu’à 500$ de bonus",
+    code: t('bookmakersSection.cards.aria.code'),
+    note: t('bookmakersSection.brands.1win.note'),
     quickUrl: "https://ton-lien-1win-rapide",
     fullUrl: "https://ton-lien-1win-complet",
   },
   {
-    name: "1xbet",
+    name: t('bookmakersSection.brands.1xbet.name'),
     logo: "/1xbet.jpg",
-    code: "GLE44",
-    note: "100% sur le premier dépôt",
+    code: t('bookmakersSection.cards.aria.code'),
+    note: t('bookmakersSection.brands.1xbet.note'),
     quickUrl: "https://ton-lien-1xbet-rapide",
     fullUrl: "https://ton-lien-1xbet-complet",
   },
   {
-    name: "Melbet",
+    name: t('bookmakersSection.brands.Melbet.name'),
     logo: "/melbet.png",
-    code: "GLE44",
-    note: "Bonus jusqu’à 200%",
+    code: t('bookmakersSection.cards.aria.code'),
+    note: t('bookmakersSection.brands.Melbet.note'),
     quickUrl: "https://ton-lien-melbet-rapide",
     fullUrl: "https://ton-lien-melbet-complet",
   },
   {
-    name: "Betwinner",
+    name: t('bookmakersSection.brands.Betwinner.name'),
     logo: "/betwinner.webp",
-    code: "GLE44",
-    note: "Offres boostées & cashbacks",
+    code: t('bookmakersSection.cards.aria.code'),
+    note: t('bookmakersSection.brands.Betwinner.note'),
     quickUrl: "https://ton-lien-betwinner-rapide",
     fullUrl: "https://ton-lien-betwinner-complet",
   },
 ]
 
 const reasons = [
-  { icon: "fa-solid fa-gift",       title: "Bonus musclés",   text: "Codes promo exclusifs pour maximiser le premier dépôt." },
-  { icon: "fa-solid fa-shield",     title: "Fiabilité",       text: "Plateformes réputées, sécurité et paiements rapides." },
-  { icon: "fa-solid fa-chart-line", title: "Gains optimisés", text: "Promos régulières, cashbacks, cotes compétitives." },
+  { icon: "fa-solid fa-gift",       title: t('bookmakersSection.reasons.bonus.title'), text: t('bookmakersSection.reasons.bonus.text') },
+  { icon: "fa-solid fa-shield",     title: t('bookmakersSection.reasons.trust.title'), text: t('bookmakersSection.reasons.trust.text') },
+  { icon: "fa-solid fa-chart-line", title: t('bookmakersSection.reasons.value.title'), text: t('bookmakersSection.reasons.value.text') },
 ]
 
 onMounted(() => {
@@ -151,12 +154,12 @@ onBeforeUnmount(() => {
       <!-- Header -->
       <header class="text-center mb-8 sm:mb-12">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-          ⚡ Pourquoi ces <span class="text-yellow-400">bookmakers</span> ?
+          {{ t('bookmakersSection.header.title_html') }} <span class="text-yellow-400"> {{ t('bookmakersSection.header.title_html1') }} </span> {{ t('bookmakersSection.header.title_html2') }}
         </h2>
         <p class="mt-3 text-gray-300 max-w-2xl mx-auto text-sm sm:text-base">
-          Sélectionnés pour leurs <span class="text-yellow-300">bonus</span>,
-          leur <span class="text-yellow-300">fiabilité</span> et des
-          <span class="text-yellow-300">gains</span> mieux valorisés.
+          {{ t('bookmakersSection.header.subtitle_html1') }}<span class="text-yellow-300">{{ t('bookmakersSection.header.subtitle_html2') }}</span>,
+          {{ t('bookmakersSection.header.subtitle_html3') }} <span class="text-yellow-300">{{ t('bookmakersSection.header.subtitle_html4') }}</span>{{ t('bookmakersSection.header.subtitle_html5') }}
+          <span class="text-yellow-300">{{ t('bookmakersSection.header.subtitle_html6') }}</span>
         </p>
       </header>
 
@@ -186,7 +189,7 @@ onBeforeUnmount(() => {
                 aria-label="Inscription rapide"
               >
                 <i class="fa-solid fa-bolt mr-1.5"></i>
-                Inscription Rapide
+                {{ t('bookmakersSection.cards.quickSignup') }}
               </a>
 
               <!-- Code promo (au centre) -->
@@ -196,7 +199,7 @@ onBeforeUnmount(() => {
                 aria-label="Code promo"
               >
                 <i class="fa-solid fa-ticket mr-1.5"></i>
-                CODE : {{ b.code }}
+                {{ t('bookmakersSection.cards.codeLabel') }} : {{ b.code }}
               </div>
 
               <!-- Inscription complète -->
@@ -207,7 +210,7 @@ onBeforeUnmount(() => {
                 aria-label="Inscription complète"
               >
                 <i class="fa-solid fa-list-check mr-1.5"></i>
-                Inscription Complète
+                {{ t('bookmakersSection.cards.fullSignup') }}
               </a>
             </div>
           </div>

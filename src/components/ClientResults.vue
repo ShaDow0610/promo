@@ -14,7 +14,7 @@
 
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">
-        Résultats des joueurs
+        {{ t('resultsSection.ariaLabel') }}
       </h2>
 
       <!-- Bande défilante -->
@@ -157,17 +157,19 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useI18n } from "vue-i18n"
 gsap.registerPlugin(ScrollTrigger)
 
 /** Démo — remplace par tes vraies images */
 const results = [
-  { name: "Kevin",  bet: 20,  win: 150, avatar: "/logo.png", screenshot: "/logo.png" },
-  { name: "Sonia",  bet: 50,  win: 320, avatar: "/logo.png", screenshot: "/logo.png" },
-  { name: "Arthur", bet: 10,  win: 90,  avatar: "/logo.png", screenshot: "/logo.png" },
-  { name: "Fatima", bet: 100, win: 600, avatar: "/logo.png", screenshot: "/logo.png" },
-  { name: "Lucas",  bet: 15,  win: 70,  avatar: "/logo.png", screenshot: "/logo.png" },
+  { name: "Kevin",  bet: 20,  win: 150, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
+  { name: "Sonia",  bet: 50,  win: 320, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
+  { name: "Arthur", bet: 10,  win: 90,  avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
+  { name: "Fatima", bet: 100, win: 600, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
+  { name: "Lucas",  bet: 15,  win: 70,  avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
 ]
 
+const {t} = useI18n
 const marquee = ref(null)
 const sectionRef = ref(null)
 const particlesEl = ref(null)

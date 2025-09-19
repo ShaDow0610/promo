@@ -2,7 +2,7 @@
   <section
     id="instructions"
     class="relative text-white py-16 sm:py-20 overflow-hidden"
-    aria-label="Comment ça marche"
+    :aria-label=" t('instructionsSection.ariaLabel') "
   >
     <!-- BG -->
     <div class="absolute inset-0 -z-10 pointer-events-none">
@@ -18,13 +18,13 @@
       <div ref="hintEl" class="pointer-events-none absolute -top-6 right-4 opacity-0 translate-y-2 select-none">
         <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/10 border border-white/15 rounded-full px-3 py-1 text-yellow-300 backdrop-blur">
           <i class="fa-solid fa-hand-pointer"></i>
-          <span class="hidden sm:inline">Clique sur une icône pour voir les détails</span>
-          <span class="sm:hidden">Swipe/Touch pour voir</span>
+          <span class="hidden sm:inline"> {{ t('instructionsSection.hint.desktop') }} </span>
+          <span class="sm:hidden"> {{ t('instructionsSection.hint.mobile') }} </span>
         </span>
       </div>
 
       <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-10 sm:mb-12">
-        Comment ça marche ?
+        {{ t('instructionsSection.header.title') }}
       </h2>
 
       <div class="timeline relative flex flex-col md:flex-row justify-between gap-12 md:gap-8">
@@ -58,7 +58,7 @@
       <div ref="modalEl" class="bg-white text-black rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden">
         <button @click="closeModal"
                 class="absolute top-2 right-2 p-2 text-gray-600 hover:text-black z-10 bg-black/40 text-white rounded-full"
-                aria-label="Fermer">✕</button>
+                :aria-label="t('instructionsSection.timeline.aria.closeModal')">✕</button>
 
         <!-- CARROUSEL -->
         <div class="relative select-none">
@@ -80,7 +80,7 @@
 
           <!-- helper swipe -->
           <div class="absolute bottom-2 inset-x-0 flex justify-center sm:hidden">
-            <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/35 text-white">Swipe ◀ ▶</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/35 text-white"> {{ t('instructionsSection.timeline.swipeHelper') }} </span>
           </div>
         </div>
 
@@ -98,52 +98,62 @@
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from "vue"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useI18n } from "vue-i18n"
+
 gsap.registerPlugin(ScrollTrigger)
 
+const {t} = useI18n()
 /* ---------- DATA (exemple) ---------- */
 const steps = [
   {
-    title: "Apple of Fortune — Hack (démo)",
-    text: "Repère précisément où se trouve la pomme à chaque tour.",
-    details:
-      "Dans cette démonstration pédagogique, nous te montrons comment lire nos pronostics pour Apple of Fortune. " +
-      "Tu vois l’emplacement suggéré de la pomme, étape par étape…",
+    title: t('instructionsSection.steps.one.title'),
+    text: t('instructionsSection.steps.one.text'),
+    details:t('instructionsSection.steps.one.details'),
     icon: "fa-solid fa-apple-whole",
     color: "#22c55e",
     media: [
+      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
+      { type: "video", src: "/apple-search.mp4", poster: "/img/step4-poster.jpg", alt: "Payout flow" },
+      { type: "video", src: "/apple-wins.mp4", alt: "Série de gains" },
       { type: "image", src: "/img/step1-1.jpg", alt: "Grille Apple of Fortune" },
       { type: "video", src: "/video/apple-demo.mp4", poster: "/img/step1-poster.jpg", alt: "Démo vidéo" },
       { type: "image", src: "/img/step1-2.jpg", alt: "Tour avec pomme révélée" }
     ]
   },
   {
-    title: "Inscription avec code promo",
-    text: "Entre notre code pour débloquer immédiatement les bonus.",
-    details: "Crée ton compte puis saisis le code promo…",
+    title: t('instructionsSection.steps.two.title'),
+    text: t('instructionsSection.steps.two.text'),
+    details: t('instructionsSection.steps.two.details'),
     icon: "fa-solid fa-ticket",
     color: "#facc15",
     media: [
+      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
+      { type: "video", src: "/apple-search.mp4", poster: "/img/step4-poster.jpg", alt: "Payout flow" },
+      { type: "video", src: "/apple-wins.mp4", alt: "Série de gains" },
       { type: "image", src: "/apple-fortune.jpg", alt: "Écran code promo" },
       { type: "video", src: "/video/signup-walkthrough.mp4", poster: "/img/step2-poster.jpg", alt: "Tutoriel vidéo" },
       { type: "image", src: "/img/step2-2.jpg", alt: "Bonus activé" }
     ]
   },
   {
-    title: "Pronostics de matchs et autres sports",
-    text: "Analyses quotidiennes et sélections à valeur.",
-    details: "Stats, contexte, bankroll…",
+    title: t('instructionsSection.steps.three.title'),
+    text: t('instructionsSection.steps.three.text'),
+    details: t('instructionsSection.steps.three.details'),
     icon: "fa-solid fa-futbol",
     color: "#3b82f6",
     media: [
+      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
+      { type: "video", src: "/apple-search.mp4", poster: "/img/step4-poster.jpg", alt: "Payout flow" },
+      { type: "video", src: "/apple-wins.mp4", alt: "Série de gains" },
       { type: "image", src: "/img/step3-1.jpg", alt: "Fiche d’analyse" },
       { type: "video", src: "/video/analysis-sample.mp4", poster: "/img/step3-poster.jpg", alt: "Analyse pré-match" },
       { type: "image", src: "/img/step3-2.jpg", alt: "Sélection de paris" }
     ]
   },
   {
-    title: "Joue & gagne",
-    text: "Parie intelligemment, encaisse, fais évoluer ta bankroll.",
-    details: "Discipline, retraits réguliers, gestion du risque…",
+    title: t('instructionsSection.steps.four.title'),
+    text: t('instructionsSection.steps.four.text'),
+    details: t('instructionsSection.steps.four.details'),
     icon: "fa-solid fa-trophy",
     color: "#ef4444",
     media: [
@@ -153,6 +163,8 @@ const steps = [
     ]
   }
 ]
+
+
 
 /* ---------- STATE ---------- */
 const activeStep = ref(null)

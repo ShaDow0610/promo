@@ -25,9 +25,9 @@
         @change="change($event.target.value)"
       >
         <option value="fr">{{t('heroSection.lang.fr')}}</option>
-        <option value="en">🇬🇧 English</option>
-        <option value="es">🇪🇸 Español</option>
-        <option value="ru">🇷🇺 Русский</option>
+        <option value="en">{{t('heroSection.lang.en')}}</option>
+        <option value="es">{{t('heroSection.lang.es')}}</option>
+        <option value="ru">{{t('heroSection.lang.ru')}}</option>
       </select>
     </div>
 
@@ -45,13 +45,14 @@
         ref="titleRef"
         class="font-display text-[34px] leading-[1.05] sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] drop-shadow-[0_6px_18px_rgba(255,215,100,.18)]"
       >
-        Bienvenue sur <span class="whitespace-nowrap">Bet PronostikerX</span>
+        
+        {{ t('heroSection.aria.heroLabel') }} <span class="whitespace-nowrap">{{ t('heroSection.brand') }}</span>
       </h1>
 
       <!-- Sous-texte -->
       <p ref="subtitleRef" class="mt-3 sm:mt-4 max-w-2xl mx-auto text-[13px] sm:text-base text-gray-300">
-        Accède à des <span class="text-yellow-300">codes promo</span> puissants et des
-        <span class="text-yellow-300">instructions claires</span> pour capitaliser tes pronostics.
+        {{ t('heroSection.hero.subtitleBefore') }} <span class="text-yellow-300"> {{t('heroSection.hero.subtitlePromo')}} </span> {{ t('heroSection.hero.subtitleMiddle') }}
+        <span class="text-yellow-300"> {{ t('heroSection.hero.subtitleInstructions') }} </span> {{ t('heroSection.hero.subtitleAfter') }}
       </p>
 
       <!-- Boutons -->
@@ -65,7 +66,7 @@
                  text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                  ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition"
         >
-          <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i> Appel fortune hack
+          <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i>{{ t('heroSection.buttons.ctaPrimary') }}
         </button>
 
         <!-- Boutons secondaires -->
@@ -76,7 +77,7 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-book-open mr-2" aria-hidden="true"></i> Instructions
+          <i class="fa-solid fa-book-open mr-2" aria-hidden="true"></i> {{ t('heroSection.buttons.instructions') }}
         </button>
 
         <button
@@ -86,7 +87,7 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-chart-line mr-2" aria-hidden="true"></i> Résultats clients
+          <i class="fa-solid fa-chart-line mr-2" aria-hidden="true"></i> {{ t('heroSection.buttons.results') }}
         </button>
 
         <button
@@ -96,27 +97,27 @@
                  bg-black/50 backdrop-blur border border-yellow-500/30 text-yellow-300
                  hover:bg-yellow-500/10 hover:border-yellow-400/60 hover:text-yellow-200 transition"
         >
-          <i class="fa-solid fa-user-plus mr-2" aria-hidden="true"></i> Nos bookmakers
+          <i class="fa-solid fa-user-plus mr-2" aria-hidden="true"></i> {{ t('heroSection.buttons.bookmakers') }}
         </button>
       </div>
 
       <!-- Statistiques -->
       <div class="mt-7 sm:mt-9 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">PAYS COUVERTS</div>
-          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300">150+</div>
+          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400"> {{ t('heroSection.stats.countries.label') }} </div>
+          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300"> {{ t('heroSection.stats.countries.value') }} </div>
         </div>
         <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">DÉPÔTS BOOSTÉS</div>
-          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300">$2.5M+</div>
+          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400"> {{ t('heroSection.stats.deposits.label') }} </div>
+          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300"> {{ t('heroSection.stats.deposits.value') }} </div>
         </div>
         <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">JOUEURS ACTIFS</div>
-          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300">15 000+</div>
+          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400"> {{ t('heroSection.stats.players.label') }} </div>
+          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300"> {{ t('heroSection.stats.players.value') }} </div>
         </div>
         <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">TAUX DE SUCCÈS</div>
-          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300">87%</div>
+          <div class="text-[10px] sm:text-xs tracking-wider text-gray-400"> {{ t('heroSection.stats.success.label') }} </div>
+          <div class="mt-1 text-lg sm:text-2xl font-extrabold text-yellow-300"> {{ t('heroSection.stats.success.value') }} </div>
         </div>
       </div>
     </div>
