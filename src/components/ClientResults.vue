@@ -165,11 +165,11 @@ gsap.registerPlugin(ScrollTrigger)
 
 /** Démo — remplace par tes vraies images */
 const results = [
-  { name: "Kevin",  bet: 20,  win: 150, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
-  { name: "Sonia",  bet: 50,  win: 320, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
-  { name: "Arthur", bet: 10,  win: 90,  avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
-  { name: "Fatima", bet: 100, win: 600, avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
-  { name: "Lucas",  bet: 15,  win: 70,  avatar: "/apple-fortune.jpg", screenshot: "/apple-fortune.jpg" },
+  { name: "Kevin", bet: 20, win: 150, avatar: "/apple-fortune.jpg", screenshot: "/proof1.jpg" },
+  { name: "Sonia", bet: 50, win: 320, avatar: "/apple-fortune.jpg", screenshot: "/proof2.jpg" },
+  { name: "Arthur", bet: 10, win: 90, avatar: "/apple-fortune.jpg", screenshot: "/proof3.jpg" },
+  { name: "Fatima", bet: 100, win: 600, avatar: "/apple-fortune.jpg", screenshot: "/proof4.jpg" },
+  { name: "Lucas", bet: 15, win: 70, avatar: "/apple-fortune.jpg", screenshot: "/proof5.jpg" },
 ]
 
 const marquee = ref(null)

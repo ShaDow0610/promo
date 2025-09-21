@@ -1,235 +1,293 @@
 {
-"heroSection": {
-"brand": "ULTIMATE PRONOS",
-"aria": {
-"heroLabel": "Bienvenue sur {brand}",
-"langSelect": "Choisir la langue"
-},
-"lang": {
-    "fr": "Français",
-    "en": "English",
-    "es": "Español",
-    "ru": "Русский",
-    "pt": "Português",
-    "ar": "العربية",
-    "tr": "Türkçe",
-    "az": "Azərbaycan dili",
-    "so": "Soomaaliga",
-    "hi": "हिन्दी"
+  "heroSection": {
+    "brand": "ULTIMATE PRONOS",
+    "aria": {
+      "heroLabel": "Bienvenue sur {brand}",
+      "langSelect": "Choisir la langue"
+    },
+    "lang": {
+      "fr": "Français",
+      "en": "English",
+      "es": "Español",
+      "ru": "Русский",
+      "pt": "Português",
+      "ar": "العربية",
+      "tr": "Türkçe",
+      "az": "Azərbaycan dili",
+      "so": "Soomaaliga",
+      "hi": "हिन्दी"
+    },
+    "hero": {
+      "marker": "PREMIUM • PRONOS • BONUS",
+      "headline": "Pronostics sportifs — {brand}",
+      "subtitleBefore": "Accède à des",
+      "subtitlePromo": "codes promo",
+      "subtitleMiddle": "puissants et à des",
+      "subtitleInstructions": "instructions claires",
+      "subtitleAfter": "pour faire fructifier tes pronostics."
+    },
+    "buttons": {
+      "ctaPrimary": "Découvrir le hack Apple of Fortune",
+      "instructions": "Voir les instructions",
+      "results": "Voir les résultats clients",
+      "bookmakers": "Créer un compte"
+    },
+    "modal": {
+      "part1": {
+        "title": "CRÉER VOTRE COMPTE OFFICIEL",
+        "reason": "POURQUOI UTILISER LE CODE PROMO 'GLE44' ?",
+        "arg1": "Pour avoir un compte officiel de paris.",
+        "arg2": "Pour connecter le compte au bot.",
+        "arg3": "Pour avoir de bons résultats sur vos jeux.",
+        "arg4": "Pour maximiser vos gains.",
+        "arg5": "Pour mettre la chance de votre côté."
+      },
+      "notice": "Utilise ce code lors de l’inscription.",
+      "part2": {
+        "title": "Utilisez les liens ci-dessous pour créer votre compte sur le bookmaker de votre choix et profitez des bonus de bienvenue avec notre code promo !",
+        "warning": "🚨 ATTENTION : une inscription sans le code promo 'GLE44' pourra perturber la connexion du bot à votre compte et réduire vos chances."
+      },
+      "pm": "Mon code promo :",
+      "part3": {
+        "nb": "(Si le lien ne s'ouvre pas, accédez-y avec un VPN activé (Suède). Le Play Store/App Store propose de nombreux services gratuits, par exemple : Vpnify, Planet VPN, Hotspot VPN, etc.)"
+      }
+    },
+
+    "stats": {
+      "countries": {
+        "label": "PAYS COUVERTS",
+        "value": "150+"
+      },
+      "deposits": {
+        "label": "DÉPÔTS BOOSTÉS",
+        "value": "$2.5M+"
+      },
+      "players": {
+        "label": "JOUEURS ACTIFS",
+        "value": "15 000+"
+      },
+      "success": {
+        "label": "TAUX DE SUCCÈS",
+        "value": "87%"
+      }
+    }
   },
-"hero": {
-"marker": "PREMIUM • PRONOS • BONUS",
-"headline": "Pronostics sportifs — {brand}",
-"subtitleBefore": "Accède à des",
-"subtitlePromo": "codes promo",
-"subtitleMiddle": "puissants et à des",
-"subtitleInstructions": "instructions claires",
-"subtitleAfter": "pour faire fructifier tes pronostics."
-},
-"buttons": {
-"ctaPrimary": "Découvrir le hack Apple of Fortune",
-"instructions": "Voir les instructions",
-"results": "Voir les résultats clients",
-"bookmakers": "Nos bookmakers partenaires"
-},
-"stats": {
-"countries": {
-"label": "PAYS COUVERTS",
-"value": "150+"
-},
-"deposits": {
-"label": "DÉPÔTS BOOSTÉS",
-"value": "$2.5M+"
-},
-"players": {
-"label": "JOUEURS ACTIFS",
-"value": "15 000+"
-},
-"success": {
-"label": "TAUX DE SUCCÈS",
-"value": "87%"
-}
-}
-},
-"bookmakersSection": {
-"header": {
-"title_html": "⚡ Nos ",
-"title_html1": "bookmakers",
-"title_html2": "recommandés",
-"subtitle_html1": "Choisis pour leurs ",
-"subtitle_html2": "bonus de bienvenue,",
-"subtitle_html3": " leur ",
-"subtitle_html4": "fiabilité ",
-"subtitle_html5": "et pour des ",
-"subtitle_html6": "gains mieux valorisés"
-},
-"cards": {
-"quickSignup": "Inscription rapide",
-"fullSignup": "Inscription complète",
-"codeLabel": "CODE : {code}",
-"aria": {
-"quick": "Inscription rapide",
-"full": "Inscription complète",
-"code": "Code promo"
-}
-},
-"mobile": {
-"hint": "Glisse →"
-},
-"reasons": {
-"bonus": {
-"title": "Bonus exclusifs",
-"text": "Profite de codes dédiés pour maximiser ton premier dépôt."
-},
-"trust": {
-"title": "Fiabilité",
-"text": "Marques reconnues, sécurité renforcée et paiements rapides."
-},
-"value": {
-"title": "Valeur optimisée",
-"text": "Promos régulières, cashbacks et cotes compétitives."
-}
-},
-"brands": {
-"1win": {
-"name": "1win",
-"note": "Jusqu’à 500$ de bonus"
-},
-"1xbet": {
-"name": "1xbet",
-"note": "100% sur le premier dépôt"
-},
-"Melbet": {
-"name": "Melbet",
-"note": "Bonus jusqu’à 200%"
-},
-"Betwinner": {
-"name": "Betwinner",
-"note": "Offres boostées & cashbacks"
-}
-}
-},
-"instructionsSection": {
-"ariaLabel": "Comment ça marche",
-"hint": {
-"desktop": "Clique sur une icône pour afficher les détails",
-"mobile": "Swipe/Touch pour voir"
-},
-"header": {
-"title": "Comment ça marche ?"
-},
-"timeline": {
-"aria": {
-"openStep": "Ouvrir le détail de l’étape",
-"closeModal": "Fermer"
-},
-"swipeHelper": "Swipe ◀ ▶"
-},
-"steps": {
-"one": {
-"title": "Apple of Fortune — Ultimate Hack",
-"text": "Repère précisément la pomme à chaque tour.",
-"details": "Ce hack t’aide à connaître l’emplacement exact de la pomme à chaque tour sur Apple of Fortune : position précise, logique du choix et bonnes pratiques pour maximiser tes gains."
-},
-"two": {
-"title": "Inscription avec code promo",
-"text": "Entre notre code et débloque tes bonus.",
-"details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas et conditions claires."
-},
-"three": {
-"title": "Pronostics de matchs et autres sports",
-"text": "Analyses quotidiennes et sélections à valeur.",
-"details": "Forme, statistiques, contexte, gestion de bankroll : parie avec méthode plutôt qu’au feeling."
-},
-"four": {
-"title": "Joue & gagne",
-"text": "Parie intelligemment et encaisse sereinement.",
-"details": "Discipline, gestion du risque et retraits réguliers pour faire progresser ta bankroll dans le temps."
-}
-}
-},
-"resultsSection": {
-"ariaLabel": "Résultats des joueurs",
-"title": "Gains de nos différents joueurs",
-"marquee": {
-"ariaLabel1": "Résultats défilants des joueurs"
-},
-"card": {
-"alt": {
-"screenshot": "Capture du pari de {name}",
-"avatar": "Avatar de {name}"
-},
-"labels": {
-"stake": "Mise :",
-"gain": "Gain :"
-},
-"percentPrefix": "+{percent}%",
-"hoverOverlay": "Survol pour agrandir"
-},
-"legend": "Captures fournies par les joueurs — exemples illustratifs de gains possibles.",
-"modal": {
-"closeAria": "Fermer",
-"prevAria": "Précédent",
-"nextAria": "Suivant",
-"swipeHint": "Swipe ◀ ▶",
-"alt": {
-"screenshot": "Capture du pari de {name}"
-},
-"infoLine": "Mise",
-"infoLine1": "Gain"
-}
-},
-"predictionsSection": {
-"ariaLabel": "Section des pronostics et Apple of Fortune — Ultimate Hack",
-"bg": {
-"seamTop": "Fondu vers la section précédente",
-"seamBottom": "Fondu vers la section suivante"
-},
-"footballCard": {
-"title": "Pronostics foot offerts",
-"description1": "Rejoins le canal pour ",
-"description2": "des pronos quotidiens",
-"description3": ", des ",
-"description4": "analyses fiables",
-"description5": " et des ",
-"description6": "codes bonus exclusifs",
-"bullets": {
-"bullets1": "Sélection rigoureuse des matchs",
-"bullets2": "Gestion de bankroll et conseils",
-"bullets3": "Notifications Telegram en temps réel"
-},
-"ctaJoin": "Rejoindre le canal",
-"ctaJoinAria": "Ouvrir le canal Telegram"
-},
-"demoCard": {
-"title": "Hack Apple of Fortune",
-"description": "Révèle les ",
-"description1": "cases exactes ",
-"description2": "où se trouve ",
-"description3": "la ",
-"description4": "pomme",
-"description5": " et gagne à chaque coup. Rejoins mon canal Telegram pour un accès premium à l’Ultimate Hack d’Apple of Fortune 😉",
-"ctaOpen": "Ouvrir le hack",
-"note": "Apple of Fortune — Ultimate Hack."
-},
-"modal": {
-"headerTitle": "Apple of Fortune — Hack",
-"headerSubtitle": "Maximise tes chances avec notre hack avancé",
-"closeAria": "Fermer",
-"controls": {
-"timeRemainingLabel": "Temps restant :",
-"timeRemainingValue": "{mm}:{ss}",
-"start": "Commencer",
-"reveal": "Montrer la pomme"
-},
-"board": {
-"revealsCounter": "Révélations : {count} / {max}"
-},
-"finished": {
-"text": "Plus de coups restants. Pour utiliser le hack complet :",
-"ctaJoin": "Rejoindre le canal"
-},
-"footnote": "Apple of Fortune — Ultimate Hack."
-}
-}
+  "bookmakersSection": {
+    "header": {
+      "title_html": "⚡ Nos ",
+      "title_html1": "bookmakers",
+      "title_html2": "recommandés",
+      "subtitle_html1": "Choisis pour leurs ",
+      "subtitle_html2": "bonus de bienvenue,",
+      "subtitle_html3": " leur ",
+      "subtitle_html4": "fiabilité ",
+      "subtitle_html5": "et pour des ",
+      "subtitle_html6": "gains mieux valorisés"
+    },
+    "cards": {
+      "quickSignup": "Inscription rapide",
+      "fullSignup": "Inscription complète",
+      "codeLabel": "CODE : {code}",
+      "aria": {
+        "quick": "Inscription rapide",
+        "full": "Inscription complète",
+        "code": "Code promo"
+      }
+    },
+    "mobile": {
+      "hint": "Glisse →"
+    },
+    "reasons": {
+      "bonus": {
+        "title": "Bonus exclusifs",
+        "text": "Profite de codes dédiés pour maximiser ton premier dépôt."
+      },
+      "trust": {
+        "title": "Fiabilité",
+        "text": "Marques reconnues, sécurité renforcée et paiements rapides."
+      },
+      "value": {
+        "title": "Valeur optimisée",
+        "text": "Promos régulières, cashbacks et cotes compétitives."
+      }
+    },
+    "brands": {
+      "1win": {
+        "name": "1win",
+        "note": "Jusqu’à 500$ de bonus"
+      },
+      "1xbet": {
+        "name": "1xbet",
+        "note": "100% sur le premier dépôt"
+      },
+      "Melbet": {
+        "name": "Melbet",
+        "note": "Bonus jusqu’à 200%"
+      },
+      "Betwinner": {
+        "name": "Betwinner",
+        "note": "Offres boostées & cashbacks"
+      }
+    }
+  },
+  "instructionsSection": {
+    "ariaLabel": "Comment ça marche",
+    "hint": {
+      "desktop": "Clique sur une icône pour afficher les détails",
+      "mobile": "Swipe/Touch pour voir"
+    },
+    "header": {
+      "title": "Comment ça marche ?"
+    },
+    "timeline": {
+      "aria": {
+        "openStep": "Ouvrir le détail de l’étape",
+        "closeModal": "Fermer"
+      },
+      "swipeHelper": "Swipe ◀ ▶"
+    },
+    "steps": {
+      "one": {
+        "title": "Apple of Fortune — Ultimate Hack",
+        "text": "Repère précisément la pomme à chaque tour.",
+        "details": "Ce hack t’aide à connaître l’emplacement exact de la pomme à chaque tour sur Apple of Fortune : position précise, logique du choix et bonnes pratiques pour maximiser tes gains.",
+        "subtitle1": "PRINCIPE DE FONCTIONNEMENT🤖",
+        "text1": {
+          "subText1": "🤖 King Of Apple Hack est un outil avancé conçu pour vous aider à maximiser vos chances de réussite dans le jeu « Apple of Fortune » sur diverses plateformes de paris en ligne.",
+          "subText2": "⚜️ Notre algorithme utilise des données complexes et une analyse prédictive pour identifier les cases les plus probables où se trouve la pomme🍎, vous offrant ainsi un avantage stratégique."
+        },
+        "subtitle2": "COMMENT UTILISER LE HACK ? 💰",
+        "text2": {
+          "subTitle1": "Pour un profit maximal, suivez ces étapes :",
+          "li1": "1. Lancez une nouvelle partie dans l’application King Of Apple Hack en cliquant sur « NEW GAME ». 💸",
+          "li2": "2. Appuyez sur « SHOW APPLE » : le hack génère la position de la pomme pour la première ligne.",
+          "li3": "3. Ouvrez le jeu « Apple of Fortune » chez votre bookmaker préféré :",
+          "NB": "(Si le lien ne s’ouvre pas, utilisez un VPN actif (Suède). Le Play Store/App Store propose de nombreux services gratuits : Vpnify, Planet VPN, Hotspot VPN, etc.)",
+          "warning": "🚨 AVERTISSEMENT : une inscription sans le code promo FASE9 peut perturber la connexion du bot à votre compte et entraîner une perte de fonds.",
+          "li4": "4. Démarrez une partie sur votre bookmaker.🍎",
+          "li5": "5. Reportez la position indiquée par le hack dans le jeu réel sur votre bookmaker.",
+          "li6": "6. Procédez ligne par ligne : après avoir ouvert une ligne chez le bookmaker, retournez dans l’app et appuyez sur « SHOW APPLE » pour obtenir la prédiction de la ligne suivante.",
+          "li7": "7. Encaissez vos gains une fois l’objectif atteint.",
+          "li8": "8. En cas d’échec, doublez (x²) votre mise pour couvrir la perte avec le résultat suivant. 📈"
+        },
+        "subtitle3": "CONFIGURATION OPTIMALE (IMPORTANT) 📊",
+        "text3": "Pour une efficacité maximale et éviter toute détection, nous recommandons vivement la configuration suivante chez votre bookmaker :",
+        "ul": {
+          "li1": "Utilisez un compte officiel KM23 OU FASE9 :",
+          "text1": " Rendez-vous dans la section « Create an account » du hack et créez un NOUVEAU compte OFFICIEL avec le code KM23 OU FASE9 pour connecter le hack à votre compte bookmaker et mettre les chances de votre côté.",
+          "li2": " Augmentation progressive :",
+          "text2": " Augmentez votre mise progressivement sur les lignes suivantes.",
+          "li3": " Limitez le nombre de parties :",
+          "text3": " Ne jouez pas plus de 5–7 parties par 30 minutes avec le hack. Espacez vos sessions.",
+          "NB": "Ces pratiques réduisent le risque de détection et garantissent la durabilité de l’efficacité du hack."
+        },
+        "subtitle4": "ASSISTANCE ET MISES À JOUR ❓",
+        "text4": {
+          "subText": "Pour toute question, assistance technique ou dernières mises à jour du hack, contactez-nous via nos canaux officiels :💬",
+          "li1": "https://t.me/+09RmIt4oNn41ZWVk",
+          "li2": "Email:support@kingofapplehack.com",
+          "NB": "Nous améliorons en continu l’algorithme pour garantir les meilleurs résultats."
+        }
+      },
+      "two": {
+        "title": "Inscription avec code promo",
+        "text": "Entre notre code et débloque tes bonus.",
+        "details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas et conditions claires."
+      },
+      "three": {
+        "title": "Pronostics de matchs et autres sports",
+        "text": "Analyses quotidiennes et sélections à valeur.",
+        "details": "Forme, statistiques, contexte, gestion de bankroll : parie avec méthode plutôt qu’au feeling."
+      },
+      "four": {
+        "title": "Joue & gagne",
+        "text": "Parie intelligemment et encaisse sereinement.",
+        "details": "Discipline, gestion du risque et retraits réguliers pour faire progresser ta bankroll dans le temps."
+      }
+    }
+  },
+  "resultsSection": {
+    "ariaLabel": "Résultats des joueurs",
+    "title": "Gains de nos différents joueurs",
+    "marquee": {
+      "ariaLabel1": "Résultats défilants des joueurs"
+    },
+    "card": {
+      "alt": {
+        "screenshot": "Capture du pari de {name}",
+        "avatar": "Avatar de {name}"
+      },
+      "labels": {
+        "stake": "Mise :",
+        "gain": "Gain :"
+      },
+      "percentPrefix": "+{percent}%",
+      "hoverOverlay": "Survol pour agrandir"
+    },
+    "legend": "Captures fournies par les joueurs — exemples illustratifs de gains possibles.",
+    "modal": {
+      "closeAria": "Fermer",
+      "prevAria": "Précédent",
+      "nextAria": "Suivant",
+      "swipeHint": "Swipe ◀ ▶",
+      "alt": {
+        "screenshot": "Capture du pari de {name}"
+      },
+      "infoLine": "Mise",
+      "infoLine1": "Gain"
+    }
+  },
+  "predictionsSection": {
+    "ariaLabel": "Section des pronostics et Apple of Fortune — Ultimate Hack",
+    "bg": {
+      "seamTop": "Fondu vers la section précédente",
+      "seamBottom": "Fondu vers la section suivante"
+    },
+    "footballCard": {
+      "title": "Pronostics foot offerts",
+      "description1": "Rejoins le canal pour ",
+      "description2": "des pronos quotidiens",
+      "description3": ", des ",
+      "description4": "analyses fiables",
+      "description5": " et des ",
+      "description6": "codes bonus exclusifs",
+      "bullets": {
+        "bullets1": "Sélection rigoureuse des matchs",
+        "bullets2": "Gestion de bankroll et conseils",
+        "bullets3": "Notifications Telegram en temps réel"
+      },
+      "ctaJoin": "Rejoindre le canal",
+      "ctaJoinAria": "Ouvrir le canal Telegram"
+    },
+    "demoCard": {
+      "title": "Hack Apple of Fortune",
+      "description": "Révèle les ",
+      "description1": "cases exactes ",
+      "description2": "où se trouve ",
+      "description3": "la ",
+      "description4": "pomme",
+      "description5": " et gagne à chaque coup. Rejoins mon canal Telegram pour un accès premium à l’Ultimate Hack d’Apple of Fortune 😉",
+      "ctaOpen": "Ouvrir le hack",
+      "note": "Apple of Fortune — Ultimate Hack."
+    },
+    "modal": {
+      "headerTitle": "Apple of Fortune — Hack",
+      "headerSubtitle": "Maximise tes chances avec notre hack avancé",
+      "closeAria": "Fermer",
+      "controls": {
+        "timeRemainingLabel": "Temps restant :",
+        "timeRemainingValue": "{mm}:{ss}",
+        "start": "Commencer",
+        "reveal": "Montrer la pomme"
+      },
+      "board": {
+        "revealsCounter": "Révélations : {count} / {max}"
+      },
+      "finished": {
+        "text": "Plus de coups restants. Pour utiliser le hack complet :",
+        "ctaJoin": "Rejoindre le canal"
+      },
+      "footnote": "Apple of Fortune — Ultimate Hack."
+    }
+  }
 }
