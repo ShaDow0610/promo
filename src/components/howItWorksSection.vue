@@ -211,7 +211,6 @@
               class="list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-800">
               <li v-if="steps[activeStep].text4_subText">{{ steps[activeStep].text4_subText }}</li>
               <li v-if="steps[activeStep].text4_li1">{{ steps[activeStep].text4_li1 }}</li>
-              <li v-if="steps[activeStep].text4_li2">{{ steps[activeStep].text4_li2 }}</li>
               <li v-if="steps[activeStep].text4_nb" class="list-none">
                 <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
                   {{ steps[activeStep].text4_nb }}
@@ -270,7 +269,6 @@ const steps = [
     subtitle4: t('instructionsSection.steps.one.details'),
     text4_subText: t('instructionsSection.steps.one.text4.subText'),
     text4_li1: t('instructionsSection.steps.one.text4.li1'),
-    text4_li2: t('instructionsSection.steps.one.text4.li2'),
     text4_nb: t('instructionsSection.steps.one.text4.NB'),
 
     icon: "fa-solid fa-apple-whole",

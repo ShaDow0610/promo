@@ -349,10 +349,10 @@ const modalContent = {
 
 /* Liens plateformes — remplace par tes URLs réelles */
 const bookmakersLinks = {
-  x1bet: "https://ton-lien-1xbet",
-  melbet: "https://ton-lien-melbet",
-  betwinner: "https://ton-lien-betwinner",
-  win1: "https://ton-lien-1win"
+  x1bet: "https://reffpa.com/L?tag=d_4135466m_97c_&site=4135466&ad=97",
+  melbet: "https://refpa3665.com/L?tag=d_4135872m_66329c_&site=4135872&ad=66329",
+  betwinner: "https://bwredir.com/1xK9?p=%2Fregistration%2F",
+  win1: "https://1wvdmy.life/?p=l6cr"
 }
 
 function openSignupModal() {
