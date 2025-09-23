@@ -52,25 +52,24 @@
         </div>
       </div>
     </div>
-
-    <!-- MODAL -->
-    <div v-if="activeStep !== null && steps?.[activeStep]"
-      class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm"
-      @click.self="closeModal">
-      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-full sm:w-auto sm:max-w-3xl md:max-w-4xl rounded-t-2xl sm:rounded-2xl overflow-hidden bg-white text-black shadow-2xl
-           ring-1 ring-black/10 sm:mx-0 mx-0
-           sm:animate-none">
-        <!-- Close button -->
+    <!-- MODAL — dark theme + subtle vivid accents (GIF-ready) -->
+    <div v-if="activeStep !== null && steps?.[activeStep]" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4
+         bg-black/70 backdrop-blur-sm" @click.self="closeModal">
+      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-full sm:w-auto sm:max-w-3xl md:max-w-4xl rounded-t-2xl sm:rounded-2xl overflow-hidden
+           bg-[#0d0d0e] text-white shadow-[0_20px_60px_rgba(0,0,0,.45)]
+           ring-1 ring-white/10 sm:mx-0 mx-0">
+        <!-- Close -->
         <button @click="closeModal" :aria-label="t('instructionsSection.timeline.aria.closeModal')" class="absolute top-2 z-50 right-2 sm:top-3 sm:right-3 inline-flex items-center justify-center
-             rounded-full bg-grey-600 hover:bg-grey-600 text-white
-             p-2 sm:p-2.5 shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400">
+             rounded-full bg-white/10 hover:bg-white/15 text-white
+             p-2 sm:p-2.5 shadow-lg transition
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/70">
           ✕
         </button>
 
         <!-- MEDIA / CAROUSEL -->
-        <div class="relative select-none bg-black">
-          <!-- media area: responsive heights + safe areas -->
-          <div class="overflow-hidden h-[40vh] xs:h-[46vh] sm:h-[56vh] md:h-[60vh] flex items-center justify-center">
+        <div class="relative select-none bg-[#0a0a0b]">
+          <!-- media area (supports GIF as image) -->
+          <div class="overflow-hidden h-[42vh] xs:h-[48vh] sm:h-[56vh] md:h-[60vh] flex items-center justify-center">
             <transition name="fadeFast" mode="out-in">
               <component :is="currentItem?.type === 'video' ? 'video' : 'img'" :key="activeStep + ':' + currentSlide"
                 class="w-full h-full object-contain" v-bind="currentItemProps" @play="pauseOthers" />
@@ -78,36 +77,42 @@
           </div>
 
           <!-- nav arrows -->
-          <button v-if="(mediaList?.length || 0) > 1" @click="prevSlide" aria-label="Previous"
-            class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2
+          <button v-if="(mediaList?.length || 0) > 1" @click="prevSlide" aria-label="Previous" class="hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2
                bg-white/10 hover:bg-white/20 text-white
-               p-2.5 rounded-full shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400">
+               p-2.5 rounded-full shadow-lg transition
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70">
             ‹
           </button>
-          <button v-if="(mediaList?.length || 0) > 1" @click="nextSlide" aria-label="Next"
-            class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2
+          <button v-if="(mediaList?.length || 0) > 1" @click="nextSlide" aria-label="Next" class="hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2
                bg-white/10 hover:bg-white/20 text-white
-               p-2.5 rounded-full shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400">
+               p-2.5 rounded-full shadow-lg transition
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70">
             ›
           </button>
 
-          <!-- mobile swipe helper -->
+          <!-- mobile swipe hint -->
           <div class="absolute bottom-2 inset-x-0 flex justify-center sm:hidden">
-            <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/35 text-white">
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/40 text-white">
               {{ t('instructionsSection.timeline.swipeHelper') }}
             </span>
           </div>
+
+          <!-- top glow accent -->
+          <div
+            class="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-yellow-400/40 to-transparent">
+          </div>
         </div>
 
-        <!-- CONTENT (scrollable) -->
-        <div class="p-4 sm:p-6 max-h-[52vh] sm:max-h-[42vh] overflow-y-auto">
+        <!-- CONTENT -->
+        <div class="p-4 sm:p-6 max-h-[54vh] sm:max-h-[44vh] overflow-y-auto">
           <!-- Title -->
-          <h3 v-if="steps?.[activeStep]?.title" class="text-base sm:text-xl font-bold leading-snug tracking-tight mb-2">
+          <h3 v-if="steps?.[activeStep]?.title" class="text-base sm:text-xl font-bold leading-snug tracking-tight mb-2
+               bg-gradient-to-r from-yellow-300 via-amber-200 to-emerald-200 bg-clip-text text-transparent">
             {{ steps[activeStep].title }}
           </h3>
 
           <!-- Details -->
-          <p v-if="steps?.[activeStep]?.details" class="text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p v-if="steps?.[activeStep]?.details" class="text-gray-200/90 text-sm sm:text-base leading-relaxed">
             {{ steps[activeStep].details }}
           </p>
 
@@ -115,45 +120,48 @@
           <div
             v-if="steps?.[activeStep]?.subtitle1 || steps?.[activeStep]?.text1SubText1 || steps?.[activeStep]?.text1SubText2"
             class="mt-4 sm:mt-5">
-            <h4 v-if="steps?.[activeStep]?.subtitle1" class="text-sm sm:text-lg font-semibold mb-2">
+            <h4 v-if="steps?.[activeStep]?.subtitle1" class="text-sm sm:text-lg font-semibold mb-2 text-yellow-300">
               {{ steps[activeStep].subtitle1 }}
             </h4>
 
-            <p v-if="steps?.[activeStep]?.text1SubText1" class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <p v-if="steps?.[activeStep]?.text1SubText1" class="text-gray-200/90 text-sm sm:text-base leading-relaxed">
               {{ steps[activeStep].text1SubText1 }}
             </p>
             <p v-if="steps?.[activeStep]?.text1SubText2"
-              class="text-gray-700 text-sm sm:text-base leading-relaxed mt-1.5">
+              class="text-gray-200/90 text-sm sm:text-base leading-relaxed mt-1.5">
               {{ steps[activeStep].text1SubText2 }}
             </p>
           </div>
 
           <!-- Block 2 -->
           <div v-if="steps?.[activeStep]?.subtitle2 || steps?.[activeStep]?.text2_subTitle1" class="mt-5 sm:mt-6">
-            <h4 v-if="steps?.[activeStep]?.subtitle2" class="text-sm sm:text-lg font-semibold mb-2">
+            <h4 v-if="steps?.[activeStep]?.subtitle2" class="text-sm sm:text-lg font-semibold mb-2 text-yellow-300">
               {{ steps[activeStep].subtitle2 }}
             </h4>
 
             <!-- list title -->
-            <h5 v-if="steps[activeStep].text2_subTitle1" class="text-sm sm:text-base font-semibold mb-2 text-gray-900">
+            <h5 v-if="steps[activeStep].text2_subTitle1"
+              class="text-sm sm:text-base font-semibold mb-2 text-emerald-300">
               {{ steps[activeStep].text2_subTitle1 }}
             </h5>
 
             <!-- list items -->
             <ul v-if="steps[activeStep].text2_subTitle1"
-              class="list-disc pl-5 space-y-1.5 text-gray-800 text-sm sm:text-base">
+              class="list-disc pl-5 space-y-1.5 text-gray-200/90 text-sm sm:text-base">
               <li v-if="steps[activeStep].text2_li1">{{ steps[activeStep].text2_li1 }}</li>
               <li v-if="steps[activeStep].text2_li2">{{ steps[activeStep].text2_li2 }}</li>
               <li v-if="steps[activeStep].text2_li3">{{ steps[activeStep].text2_li3 }}</li>
 
               <!-- info / warning badges -->
               <li v-if="steps[activeStep].text2_nb" class="list-none">
-                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
+                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full
+                     bg-blue-500/15 text-blue-200 ring-1 ring-inset ring-blue-400/30">
                   {{ steps[activeStep].text2_nb }}
                 </span>
               </li>
               <li v-if="steps[activeStep].text2_warning" class="list-none">
-                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full
+                     bg-rose-500/15 text-rose-200 ring-1 ring-inset ring-rose-400/30">
                   {{ steps[activeStep].text2_warning }}
                 </span>
               </li>
@@ -168,33 +176,34 @@
 
           <!-- Block 3 -->
           <div v-if="steps[activeStep].subtitle3 || steps[activeStep].text3" class="mt-5 sm:mt-6">
-            <h4 v-if="steps[activeStep].subtitle3" class="text-sm sm:text-lg font-semibold mb-2">
+            <h4 v-if="steps[activeStep].subtitle3" class="text-sm sm:text-lg font-semibold mb-2 text-yellow-300">
               {{ steps[activeStep].subtitle3 }}
             </h4>
 
-            <p v-if="steps[activeStep].text3" class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <p v-if="steps[activeStep].text3" class="text-gray-200/90 text-sm sm:text-base leading-relaxed">
               {{ steps[activeStep].text3 }}
             </p>
 
             <ul v-if="steps[activeStep].text3_li1"
-              class="mt-2 list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-800">
+              class="mt-2 list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-200/90">
               <li v-if="steps[activeStep].text3_li1">
                 {{ steps[activeStep].text3_li1 }}
-                <p v-if="steps[activeStep].text3_text1" class="mt-1 text-gray-700">{{ steps[activeStep].text3_text1 }}
+                <p v-if="steps[activeStep].text3_text1" class="mt-1 text-gray-300">{{ steps[activeStep].text3_text1 }}
                 </p>
               </li>
               <li v-if="steps[activeStep].text3_li2">
                 {{ steps[activeStep].text3_li2 }}
-                <p v-if="steps[activeStep].text3_text2" class="mt-1 text-gray-700">{{ steps[activeStep].text3_text2 }}
+                <p v-if="steps[activeStep].text3_text2" class="mt-1 text-gray-300">{{ steps[activeStep].text3_text2 }}
                 </p>
               </li>
               <li v-if="steps[activeStep].text3_li3">
                 {{ steps[activeStep].text3_li3 }}
-                <p v-if="steps[activeStep].text3_text3" class="mt-1 text-gray-700">{{ steps[activeStep].text3_text3 }}
+                <p v-if="steps[activeStep].text3_text3" class="mt-1 text-gray-300">{{ steps[activeStep].text3_text3 }}
                 </p>
               </li>
               <li v-if="steps[activeStep].text3_nb" class="list-none">
-                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
+                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full
+                     bg-blue-500/15 text-blue-200 ring-1 ring-inset ring-blue-400/30">
                   {{ steps[activeStep].text3_nb }}
                 </span>
               </li>
@@ -203,16 +212,17 @@
 
           <!-- Block 4 -->
           <div v-if="steps[activeStep].subtitle4 || steps[activeStep].text4_subText" class="mt-5 sm:mt-6">
-            <h4 v-if="steps[activeStep].subtitle4" class="text-sm sm:text-lg font-semibold mb-2">
+            <h4 v-if="steps[activeStep].subtitle4" class="text-sm sm:text-lg font-semibold mb-2 text-yellow-300">
               {{ steps[activeStep].subtitle4 }}
             </h4>
 
             <ul v-if="steps[activeStep].text4_subText"
-              class="list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-800">
+              class="list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-200/90">
               <li v-if="steps[activeStep].text4_subText">{{ steps[activeStep].text4_subText }}</li>
               <li v-if="steps[activeStep].text4_li1">{{ steps[activeStep].text4_li1 }}</li>
               <li v-if="steps[activeStep].text4_nb" class="list-none">
-                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
+                <span class="inline-block text-[12px] sm:text-xs px-2 py-0.5 rounded-full
+                     bg-blue-500/15 text-blue-200 ring-1 ring-inset ring-blue-400/30">
                   {{ steps[activeStep].text4_nb }}
                 </span>
               </li>

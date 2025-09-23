@@ -87,7 +87,7 @@
     "cards": {
       "quickSignup": "Inscription rapide",
       "fullSignup": "Inscription complète",
-      "codeLabel": "CODE : {code}",
+      "codeLabel": "CODE PROMO ",
       "aria": {
         "quick": "Inscription rapide",
         "full": "Inscription complète",

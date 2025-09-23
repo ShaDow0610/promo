@@ -1,16 +1,17 @@
-<script setup>
-import HeroSection from './components/HeroSection.vue';
-import BookmakersSection from './components/BookmakersSection.vue';
-import howItWorksSection from './components/howItWorksSection.vue';
-import ClientResults from './components/ClientResults.vue';
-import CallToAction from './components/CallToAction.vue';
-</script>
 <template>
-  <div>
-    <HeroSection/>
-    <BookmakersSection/>
-    <howItWorksSection/>
-    <ClientResults/>
-    <CallToAction/>
+  <div class="min-h-screen bg-[#0b0b0c] text-white">
+    <AppNavbar />
+    <main class="pt-20">
+      <RouterView />
+    </main>
   </div>
 </template>
+<script setup>
+import AppNavbar from './components/AppNavbar.vue';
+
+</script>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

@@ -17,7 +17,7 @@
     </div>
 
     <!-- Sélecteur langue -->
-    <div ref="langRef" class="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
+    <div ref="langRef" class="hidden absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 text-gray-300">
       <i class="fa-solid fa-globe text-sm" aria-hidden="true"></i>
       <label class="sr-only" for="lang">{{ t('heroSection.aria.langSelect') }}</label>
       <select id="lang"
@@ -344,7 +344,7 @@ const modalContent = {
     nb: "(Si le lien ne s'ouvre pas, accédez-y avec un VPN activé (Suède). Le PlayStore/App Store propose de nombreux services gratuits, par exemple : Vpnify, Planet VPN, Hotspot VPN, etc. !)"
   },
   // vidéo illustrative (optionnelle) — remplace par ta vraie source
-  gifSrc: "/your_account_gif.gif",
+  gifSrc: "/inscription.gif",
 }
 
 /* Liens plateformes — remplace par tes URLs réelles */
