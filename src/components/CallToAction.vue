@@ -31,7 +31,7 @@
               <p class="text-sm sm:text-base text-gray-300">
                 {{ t('predictionsSection.footballCard.description1') }}<span class="text-yellow-300 font-semibold">{{
                   t('predictionsSection.footballCard.description2') }}</span>{{
-                    t('predictionsSection.footballCard.description3') }}
+  t('predictionsSection.footballCard.description3') }}
                 <span class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description5')
                 }}</span> {{ t('predictionsSection.footballCard.description5') }}<span
                   class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description6') }}</span>.
@@ -67,7 +67,7 @@
             </div>
             <div>
               <h3 class="text-xl sm:text-2xl font-extrabold">{{ t('predictionsSection.demoCard.title') }}</h3>
-              <p class="text-sm sm:text-base text-gray-300">
+              <p class="text-lg sm:text-base text-gray-300">
                 {{ t('predictionsSection.demoCard.description') }} <span class="text-yellow-300 font-semibold">{{
                   t('predictionsSection.demoCard.description1') }}</span> {{
                     t('predictionsSection.demoCard.description2') }}
@@ -80,11 +80,11 @@
 
           <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
             <button
-              class="inline-flex items-center justify-center rounded-full px-4 py-2.5 font-semibold bg-emerald-500 text-black hover:brightness-110 active:brightness-95 transition"
+              class="inline-flex items-center text-sm justify-center rounded-full px-4 py-2.5 font-semibold bg-emerald-500 text-black hover:brightness-110 active:brightness-95 transition"
               @click="openModal">
               <i class="fa-solid fa-play mr-2"></i> {{ t('predictionsSection.demoCard.ctaOpen') }}
             </button>
-            <p class="text-xs text-gray-400"> {{ t('predictionsSection.demoCard.note') }}</p>
+            <!-- <p class="text-xs text-gray-400"> {{ t('predictionsSection.demoCard.note') }}</p> -->
           </div>
         </article>
       </div>
@@ -94,9 +94,9 @@
     <div v-if="show" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4"
       @click.self="closeModal">
       <div ref="modalRef"
-        class="bg-[#0d0d0e] text-white rounded-2xl shadow-2xl max-w-[920px] w-full border border-white/10 overflow-hidden">
+        class="bg-[#0d0d0e] h-145 text-white rounded-2xl shadow-2xl max-w-[920px] w-sm border border-white/10 overflow-hidden">
         <!-- Header -->
-        <div class="flex items-center justify-between px-4 sm:px-5 py-3 bg-white/5 border-b border-white/10">
+        <div class="flex items-center justify-between px-4 sm:px-5 py-1 bg-white/5 border-b border-white/10">
           <div class="flex items-center gap-3">
             <div
               class="w-9 h-9 rounded-lg bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Controls -->
-        <div class="px-4 sm:px-5 py-3 flex items-center justify-between gap-3 border-b border-white/10 bg-[#0f1012]">
+        <div class="px-4 sm:px-5 py-0 flex items-center justify-between gap-3 border-b border-white/10 bg-[#0f1012]">
           <div class="text-sm">
             <span class="text-gray-300">{{ t('predictionsSection.modal.controls.timeRemainingLabel') }}</span>
             <span class="ml-2 font-mono font-bold" :class="timeDanger ? 'text-red-400' : 'text-yellow-300'">{{
@@ -123,7 +123,7 @@
               @click="openIdPrompt" :disabled="running">
               {{ t('predictionsSection.modal.controls.start') }}
             </button>
-            <button class="rounded-full px-4 py-2 bg-emerald-500 text-black font-semibold disabled:opacity-50"
+            <button class="rounded-full text-xs px-4 py-2 text-lg bg-emerald-500 text-black font-semibold disabled:opacity-50"
               @click="revealApple" :disabled="!running || revealedCount >= maxReveals || locked">
               {{ t('predictionsSection.modal.controls.reveal') }}
             </button>
@@ -162,7 +162,7 @@
                   revealedCount }}</span> / {{ maxReveals }}
               </p>
               <div v-else class="mt-3">
-                <p class="text-sm sm:text-base text-gray-200 mb-3">{{ t('predictionsSection.modal.finished.text') }}</p>
+                <p class="text-xs sm:text-base text-gray-200 mb-3">{{ t('predictionsSection.modal.finished.text') }}</p>
                 <a :href="telegramUrl" target="_blank" rel="noopener" class="tg-cta inline-flex items-center justify-center rounded-full px-6 py-3 font-bold
                          text-white shadow-[0_8px_24px_rgba(34,158,217,0.35)]
                          ring-1 ring-[#229ED9]/40 hover:brightness-110 active:brightness-95 transition">
@@ -181,7 +181,7 @@
     <div v-if="askId" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
       @click.self="askId = false">
       <div ref="idModalRef"
-        class="w-full max-w-md bg-[#0f1012] text-white rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+        class="w-full max-w-md bg-[#0f1012]  text-white rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
         <div class="px-4 py-3 bg-white/5 border-b border-white/10 flex items-center gap-3">
           <div
             class="w-8 h-8 rounded-lg bg-yellow-500/15 border border-yellow-400/30 text-yellow-300 flex items-center justify-center">
@@ -225,8 +225,8 @@ const { t } = useI18n()
 
 // ===== Config =====
 const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // <-- remplace
-const rows = 8
-const cols = 8
+const rows = 6
+const cols = 5
 const maxReveals = 3
 const demoDurationSec = 10 * 60 // 10:00
 

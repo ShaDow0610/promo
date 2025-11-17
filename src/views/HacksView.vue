@@ -54,12 +54,12 @@
             <div ref="gridRef"
                 class="mt-8 grid gap-4 sm:gap-6 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <article v-for="g in filteredGames" :key="g.id"
-                    class="group relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(250,200,80,0.06)] will-change-transform card-3d">
+                    class="group relative w-sm justify-self-center rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(250,200,80,0.06)] will-change-transform card-3d">
                     <!-- cover -->
                     <div class="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                         <div class="absolute inset-0 skeleton" v-if="!loaded.has(g.id)"></div>
                         <img :src="g.image" :alt="g.name"
-                            class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.06]"
+                            class="w-full h-full object-contain transition duration-500 group-hover:scale-[1.06]"
                             loading="lazy" decoding="async" @load="onImgLoad(g.id)" />
                         <!-- subtle gradient -->
                         <div
@@ -212,25 +212,25 @@ const platforms = {
 
 /* 40 games (images à placer dans /public/games/...) */
 const games = ref([
-    { id: 1, name: 'Apple of Fortune', platform: platforms['1xbet'], image: '/games/apple-of-fortune.jpg', description: 'Révélez la bonne case à chaque ligne grâce à nos signaux.' },
-    { id: 2, name: 'Aviator', platform: platforms['1win'], image: '/games/aviator.jpg', description: 'Partez avant le crash. Indices de volatilité en temps réel.' },
-    { id: 3, name: 'Mines', platform: platforms['melbet'], image: '/games/mines.jpg', description: 'Évitez les mines, sécurisez vos paliers de gain.' },
-    { id: 4, name: 'Plinko', platform: platforms['betwinner'], image: '/games/plinko.jpg', description: 'Trajectoires optimisées et niveaux de risque ajustés.' },
-    { id: 5, name: 'Crash', platform: platforms['1xbet'], image: '/games/crash.jpg', description: 'Courbes, momentum, sorties ciblées pour limiter le risque.' },
-    { id: 6, name: 'JetX', platform: platforms['1win'], image: '/games/jetx.jpg', description: 'Stratégies de décollage et d’éjection progressive.' },
-    { id: 7, name: 'Dice', platform: platforms['melbet'], image: '/games/dice.jpg', description: 'Probabilités dynamiques, gestion des séries perdantes.' },
-    { id: 8, name: 'Goal', platform: platforms['betwinner'], image: '/games/goal.jpg', description: 'Avancez vers le but en minimisant les risques par palier.' },
-    { id: 9, name: 'HiLo', platform: platforms['1xbet'], image: '/games/hilo.jpg', description: 'Lectures de séquences pour mieux anticiper les tours.' },
-    { id: 10, name: 'Limbo', platform: platforms['1win'], image: '/games/limbo.jpg', description: 'Cibles de multiplicateurs et mises progressives.' },
-    { id: 11, name: 'Keno', platform: platforms['melbet'], image: '/games/keno.jpg', description: 'Sélection optimisée des grilles à espérance positive.' },
-    { id: 12, name: 'Roulette', platform: platforms['betwinner'], image: '/games/roulette.jpg', description: 'Progression contrôlée et cibles de sortie claires.' },
-    { id: 13, name: 'Blackjack', platform: platforms['1xbet'], image: '/games/blackjack.jpg', description: 'Charts, comptage soft et limites de pertes strictes.' },
-    { id: 14, name: 'Baccarat', platform: platforms['1win'], image: '/games/baccarat.jpg', description: 'Gestion des runs banker/player, stop-win discipliné.' },
-    { id: 15, name: 'Poker', platform: platforms['melbet'], image: '/games/poker.jpg', description: 'Ranges de départ simples et lignes à faible variance.' },
-    { id: 16, name: 'Wheel', platform: platforms['betwinner'], image: '/games/wheel.jpg', description: 'Répartition des segments et couverture intelligente.' },
-    { id: 17, name: 'Slots', platform: platforms['1xbet'], image: '/games/slots.jpg', description: 'Sessions courtes, features ciblées, retraits réguliers.' },
-    { id: 18, name: 'Zeppelin', platform: platforms['1win'], image: '/games/zeppelin.jpg', description: 'Sorties progressives, séquence de sécurité intégrée.' },
-    { id: 19, name: 'Space XY', platform: platforms['melbet'], image: '/games/space-xy.jpg', description: 'Stratégie multi-objectifs selon la volatilité.' },
+    { id: 1, name: 'Apple of Fortune', platform: platforms['1xbet'], image: '/apple.webp', description: 'Révélez la bonne case à chaque ligne grâce à nos signaux.' },
+    { id: 2, name: 'Aviator', platform: platforms['1win'], image: '/aviator 1win.jpg', description: 'Partez avant le crash. Indices de volatilité en temps réel.' },
+    { id: 3, name: 'Mines', platform: platforms['melbet'], image: '/mines.jpg', description: 'Évitez les mines, sécurisez vos paliers de gain.' },
+    { id: 4, name: 'Plinko', platform: platforms['betwinner'], image: '/plinko.jpg', description: 'Trajectoires optimisées et niveaux de risque ajustés.' },
+    { id: 5, name: 'Crash', platform: platforms['1xbet'], image: '/crash.jpg', description: 'Courbes, momentum, sorties ciblées pour limiter le risque.' },
+    { id: 6, name: 'JetX', platform: platforms['1win'], image: '/jetx.jpg', description: 'Stratégies de décollage et d’éjection progressive.' },
+    { id: 7, name: 'Dice', platform: platforms['melbet'], image: '/dice.jpg', description: 'Probabilités dynamiques, gestion des séries perdantes.' },
+    { id: 8, name: 'Goal', platform: platforms['betwinner'], image: '/goal.jpg', description: 'Avancez vers le but en minimisant les risques par palier.' },
+    { id: 9, name: 'Burning hot', platform: platforms['1xbet'], image: '/burnung hot.jpg', description: 'Lectures de séquences pour mieux anticiper les tours.' },
+    { id: 10, name: 'Limbo', platform: platforms['1win'], image: '/limbo.jpg', description: 'Cibles de multiplicateurs et mises progressives.' },
+    { id: 11, name: 'Keno', platform: platforms['melbet'], image: '/keno.jpg', description: 'Sélection optimisée des grilles à espérance positive.' },
+    { id: 12, name: 'Roulette', platform: platforms['betwinner'], image: '/roulette.jpg', description: 'Progression contrôlée et cibles de sortie claires.' },
+    { id: 13, name: 'Blackjack', platform: platforms['1xbet'], image: '/blackjack.jpg', description: 'Charts, comptage soft et limites de pertes strictes.' },
+    { id: 14, name: 'Baccarat', platform: platforms['1win'], image: '/baccarat.jpg', description: 'Gestion des runs banker/player, stop-win discipliné.' },
+    { id: 15, name: 'Poker', platform: platforms['melbet'], image: '/pocker.jpg', description: 'Ranges de départ simples et lignes à faible variance.' },
+    { id: 16, name: 'Wheel', platform: platforms['betwinner'], image: '/wheel.jpg', description: 'Répartition des segments et couverture intelligente.' },
+    { id: 17, name: 'Slots', platform: platforms['1xbet'], image: '/slot.jpg', description: 'Sessions courtes, features ciblées, retraits réguliers.' },
+    { id: 18, name: 'Zeppelin', platform: platforms['1win'], image: '/zipeline.jpg', description: 'Sorties progressives, séquence de sécurité intégrée.' },
+    { id: 19, name: 'Space XY', platform: platforms['melbet'], image: '/spacexy.jpg', description: 'Stratégie multi-objectifs selon la volatilité.' },
     { id: 20, name: 'Minesweeper', platform: platforms['betwinner'], image: '/games/minesweeper.jpg', description: 'Pattern sécurisés et stop-loss stricts.' },
     { id: 21, name: 'Tower', platform: platforms['1xbet'], image: '/games/tower.jpg', description: 'Montée par niveaux avec paliers de prise de gain.' },
     { id: 22, name: 'Stairs', platform: platforms['1win'], image: '/games/stairs.jpg', description: 'Choix de marches à meilleur ratio risque/rendement.' },

@@ -33,7 +33,7 @@
       </h2>
 
       <div class="timeline relative flex flex-col md:flex-row justify-between gap-12 md:gap-8">
-        <span class="timeline-bar hidden md:block absolute top-1/2 left-[6%] right-[6%] h-1
+        <span class="timeline-bar hidden absolute top-1/2 left-[6%] right-[6%] h-1
                      bg-gradient-to-r from-green-500 via-yellow-400 via-blue-500 to-red-500
                      scale-x-0 origin-left rounded"></span>
 
@@ -55,7 +55,7 @@
     <!-- MODAL — dark theme + subtle vivid accents (GIF-ready) -->
     <div v-if="activeStep !== null && steps?.[activeStep]" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4
          bg-black/70 backdrop-blur-sm" @click.self="closeModal">
-      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-full sm:w-auto sm:max-w-3xl md:max-w-4xl rounded-t-2xl sm:rounded-2xl overflow-hidden
+      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-sm h-145 sm:w-3xl sm:max-w-3xl md:max-w-3xl rounded-t-2xl sm:rounded-2xl overflow-hidden
            bg-[#0d0d0e] text-white shadow-[0_20px_60px_rgba(0,0,0,.45)]
            ring-1 ring-white/10 sm:mx-0 mx-0">
         <!-- Close -->
@@ -284,7 +284,7 @@ const steps = [
     icon: "fa-solid fa-apple-whole",
     color: "#22c55e",
     media: [
-      { type: "image", src: "/your_instruction_gif.gif", alt: "Grille Apple of Fortune" },
+      { type: "video", src: "/hack.webm", alt: "Grille Apple of Fortune" },
     ]
   },
   {
@@ -294,8 +294,7 @@ const steps = [
     icon: "fa-solid fa-ticket",
     color: "#facc15",
     media: [
-      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
-      { type: "image", src: "/img/step2-2.jpg", alt: "Bonus activé" }
+      { type: "image", src: "/inscription.mp4", alt: "Historique de gains" }      
     ]
   },
   {
@@ -305,8 +304,7 @@ const steps = [
     icon: "fa-solid fa-futbol",
     color: "#3b82f6",
     media: [
-      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
-      { type: "image", src: "/img/step3-2.jpg", alt: "Sélection de paris" }
+      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" }
     ]
   },
   {
@@ -316,8 +314,7 @@ const steps = [
     icon: "fa-solid fa-trophy",
     color: "#ef4444",
     media: [
-      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" },
-
+      { type: "video", src: "/wins.webm", alt: "Historique de gains" },
     ]
   }
 ]
@@ -485,15 +482,15 @@ onMounted(() => {
   if (!prefersReduced && hintEl.value) {
     gsap.to(hintEl.value, {
       scrollTrigger: { trigger: "#instructions", start: "top 80%" },
-      opacity: 1, y: 0, duration: 0.6, ease: "power2.out",
-      onComplete: () => gsap.to(hintEl.value, { opacity: 0, duration: 0.6, delay: 3 })
+      opacity: 1, y: 0, duration: 7.6, ease: "power2.out",
+      onComplete: () => gsap.to(hintEl.value, { opacity: 1, duration: 7.6, delay: 2 })
     })
   }
 
   gsap.utils.toArray(".step").forEach((step, i) => {
     gsap.from(step, {
       scrollTrigger: { trigger: step, start: "top 82%", toggleActions: "play none none reverse" },
-      opacity: 0, y: 44, filter: "blur(8px)", scale: 0.98,
+      opacity: 1, y: 44, filter: "blur(8px)", scale: 0.98,
       duration: 0.6, delay: i * 0.08, ease: "power3.out",
       onComplete: () => gsap.to(step, { filter: "blur(0px)", duration: 0.15 })
     })

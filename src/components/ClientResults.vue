@@ -3,13 +3,20 @@
     <!-- BACKGROUND cohérent -->
     <div class="absolute inset-0 -z-10 pointer-events-none">
       <div class="absolute inset-0 animate-bgShift"></div>
-      <div class="absolute inset-0 opacity-25 bg-[radial-gradient(60%_40%_at_50%_30%,rgba(255,200,80,0.22),transparent_70%)]"></div>
-      <div class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+      <div
+        class="absolute inset-0 opacity-25 bg-[radial-gradient(60%_40%_at_50%_30%,rgba(255,200,80,0.22),transparent_70%)]">
+      </div>
+      <div
+        class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:48px_48px]">
+      </div>
       <div ref="particlesEl" class="absolute inset-0"></div>
 
       <!-- Seam TOP / BOTTOM -->
-      <div class="absolute -top-12 left-0 right-0 h-12 bg-gradient-to-b from-transparent via-[#0b0b0c]/70 to-[#0b0b0c]"></div>
-      <div class="absolute -bottom-12 left-0 right-0 h-12 bg-gradient-to-b from-transparent via-[#0b0b0c]/70 to-[#050505]"></div>
+      <div class="absolute -top-12 left-0 right-0 h-12 bg-gradient-to-b from-transparent via-[#0b0b0c]/70 to-[#0b0b0c]">
+      </div>
+      <div
+        class="absolute -bottom-12 left-0 right-0 h-12 bg-gradient-to-b from-transparent via-[#0b0b0c]/70 to-[#050505]">
+      </div>
     </div>
 
     <div class="container mx-auto px-4">
@@ -20,55 +27,44 @@
       <!-- Bande défilante -->
       <div class="relative w-full overflow-hidden">
         <!-- Fades aux bords -->
-        <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-[#0b0b0c] to-transparent z-10"></div>
-        <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-l from-[#0b0b0c] to-transparent z-10"></div>
-
         <div
-          ref="marquee"
-          class="flex gap-6 sm:gap-8 whitespace-nowrap will-change-transform"
-          aria-label="Résultats défilants des joueurs"
-          @mouseenter="pause"
-          @mouseleave="play"
-          @click="openModal(hoverIndex)"
-        >
+          class="pointer-events-none absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-[#0b0b0c] to-transparent z-10">
+        </div>
+        <div
+          class="pointer-events-none absolute right-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-l from-[#0b0b0c] to-transparent z-10">
+        </div>
+
+        <div ref="marquee" class="flex gap-6 sm:gap-8 whitespace-nowrap will-change-transform"
+          aria-label="Résultats défilants des joueurs" @mouseenter="pause" @mouseleave="play"
+          @click="openModal(hoverIndex)">
           <!-- Duplication pour effet infini -->
           <div v-for="n in 2" :key="n" class="flex gap-6 sm:gap-8">
-            <article
-              v-for="(r, index) in results"
-              :key="index + '-' + n"
+            <article v-for="(r, index) in results" :key="index + '-' + n"
               class="group result-card bg-white/10 border border-white/10 rounded-2xl p-3 sm:p-4 md:p-5
                      min-w-[82vw] sm:min-w-[420px] md:min-w-[540px]
-                     hover:shadow-2xl hover:shadow-yellow-500/10 transition-transform duration-300 cursor-pointer flex flex-col"
-              @mouseenter="hoverIndex = index"
-              @touchstart.passive="hoverIndex = index"
-              @click.stop="openModal(index)"
-            >
+                     hover:shadow-2xl hover:shadow-yellow-500/10 transition-transform duration-300 cursor-pointer flex flex-col" @mouseenter="hoverIndex = index"
+              @touchstart.passive="hoverIndex = index" @click.stop="openModal(index)">
               <!-- Capture (TOP) -->
               <div class="relative w-full h-56 sm:h-64 md:h-72 rounded-xl overflow-hidden border border-white/15">
-                <img
-                  :src="r.screenshot"
-                  :alt="`Capture du pari de ${r.name}`"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img :src="r.screenshot" :alt="`Capture du pari de ${r.name}`"
+                  class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <!-- léger voile doré en hover -->
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-yellow-500/0 via-yellow-400/0 to-yellow-400/10 opacity-0 group-hover:opacity-100 transition"></div>
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-yellow-500/0 via-yellow-400/0 to-yellow-400/10 opacity-0 group-hover:opacity-100 transition">
+                </div>
               </div>
 
               <!-- Infos (BOTTOM) -->
               <div class="mt-4 flex items-center gap-3">
-                <img
-                  :src="r.avatar"
-                  :alt="`Avatar de ${r.name}`"
+                <img :src="r.avatar" :alt="`Avatar de ${r.name}`"
                   class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-yellow-400 object-cover flex-shrink-0"
-                  loading="lazy"
-                />
+                  loading="lazy" />
                 <div class="flex-1">
                   <p class="font-semibold text-base sm:text-lg leading-tight">{{ r.name }}</p>
                   <p class="text-xs sm:text-sm text-gray-300">
                     {{ t('resultsSection.card.labels.stake') }} :
                     <span class="text-yellow-400 font-bold">{{ r.bet }}$</span>
-                    &nbsp;→&nbsp; {{ t('resultsSection.card.labels.stake') }} :
+                    &nbsp;→&nbsp; {{ t('resultsSection.card.labels.gain') }} :
                     <span class="text-green-400 font-bold">{{ r.win }}$</span>
                   </p>
                 </div>
@@ -84,66 +80,54 @@
 
       <!-- Légende -->
       <p class="mt-6 text-center text-xs text-gray-400">
-        {{  t('resultsSection.legend') }}
+        {{ t('resultsSection.legend') }}
       </p>
     </div>
 
     <!-- MODAL plein écran -->
-    <div
-      v-if="activeIndex !== null"
+    <div v-if="activeIndex !== null"
       class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4"
-      @click.self="closeModal"
-    >
-      <div ref="modalEl" class="bg-[#0d0d0e] text-white rounded-2xl shadow-2xl max-w-3xl w-full relative overflow-hidden border border-white/10">
+      @click.self="closeModal">
+      <div ref="modalEl"
+        class="bg-[#0d0d0e] text-white rounded-2xl shadow-2xl max-w-3xl w-full relative overflow-hidden border border-white/10">
         <!-- close -->
-        <button
-          @click="closeModal"
-          class="absolute top-2 right-2 p-2 text-gray-300 hover:text-white z-10"
-          aria-label="Fermer"
-        >✕</button>
+        <button @click="closeModal" class="absolute top-2 right-2 p-2 text-gray-300 hover:text-white z-10"
+          aria-label="Fermer">✕</button>
 
         <!-- image -->
         <div class="relative">
           <div class="overflow-hidden h-[55vh] sm:h-[65vh] flex items-center justify-center">
-            <img
-              :src="results[activeIndex].screenshot"
-              class="w-full h-full object-contain"
-              :alt="`Capture du pari de ${results[activeIndex].name}`"
-            />
+            <img :src="results[activeIndex].screenshot" class="w-full h-full object-contain"
+              :alt="`Capture du pari de ${results[activeIndex].name}`" />
           </div>
 
           <!-- nav -->
-          <button
-            @click="prev"
+          <button @click="prev"
             class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full"
-            aria-label="Précédent"
-          >‹</button>
-          <button
-            @click="next"
+            aria-label="Précédent">‹</button>
+          <button @click="next"
             class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full"
-            aria-label="Suivant"
-          >›</button>
+            aria-label="Suivant">›</button>
 
           <!-- swipe hint mobile -->
           <div class="absolute bottom-2 inset-x-0 flex justify-center sm:hidden">
             <span class="text-[11px] px-2 py-0.5 rounded-full bg-black/35 text-white">
-             {{ t('resultsSection.modal.swipeHint') }}
+              {{ t('resultsSection.modal.swipeHint') }}
             </span>
           </div>
         </div>
 
         <!-- infos -->
         <div class="p-4 sm:p-6 flex items-center gap-3">
-          <img
-            :src="results[activeIndex].avatar"
-            :alt="`Avatar de ${results[activeIndex].name}`"
-            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-yellow-400 object-cover"
-          />
+          <img :src="results[activeIndex].avatar" :alt="`Avatar de ${results[activeIndex].name}`"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-yellow-400 object-cover" />
           <div class="flex-1">
             <p class="font-semibold">{{ results[activeIndex].name }}</p>
             <p class="text-sm text-gray-300">
-              {{ t('resultsSection.modal.infoLine') }} <span class="text-yellow-400 font-bold">{{ results[activeIndex].bet }}$</span>
-              • {{ t('resultsSection.modal.infoLine1') }} <span class="text-green-400 font-bold">{{ results[activeIndex].win }}$</span>
+              {{ t('resultsSection.modal.infoLine') }} <span class="text-yellow-400 font-bold">{{
+                results[activeIndex].bet }}$</span>
+              • {{ t('resultsSection.modal.infoLine1') }} <span class="text-green-400 font-bold">{{
+                results[activeIndex].win }}$</span>
               • +{{ Math.round((results[activeIndex].win / results[activeIndex].bet - 1) * 100) }}%
             </p>
           </div>
