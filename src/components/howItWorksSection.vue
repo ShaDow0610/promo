@@ -55,7 +55,7 @@
     <!-- MODAL — dark theme + subtle vivid accents (GIF-ready) -->
     <div v-if="activeStep !== null && steps?.[activeStep]" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4
          bg-black/70 backdrop-blur-sm" @click.self="closeModal">
-      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-sm h-145 sm:w-3xl sm:max-w-3xl md:max-w-3xl rounded-t-2xl sm:rounded-2xl overflow-hidden
+      <div ref="modalEl" role="dialog" :aria-label="steps?.[activeStep]?.title || 'Details'" class="w-sm lg:h-145 md:h-145 sm:w-3xl sm:max-w-3xl md:max-w-3xl rounded-t-2xl sm:rounded-2xl overflow-hidden
            bg-[#0d0d0e] text-white shadow-[0_20px_60px_rgba(0,0,0,.45)]
            ring-1 ring-white/10 sm:mx-0 mx-0">
         <!-- Close -->

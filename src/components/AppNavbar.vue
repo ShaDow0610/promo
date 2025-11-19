@@ -15,10 +15,10 @@
 
                     <!-- Desktop links -->
                     <div class="hidden md:flex items-center gap-1.5">
+                        <RouterLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
+                            Acceuille</RouterLink>
                         <RouterLink to="/hacks" class="nav-link"
                             active-class="!text-white !bg-white/10 !border-white/10">Nos hacks</RouterLink>
-                        <RouterLink to="/gains" class="nav-link"
-                            active-class="!text-white !bg-white/10 !border-white/10">Plus grands gains</RouterLink>
                         <RouterLink to="/about" class="nav-link"
                             active-class="!text-white !bg-white/10 !border-white/10">À propos</RouterLink>
                         <RouterLink to="/contact" class="nav-link"

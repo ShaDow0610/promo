@@ -31,9 +31,9 @@
               <p class="text-sm sm:text-base text-gray-300">
                 {{ t('predictionsSection.footballCard.description1') }}<span class="text-yellow-300 font-semibold">{{
                   t('predictionsSection.footballCard.description2') }}</span>{{
-  t('predictionsSection.footballCard.description3') }}
+                t('predictionsSection.footballCard.description3') }}
                 <span class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description5')
-                }}</span> {{ t('predictionsSection.footballCard.description5') }}<span
+                  }}</span> {{ t('predictionsSection.footballCard.description5') }}<span
                   class="text-yellow-300 font-semibold">{{ t('predictionsSection.footballCard.description6') }}</span>.
               </p>
             </div>
@@ -70,10 +70,10 @@
               <p class="text-lg sm:text-base text-gray-300">
                 {{ t('predictionsSection.demoCard.description') }} <span class="text-yellow-300 font-semibold">{{
                   t('predictionsSection.demoCard.description1') }}</span> {{
-                    t('predictionsSection.demoCard.description2') }}
+                t('predictionsSection.demoCard.description2') }}
                 {{ t('predictionsSection.demoCard.description3') }}<span class="text-yellow-300 font-semibold">{{
                   t('predictionsSection.demoCard.description4') }}</span> {{
-                    t('predictionsSection.demoCard.description5') }}
+                t('predictionsSection.demoCard.description5') }}
               </p>
             </div>
           </header>
@@ -94,7 +94,7 @@
     <div v-if="show" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4"
       @click.self="closeModal">
       <div ref="modalRef"
-        class="bg-[#0d0d0e] h-145 text-white rounded-2xl shadow-2xl max-w-[920px] w-sm border border-white/10 overflow-hidden">
+        class="bg-[#0d0d0e] lg:h-145 md:h-145 text-white rounded-2xl shadow-2xl max-w-[920px] w-sm border border-white/10 overflow-hidden">
         <!-- Header -->
         <div class="flex items-center justify-between px-4 sm:px-5 py-1 bg-white/5 border-b border-white/10">
           <div class="flex items-center gap-3">
@@ -123,7 +123,8 @@
               @click="openIdPrompt" :disabled="running">
               {{ t('predictionsSection.modal.controls.start') }}
             </button>
-            <button class="rounded-full text-xs px-4 py-2 text-lg bg-emerald-500 text-black font-semibold disabled:opacity-50"
+            <button
+              class="rounded-full text-xs px-4 py-2 text-lg bg-emerald-500 text-black font-semibold disabled:opacity-50"
               @click="revealApple" :disabled="!running || revealedCount >= maxReveals || locked">
               {{ t('predictionsSection.modal.controls.reveal') }}
             </button>
@@ -224,7 +225,7 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 // ===== Config =====
-const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // <-- remplace
+const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // lien corriger
 const rows = 6
 const cols = 5
 const maxReveals = 3
