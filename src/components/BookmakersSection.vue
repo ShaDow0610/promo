@@ -211,9 +211,9 @@ onBeforeUnmount(() => {
 
           <!-- Actions + Code (3 colonnes sur sm+, stack sur mobile) -->
           <div class="mt-4">
-            <div class="flex flex-col sm:grid sm:grid-cols-3 sm:items-center gap-2 sm:gap-3">
+            <div class="flex flex-col sm:grid sm:grid-cols-1 sm:items-center gap-2 sm:gap-3">
               <!-- Inscription rapide -->
-              <a class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+              <a class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
                        bg-emerald-500/15 text-emerald-300 border border-emerald-400/30 hover:bg-emerald-500/25 transition"
                 :href="b.quickUrl" target="_blank" rel="noopener" aria-label="Inscription rapide">
                 <i class="fa-solid fa-bolt mr-1.5"></i>
@@ -221,7 +221,7 @@ onBeforeUnmount(() => {
               </a>
 
               <!-- Code promo (au centre) -->
-              <boutton @click="copyPromo('GLE44')" @touchend.prevent="copyPromo('GLE44')" class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+              <boutton @click="copyPromo('GLE44')" @touchend.prevent="copyPromo('GLE44')" class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
                        bg-yellow-500/10 text-yellow-300 border border-yellow-400/30" aria-label="Code promo">
                 <i class="fa-solid fa-ticket mr-1.5"></i>
                 {{ t('bookmakersSection.cards.codeLabel') }} : {{ b.code }}
@@ -233,7 +233,7 @@ onBeforeUnmount(() => {
                 </span>
               </boutton>
               <!-- Inscription complète -->
-              <a class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[13px] font-semibold
+              <a class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
                        bg-sky-500/15 text-sky-300 border border-sky-400/30 hover:bg-sky-500/25 transition"
                 :href="b.fullUrl" target="_blank" rel="noopener" aria-label="Inscription complète">
                 <i class="fa-solid fa-list-check mr-1.5"></i>
