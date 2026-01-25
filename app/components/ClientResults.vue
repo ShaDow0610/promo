@@ -140,14 +140,15 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
 import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useI18n } from "vue-i18n"
 
+const { t } = useI18n()
+let tween = null, resizeObserver = null, visHandler = null, st = null
+let touchStartX = 0, touchStartY = 0
 
-const {t} =useI18n()
 gsap.registerPlugin(ScrollTrigger)
 
-/** Démo — remplace par tes vraies images */
 const results = [
   { name: "Kevin", bet: 20, win: 150, avatar: "/apple-fortune.jpg", screenshot: "/proof1.jpg" },
   { name: "Sonia", bet: 50, win: 320, avatar: "/apple-fortune.jpg", screenshot: "/proof2.jpg" },
@@ -159,30 +160,25 @@ const results = [
 const marquee = ref(null)
 const sectionRef = ref(null)
 const particlesEl = ref(null)
-let tween = null
-let resizeObserver = null
-let visHandler = null
-let st = null
 const hoverIndex = ref(null)
-
-// Modal
 const activeIndex = ref(null)
 const modalEl = ref(null)
-let touchStartX = 0, touchStartY = 0
 
+// ====== Modal ======
 const openModal = (i) => {
   if (i == null) return
   activeIndex.value = i
-  // anim
+  if (typeof window === 'undefined') return
   requestAnimationFrame(() => {
     if (modalEl.value) {
-      gsap.fromTo(
-        modalEl.value, { opacity: 0, y: 22, scale: 0.96 },
+      gsap.fromTo(modalEl.value,
+        { opacity: 0, y: 22, scale: 0.96 },
         { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "power2.out" }
       )
     }
   })
 }
+
 const closeModal = () => {
   if (!modalEl.value) { activeIndex.value = null; return }
   gsap.to(modalEl.value, {
@@ -190,12 +186,14 @@ const closeModal = () => {
     onComplete: () => (activeIndex.value = null),
   })
 }
+
 const next = () => { activeIndex.value = (activeIndex.value + 1) % results.length }
 const prev = () => { activeIndex.value = (activeIndex.value - 1 + results.length) % results.length }
 
+// ====== Marquee ======
 function buildMarquee(pxPerSec = 70) {
   if (!marquee.value) return
-  const distance = marquee.value.scrollWidth / 2 // 2 blocs clonés
+  const distance = marquee.value.scrollWidth / 2
   if (tween) tween.kill()
   const duration = distance / pxPerSec
   tween = gsap.to(marquee.value, { x: -distance, duration, ease: "linear", repeat: -1 })
@@ -204,8 +202,10 @@ const pause = () => tween?.pause()
 const play  = () => tween?.resume()
 
 onMounted(async () => {
+  if (typeof window === 'undefined') return
   await nextTick()
-  // Particules (légères)
+
+  // ===== Particles =====
   if (particlesEl.value) {
     const host = particlesEl.value
     const isMobile = window.innerWidth < 768
@@ -230,15 +230,13 @@ onMounted(async () => {
     }
   }
 
-  // Marquee
+  // ===== Marquee =====
   const pxPerSec = window.innerWidth < 768 ? 55 : 70
   buildMarquee(pxPerSec)
-
-  // Resize recalcul
   resizeObserver = new ResizeObserver(() => buildMarquee(pxPerSec))
   resizeObserver.observe(marquee.value)
 
-  // Pause si section hors écran
+  // ===== ScrollTrigger =====
   st = ScrollTrigger.create({
     trigger: "#results",
     start: "top bottom",
@@ -249,16 +247,17 @@ onMounted(async () => {
     onLeaveBack: pause,
   })
 
-  // Visibility change (onglet)
-  visHandler = () => (document.hidden ? pause() : play())
+  // ===== Visibility change =====
+  visHandler = () => document.hidden ? pause() : play()
   document.addEventListener("visibilitychange", visHandler)
 
-  // Swipe modal (mobile)
+  // ===== Swipe modal =====
   window.addEventListener("touchstart", e => {
     if (activeIndex.value === null) return
     const t = e.changedTouches?.[0]; if (!t) return
     touchStartX = t.clientX; touchStartY = t.clientY
   }, { passive: true })
+
   window.addEventListener("touchend", e => {
     if (activeIndex.value === null) return
     const t = e.changedTouches?.[0]; if (!t) return

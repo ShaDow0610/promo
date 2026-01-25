@@ -17,11 +17,11 @@
                     <div class="hidden md:flex items-center gap-1.5">
                         <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
                             Acceuille</NuxtLink>
-                        <NuxtLink to="/hacks" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
+                       <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
                             Nos hacks</NuxtLink>
-                        <NuxtLink to="/about" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
+                       <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
                             À propos</NuxtLink>
-                        <NuxtLink to="/contact" class="nav-link"
+                       <NuxtLink to="/" class="nav-link"
                             active-class="!text-white !bg-white/10 !border-white/10">Contact</NuxtLink>
                     </div>
 
@@ -38,9 +38,9 @@
                                 <option value="en">{{ t('heroSection.lang.en') }}</option>
                                 <option value="es">{{ t('heroSection.lang.es') }}</option>
                                 <option value="ru">{{ t('heroSection.lang.ru') }}</option>
-                                <option value="ae">{{ t('heroSection.lang.ar') }}</option>
+                               <option value="ar">{{ t('heroSection.lang.ar') }}</option>
                                 <option value="az">{{ t('heroSection.lang.az') }}</option>
-                                <option value="in">{{ t('heroSection.lang.hi') }}</option>
+                               <option value="hi">{{ t('heroSection.lang.hi') }}</option>
                                 <option value="so">{{ t('heroSection.lang.so') }}</option>
                                 <option value="tr">{{ t('heroSection.lang.tr') }}</option>
                                 <option value="pt">{{ t('heroSection.lang.pt') }}</option>
@@ -60,11 +60,11 @@
                     <div v-if="navOpen" class="md:hidden mt-2 grid grid-cols-2 gap-2">
                        <NuxtLink to="/" class="nav-pill" @click="navOpen = false"> Acceuille
                         </NuxtLink>
-                       <NuxtLink to="/hacks" class="nav-pill" @click="navOpen = false">Nos hacks
+                       <NuxtLink to="hacks" class="nav-pill" @click="navOpen = false">Nos hacks
                         </NuxtLink>
-                        <NuxtLink to="/about" class="nav-pill" @click="navOpen = false">À propos
+                       <NuxtLink to="about" class="nav-pill" @click="navOpen = false">À propos
                         </NuxtLink>
-                        <NuxtLink to="/contact" class="nav-pill" @click="navOpen = false">Contact
+                       <NuxtLink to="contact" class="nav-pill" @click="navOpen = false">Contact
                         </NuxtLink>
                     </div>
                 </transition>

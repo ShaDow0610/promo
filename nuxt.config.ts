@@ -1,83 +1,110 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+
   devtools: { enabled: true },
+
+  ssr: true,
+
   css: ['~/assets/css/tailwind.css'],
-  nitro:{
-    preset: 'static',
-    prerender: {
-      routes: ['/hacks', '/about', '/contact']
-    },
-    compressPublicAssets: true
-  },
+
   modules: [
-    '@nuxt/icon', 
+    '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots', 
+    '@nuxtjs/robots',
     '@nuxtjs/tailwindcss'
   ],
-  app:{
-    head:{
-      htmlAttrs:{lang: 'fr'},
+
+  /* -------------------- APP / SEO -------------------- */
+  app: {
+    head: {
+      htmlAttrs: { lang: 'fr' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+
       titleTemplate: '%s Ultimate Pronos',
-      script:[
+
+      meta: [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'theme-color', content: '#000000' }
+      ],
+
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/logo.png', sizes: '96x96' }
+      ],
+
+      script: [
         {
-          id:'Cookiebot',
-          src:'https://consent.cookiebot.com/uc.js',
+          id: 'Cookiebot',
+          src: 'https://consent.cookiebot.com/uc.js',
           async: true,
-          'data-cbid':"b433eb58-7ffb-431f-84b2-e83a7e017c20"
-        },
-      ],
-      meta:[
-        {name: "robots", content:'index, follow'},
-        {name: "theme-color", content:'#000000'}
-      ],
-      link:[
-        {rel: 'icon', type: 'img/png' , href: '/logo.png', sizes: ' 96x96'},
-        {rel: 'canonical' , href: ''}
+          'data-cbid': 'b433eb58-7ffb-431f-84b2-e83a7e017c20'
+        }
       ]
     }
   },
-  i18n:{
+
+  /* -------------------- NITRO / STATIC -------------------- */
+  nitro: {
+    preset: 'static',
+
+    prerender: {
+      routes: ['/about', '/contact', '/hacks'],
+      failOnError: false
+    },
+
+    compressPublicAssets: true
+  },
+
+  /* -------------------- I18N -------------------- */
+  i18n: {
     strategy: 'prefix',
-    defaultLocale:'fr',
-    locales:[
-       { code: 'fr', name: 'Français', file: 'fr.json' },
+    defaultLocale: 'fr',
+    lazy: true,
+    langDir: 'locales/',
+
+    locales: [
+      { code: 'fr', name: 'Français', file: 'fr.json' },
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'es', name: 'Español', file: 'es.json' },
-      { code: 'in', name: 'हिन्दी', file: 'in.json' },
-      { code: 'ae', name: 'العربية', file: 'ae.json' },
+      { code: 'hi', name: 'हिन्दी', file: 'hi.json' },
+      { code: 'ar', name: 'العربية', file: 'ar.json' },
       { code: 'az', name: 'Azərbaycan dili', file: 'az.json' },
       { code: 'pt', name: 'Português', file: 'pt.json' },
       { code: 'ru', name: 'Русский', file: 'ru.json' },
       { code: 'so', name: 'Soomaaliga', file: 'so.json' },
-      { code: 'tr', name: 'Türkçe', file: 'tr.json' },
-
+      { code: 'tr', name: 'Türkçe', file: 'tr.json' }
     ]
   },
-  sitemap:{
-    autoLastmod:true
-  },
-  experimental:{
-    payloadExtraction: true,
-    inlineRouteRules:false
-  },
-  routeRules:{
-    '/':{prerender:true},
-    '/fr/**':{prerender:true},
-    'en/**':{prerender:true}
-  },
-  sitemap:{
 
-    i18n:true,
+  /* -------------------- ROUTES -------------------- */
+  routeRules: {
+    '/': { prerender: true },
+    '/fr/**': { prerender: true },
+    '/en/**': { prerender: true }
+  },
+
+  /* -------------------- SITEMAP -------------------- */
+  sitemap: {
+    i18n: true,
+    autoLastmod: true,
     gzip: true
   },
-  robots:{
-    rules:[{ userAgent: '*' , allow: '/'}]
-  }
 
+  /* -------------------- ROBOTS -------------------- */
+  robots: {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/'
+      }
+    ]
+  },
+
+  /* -------------------- EXPERIMENTAL -------------------- */
+  experimental: {
+    payloadExtraction: true
+  }
 })

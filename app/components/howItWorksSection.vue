@@ -237,14 +237,15 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from "vue"
-import {gsap} from "gsap"
+import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useI18n } from "vue-i18n"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const { t } = useI18n()
-/* ---------- DATA (exemple) ---------- */
+
+/* ---------- DATA ---------- */
 const steps = [
   {
     title: t('instructionsSection.steps.one.title'),
@@ -265,7 +266,6 @@ const steps = [
     text2_li6: t('instructionsSection.steps.one.text2.li6'),
     text2_li7: t('instructionsSection.steps.one.text2.li7'),
     text2_li8: t('instructionsSection.steps.one.text2.li8'),
-
     subtitle3: t('instructionsSection.steps.one.subtitle3'),
     text3: t('instructionsSection.steps.one.text3'),
     text3_li1: t('instructionsSection.steps.one.ul.li1'),
@@ -275,17 +275,13 @@ const steps = [
     text3_li3: t('instructionsSection.steps.one.ul.li3'),
     text3_text3: t('instructionsSection.steps.one.ul.text3'),
     text3_nb: t('instructionsSection.steps.one.ul.NB'),
-
     subtitle4: t('instructionsSection.steps.one.details'),
     text4_subText: t('instructionsSection.steps.one.text4.subText'),
     text4_li1: t('instructionsSection.steps.one.text4.li1'),
     text4_nb: t('instructionsSection.steps.one.text4.NB'),
-
     icon: "fa-solid fa-apple-whole",
     color: "#22c55e",
-    media: [
-      { type: "video", src: "/hack.webm", alt: "Grille Apple of Fortune" },
-    ]
+    media: [{ type: "video", src: "/hack.webm", alt: "Grille Apple of Fortune" }]
   },
   {
     title: t('instructionsSection.steps.two.title'),
@@ -293,9 +289,7 @@ const steps = [
     details: t('instructionsSection.steps.two.details'),
     icon: "fa-solid fa-ticket",
     color: "#facc15",
-    media: [
-      { type: "image", src: "/inscription.mp4", alt: "Historique de gains" }      
-    ]
+    media: [{ type: "video", src: "/inscription.mp4", alt: "Historique de gains" }]
   },
   {
     title: t('instructionsSection.steps.three.title'),
@@ -303,9 +297,7 @@ const steps = [
     details: t('instructionsSection.steps.three.details'),
     icon: "fa-solid fa-futbol",
     color: "#3b82f6",
-    media: [
-      { type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" }
-    ]
+    media: [{ type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" }]
   },
   {
     title: t('instructionsSection.steps.four.title'),
@@ -313,72 +305,51 @@ const steps = [
     details: t('instructionsSection.steps.four.details'),
     icon: "fa-solid fa-trophy",
     color: "#ef4444",
-    media: [
-      { type: "video", src: "/wins.webm", alt: "Historique de gains" },
-    ]
+    media: [{ type: "video", src: "/wins.webm", alt: "Historique de gains" }]
   }
 ]
-
-
 
 /* ---------- STATE ---------- */
 const activeStep = ref(null)
 const currentSlide = ref(0)
 const modalEl = ref(null)
 const hintEl = ref(null)
-const particlesEl = ref(null)
 const prefersReduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 /* ---------- MEDIA HELPERS ---------- */
 const mediaList = computed(() => {
   if (activeStep.value === null) return []
   const s = steps[activeStep.value]
-  return Array.isArray(s.media) && s.media.length ? s.media : []
+  return Array.isArray(s.media) ? s.media : []
 })
-const currentItem = computed(() => mediaList.value[currentSlide.value])
 
-// Props pour img/video
+const currentItem = computed(() => mediaList.value[currentSlide.value] || {})
+
 const currentItemProps = computed(() => {
   const item = currentItem.value
   if (!item) return {}
-  if (item.type === 'video') {
-    return {
-      src: item.src,
-      poster: item.poster,
-      // autoplay & loop rapides
-      autoplay: true,
-      muted: true,
-      loop: true,
-      playsinline: true,
-      controls: true,
-      preload: 'auto' // charge plus vite
-    }
-  } else {
-    return {
-      src: item.src,
-      alt: item.alt || 'illustration',
-      loading: 'eager',     // affiche vite
-      decoding: 'async'     // rendu rapide
-    }
+  if (item.type === "video") {
+    return { src: item.src, autoplay: true, muted: true, loop: true, playsinline: true, controls: true, preload: "auto" }
   }
+  return { src: item.src, alt: item.alt || "illustration", loading: "eager", decoding: "async" }
 })
 
-/* ---------- PRELOAD (accélère le slide) ---------- */
+/* ---------- PRELOAD ---------- */
 function preloadItem(item) {
   if (!item) return
-  if (item.type === 'image') {
+  if (item.type === "image") {
     const img = new Image()
-    img.decoding = 'async'
-    img.loading = 'eager'
     img.src = item.src
-  } else if (item.type === 'video') {
-    const vid = document.createElement('video')
+    img.decoding = "async"
+    img.loading = "eager"
+  } else if (item.type === "video") {
+    const vid = document.createElement("video")
     vid.src = item.src
-    vid.preload = 'auto'
-    // ne pas l'ajouter au DOM, juste déclencher la mise en cache
+    vid.preload = "auto"
     vid.load()
   }
 }
+
 function preloadAround(index) {
   const list = mediaList.value
   if (!list.length) return
@@ -389,58 +360,47 @@ function preloadAround(index) {
   preloadItem(list[prev])
 }
 
-/* ---------- LECTURE AUTO VIDÉO ---------- */
+/* ---------- VIDEO HANDLING ---------- */
 async function autoPlayIfVideo() {
   await nextTick()
-  const el = modalEl.value?.querySelector('video')
+  const el = modalEl.value?.querySelector("video")
   if (!el) return
   try {
     el.muted = true
     el.loop = true
     el.playsInline = true
-    // relance propre
     el.currentTime = 0
     await el.play()
-  } catch (e) {
-    // certains navigateurs bloquent — l’utilisateur peut cliquer play
-  }
+  } catch { }
 }
 
-// pause les autres vidéos si une joue
 function pauseOthers(e) {
   const me = e.target
-  const vids = modalEl.value?.querySelectorAll('video') || []
+  const vids = modalEl.value?.querySelectorAll("video") || []
   vids.forEach(v => { if (v !== me) v.pause() })
 }
+
 function pauseAllVideos() {
-  const vids = modalEl.value?.querySelectorAll('video') || []
+  const vids = modalEl.value?.querySelectorAll("video") || []
   vids.forEach(v => v.pause())
 }
 
-/* ---------- MODAL ---------- */
-const openModal = (index) => {
+/* ---------- MODAL CONTROL ---------- */
+function openModal(index) {
   activeStep.value = index
   currentSlide.value = 0
-  // précharge le flux
   preloadAround(0)
-
   requestAnimationFrame(() => {
-    if (modalEl.value) {
-      gsap.fromTo(
-        modalEl.value,
-        { opacity: 0, y: 24, scale: 0.96 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }
-      )
+    if (modalEl.value && !prefersReduced) {
+      gsap.fromTo(modalEl.value, { opacity: 0, y: 24, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" })
     }
   })
 }
-const closeModal = () => {
+
+function closeModal() {
   pauseAllVideos()
   if (!modalEl.value) { activeStep.value = null; return }
-  gsap.to(modalEl.value, {
-    opacity: 0, y: 16, scale: 0.98, duration: 0.16, ease: "power1.inOut",
-    onComplete: () => (activeStep.value = null),
-  })
+  gsap.to(modalEl.value, { opacity: 0, y: 16, scale: 0.98, duration: 0.16, ease: "power1.inOut", onComplete: () => activeStep.value = null })
 }
 
 function nextSlide() {
@@ -450,6 +410,7 @@ function nextSlide() {
   currentSlide.value = next
   preloadAround(next)
 }
+
 function prevSlide() {
   if (activeStep.value === null || !mediaList.value.length) return
   pauseAllVideos()
@@ -459,54 +420,38 @@ function prevSlide() {
   preloadAround(prev)
 }
 
-/* ---------- SWIPE MOBILE ---------- */
+/* ---------- MOBILE SWIPE ---------- */
 let startX = 0, startY = 0
-const onTouchStart = (e) => {
-  const t = e.changedTouches?.[0]; if (!t) return
-  startX = t.clientX; startY = t.clientY
-}
-const onTouchEnd = (e) => {
+function onTouchStart(e) { const t = e.changedTouches?.[0]; if (!t) return; startX = t.clientX; startY = t.clientY }
+function onTouchEnd(e) { 
   const t = e.changedTouches?.[0]; if (!t) return
   const dx = t.clientX - startX, dy = t.clientY - startY
   if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? nextSlide() : prevSlide()
 }
 
-/* ---------- EFFETS ---------- */
-watch([activeStep, currentSlide], async () => {
-  // à chaque changement de slide/step : autoplay si vidéo
-  await autoPlayIfVideo()
-})
+/* ---------- WATCHERS ---------- */
+watch([activeStep, currentSlide], async () => { await autoPlayIfVideo() })
 
+/* ---------- GSAP ANIMATIONS ---------- */
 onMounted(() => {
-  // Particules / animations (inchangées)
-  if (!prefersReduced && hintEl.value) {
-    gsap.to(hintEl.value, {
-      scrollTrigger: { trigger: "#instructions", start: "top 80%" },
-      opacity: 1, y: 0, duration: 7.6, ease: "power2.out",
-      onComplete: () => gsap.to(hintEl.value, { opacity: 1, duration: 7.6, delay: 2 })
-    })
+  if (prefersReduced) return
+
+  if (hintEl.value) {
+    gsap.to(hintEl.value, { scrollTrigger: { trigger: "#instructions", start: "top 80%" }, opacity: 1, y: 0, duration: 7.6, ease: "power2.out" })
   }
 
   gsap.utils.toArray(".step").forEach((step, i) => {
-    gsap.from(step, {
-      scrollTrigger: { trigger: step, start: "top 82%", toggleActions: "play none none reverse" },
-      opacity: 1, y: 44, filter: "blur(8px)", scale: 0.98,
-      duration: 0.6, delay: i * 0.08, ease: "power3.out",
-      onComplete: () => gsap.to(step, { filter: "blur(0px)", duration: 0.15 })
-    })
+    gsap.from(step, { scrollTrigger: { trigger: step, start: "top 82%", toggleActions: "play none none reverse" }, opacity: 1, y: 44, filter: "blur(8px)", scale: 0.98, duration: 0.6, delay: i * 0.08, ease: "power3.out", onComplete: () => gsap.to(step, { filter: "blur(0px)", duration: 0.15 }) })
   })
 
-  gsap.fromTo(".timeline-bar", { scaleX: 0 }, {
-    scrollTrigger: { trigger: ".timeline", start: "top 80%", end: "bottom 70%", scrub: true },
-    scaleX: 1, ease: "none"
-  })
+  gsap.fromTo(".timeline-bar", { scaleX: 0 }, { scrollTrigger: { trigger: ".timeline", start: "top 80%", end: "bottom 70%", scrub: true }, scaleX: 1, ease: "none" })
 
   window.addEventListener("touchstart", onTouchStart, { passive: true })
   window.addEventListener("touchend", onTouchEnd, { passive: true })
 })
 
 onBeforeUnmount(() => {
-  ScrollTrigger.getAll().forEach((st) => st.kill())
+  ScrollTrigger.getAll().forEach(st => st.kill())
   window.removeEventListener("touchstart", onTouchStart)
   window.removeEventListener("touchend", onTouchEnd)
 })

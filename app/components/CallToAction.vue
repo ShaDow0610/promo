@@ -217,7 +217,6 @@
     <!-- /MODAL ID -->
   </section>
 </template>
-
 <script setup>
 import { ref, computed, onBeforeUnmount, nextTick } from 'vue'
 import { gsap } from 'gsap'
@@ -226,21 +225,21 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 // ===== Config =====
-const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk' // lien corriger
+const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk'
 const rows = 6
 const cols = 5
 const maxReveals = 3
-const demoDurationSec = 10 * 60 // 10:00
+const demoDurationSec = 10 * 60 // 10 minutes
 
 // ===== State =====
 const show = ref(false)
 const running = ref(false)
 const locked = ref(false)
-const revealed = ref([]) // [{r,c}]
+const revealed = ref([])
 const revealedCount = computed(() => revealed.value.length)
 const modalRef = ref(null)
 
-// === Nouvel état pour la vérification d'ID ===
+// === Vérification d'ID ===
 const askId = ref(false)
 const idModalRef = ref(null)
 const userId = ref('')
@@ -249,27 +248,25 @@ const idError = ref('')
 // cells
 const cells = computed(() => {
   const list = []
-  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) list.push({ r, c, key: `${r} - ${c} ` })
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      list.push({ r, c, key: `${r}-${c}` })
+    }
+  }
   return list
 })
 const isRevealed = (r, c) => revealed.value.some(x => x.r === r && x.c === c)
 
-// ===== CIBLE PAR LIGNE : colonne aléatoire pour chaque ligne =====
+// ===== Target par ligne =====
 const rowCursor = ref(rows - 1)
 const rowTargetCol = ref(Array(rows).fill(null))
 
-function randomCol() {
-  return Math.floor(Math.random() * cols)
-}
+function randomCol() { return Math.floor(Math.random() * cols) }
 function colForRow(r) {
-  if (rowTargetCol.value[r] == null) {
-    rowTargetCol.value[r] = randomCol()
-  }
+  if (rowTargetCol.value[r] === null) rowTargetCol.value[r] = randomCol()
   return rowTargetCol.value[r]
 }
-function advanceRowPointer() {
-  rowCursor.value--
-}
+function advanceRowPointer() { rowCursor.value-- }
 
 // Timer
 const timeLeft = ref(demoDurationSec)
@@ -285,16 +282,17 @@ const timeDanger = computed(() => timeLeft.value <= 30)
 function openModal() {
   resetDemo()
   show.value = true
+  if (typeof window === 'undefined') return
   nextTick(() => {
     if (modalRef.value) {
-      gsap.fromTo(
-        modalRef.value,
+      gsap.fromTo(modalRef.value,
         { opacity: 0, y: 24, scale: 0.96 },
         { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: 'power2.out' }
       )
     }
   })
 }
+
 function closeModal() {
   if (!modalRef.value) { show.value = false; stopTimer(); return }
   gsap.to(modalRef.value, {
@@ -302,6 +300,7 @@ function closeModal() {
     onComplete: () => { show.value = false; stopTimer() }
   })
 }
+
 function resetDemo() {
   revealed.value = []
   timeLeft.value = demoDurationSec
@@ -312,21 +311,22 @@ function resetDemo() {
   stopTimer()
 }
 
-// === CHANGÉ: on ne démarre plus directement, on ouvre d'abord la modale d'ID
+// === ID Prompt ===
 function openIdPrompt() {
   idError.value = ''
   userId.value = ''
   askId.value = true
+  if (typeof window === 'undefined') return
   nextTick(() => {
     if (idModalRef.value) {
-      gsap.fromTo(
-        idModalRef.value,
+      gsap.fromTo(idModalRef.value,
         { y: 14, opacity: 0, scale: 0.98 },
         { y: 0, opacity: 1, scale: 1, duration: 0.22, ease: 'power2.out' }
       )
     }
   })
 }
+
 function submitId() {
   if (!userId.value || userId.value.length < 4) {
     idError.value = 'Veuillez renseigner un identifiant valide (4 caractères minimum).'
@@ -336,15 +336,17 @@ function submitId() {
   startDemo()
 }
 
+// ===== Demo =====
 function startDemo() {
   if (running.value) return
   running.value = true
   stopTimer()
-  timer = setInterval(() => {
+  timer = window.setInterval(() => {
     timeLeft.value--
     if (timeLeft.value <= 0) { timeLeft.value = 0; endDemo() }
   }, 1000)
 }
+
 function stopTimer() { if (timer) { clearInterval(timer); timer = null } }
 
 function revealApple() {
@@ -357,15 +359,16 @@ function revealApple() {
 
   const r = rowCursor.value
   const c = colForRow(r)
-
   revealed.value = [...revealed.value, { r, c }]
 
-  const el = modalRef.value?.querySelector(`[data - cell="${r}-${c}"]`)
-  if (el) {
-    const cover = el.querySelector('.cover')
-    const apple = el.querySelector('.apple')
-    gsap.fromTo(cover, { scale: 1, opacity: 1, rotate: 0 }, { scale: 0, opacity: 0, rotate: 28, duration: 0.35, ease: 'back.in(1.8)' })
-    gsap.fromTo(apple, { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(2)', delay: 0.05 })
+  if (typeof window !== 'undefined' && modalRef.value) {
+    const el = modalRef.value.querySelector(`[data-cell="${r}-${c}"]`)
+    if (el) {
+      const cover = el.querySelector('.cover')
+      const apple = el.querySelector('.apple')
+      if (cover) gsap.fromTo(cover, { scale: 1, opacity: 1, rotate: 0 }, { scale: 0, opacity: 0, rotate: 28, duration: 0.35, ease: 'back.in(1.8)' })
+      if (apple) gsap.fromTo(apple, { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(2)', delay: 0.05 })
+    }
   }
 
   advanceRowPointer()
