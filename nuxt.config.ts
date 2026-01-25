@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   nitro:{
     preset: 'static',
+    prerender: {
+      routes: ['/hacks', '/about', '/contact']
+    },
     compressPublicAssets: true
   },
   modules: [

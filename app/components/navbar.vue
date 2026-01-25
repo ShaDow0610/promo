@@ -58,10 +58,9 @@
                 <!-- Mobile menu -->
                 <transition name="fadeFast">
                     <div v-if="navOpen" class="md:hidden mt-2 grid grid-cols-2 gap-2">
-                        <NuxtLink to="/hacks" class="nav-pill" @click="navOpen = false">Nos hacks
+                       <NuxtLink to="/" class="nav-pill" @click="navOpen = false"> Acceuille
                         </NuxtLink>
-                        <NuxtLink to="/predictions" class="nav-pill" @click="navOpen = false">Plus grands
-                            gains
+                       <NuxtLink to="/hacks" class="nav-pill" @click="navOpen = false">Nos hacks
                         </NuxtLink>
                         <NuxtLink to="/about" class="nav-pill" @click="navOpen = false">À propos
                         </NuxtLink>

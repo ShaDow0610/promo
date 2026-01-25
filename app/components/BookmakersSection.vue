@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 import { useI18n } from 'vue-i18n'
 
@@ -221,7 +221,7 @@ onBeforeUnmount(() => {
               </a>
 
               <!-- Code promo (au centre) -->
-              <boutton @click="copyPromo('GLE44')" @touchend.prevent="copyPromo('GLE44')" class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
+             <button @click="copyPromo('GLE44')" @touchend.prevent="copyPromo('GLE44')" class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
                        bg-yellow-500/10 text-yellow-300 border border-yellow-400/30" aria-label="Code promo">
                 <i class="fa-solid fa-ticket mr-1.5"></i>
                 {{ t('bookmakersSection.cards.codeLabel') }} : {{ b.code }}
@@ -231,7 +231,7 @@ onBeforeUnmount(() => {
                     bg-black/80 text-white shadow" aria-live="polite">
                   Copié ✓
                 </span>
-              </boutton>
+             </button>
               <!-- Inscription complète -->
               <a class="inline-flex items-center justify-center rounded-full px-3 py-1.5 text-xs sm:text-[9px] font-semibold
                        bg-sky-500/15 text-sky-300 border border-sky-400/30 hover:bg-sky-500/25 transition"

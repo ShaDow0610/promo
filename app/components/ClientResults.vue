@@ -139,8 +139,8 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "vue-i18n"
 
 

@@ -62,12 +62,12 @@
       <!-- Boutons -->
       <div class="mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
         <!-- CTA principal -->
-        <router-link to="/hacks" :ref="(el) => setBtnRef(el, 0)" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-bold
+        <NuxtLink to="/hacks" :ref="(el) => setBtnRef(el, 0)" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-bold
                  bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A]
                  text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                  ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition">
           <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i>{{ t('heroSection.buttons.ctaPrimary') }}
-        </router-link>
+        </NuxtLink>
 
         <!-- Boutons secondaires -->
         <button :ref="(el) => setBtnRef(el, 1)" @click="scrollTo('instructions')" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-semibold
@@ -260,7 +260,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick, onBeforeUnmount } from "vue"
-import gsap from "gsap"
+import { gsap } from "gsap"
 import { useI18n } from "vue-i18n"
 import VanillaTilt from "vanilla-tilt"
 import { setLocaleAsync } from "../i18n"

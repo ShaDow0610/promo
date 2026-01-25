@@ -1,10 +1,11 @@
 <script setup>
 import { defineAsyncComponent } from 'vue';
-import HeroSection from '../components/HeroSection.vue';
-import BookmakersSection from '../components/BookmakersSection.vue';
-import howItWorksSection from '../components/howItWorksSection.vue';
-import ClientResults from '../components/ClientResults.vue';
-import CallToAction from '../components/CallToAction.vue';
+const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
+const BookmakersSection = defineAsyncComponent(() => import('@/components/BookmakersSection.vue'))
+const howItWorksSection = defineAsyncComponent(() => import('@/components/howItWorksSection.vue'))
+const ClientResults = defineAsyncComponent(() => import('@/components/ClientResults.vue'))
+const CallToAction = defineAsyncComponent(() => import('@/components/CallToAction.vue'))
+
 </script>
 <template>
     <div>
