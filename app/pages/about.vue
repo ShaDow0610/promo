@@ -223,7 +223,8 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick, getCurrentInstance } from 'vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
+
 
 const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk'
 

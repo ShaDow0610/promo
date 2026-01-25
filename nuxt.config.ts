@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       htmlAttrs:{lang: 'fr'},
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      titleTemplate: '%s . Ultimate Pronos',
+      titleTemplate: '%s Ultimate Pronos',
       script:[
         {
           id:'Cookiebot',
