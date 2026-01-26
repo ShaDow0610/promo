@@ -62,7 +62,7 @@
       <!-- Boutons -->
       <div class="mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
         <!-- CTA principal -->
-        <NuxtLink to="/" :ref="(el) => setBtnRef(el, 0)" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-bold
+        <NuxtLink :to="localePath('/hacks')" :ref="(el) => setBtnRef(el, 0)" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-bold
                  bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A]
                  text-black shadow-[0_8px_24px_rgba(255,210,90,0.25)]
                  ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition">
@@ -260,10 +260,11 @@
 
 <script setup>
 import { ref, onMounted, nextTick, onBeforeUnmount } from "vue"
-import { gsap } from "gsap"
+const { $gsap } = useNuxtApp()
 import { useI18n } from "vue-i18n"
 import VanillaTilt from "vanilla-tilt"
 import { setLocaleAsync } from "../i18n"
+const localePath = useLocalePath()
 
 const titleRef = ref(null)
 const subtitleRef = ref(null)
@@ -322,7 +323,7 @@ function openSignupModal() {
   showSignup.value = true
   nextTick(() => {
     if (!prefersReduced && signupModalEl.value) {
-      gsap.fromTo(signupModalEl.value, 
+      $gsap.fromTo(signupModalEl.value, 
         { y: 20, opacity: 0, scale: 0.98 },
         { y: 0, opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }
       )
@@ -333,24 +334,24 @@ function openSignupModal() {
 
 function closeSignupModal() {
   if (!signupModalEl.value || prefersReduced) { showSignup.value = false; return }
-  gsap.to(signupModalEl.value, {
+  $gsap.to(signupModalEl.value, {
     y: 12, opacity: 0, scale: 0.985, duration: 0.18, ease: "power1.inOut",
     onComplete: () => (showSignup.value = false)
   })
 }
 
-// ===== Animations GSAP et Tilt =====
+// ===== Animations $GSAP et Tilt =====
 onMounted(async () => {
   await nextTick()
-  if (prefersReduced) return
+  if (prefersReduced || !$gsap) return
 
-  if (langRef.value) gsap.from(langRef.value, { y: -24, opacity: 0, duration: 0.9, ease: "power3.out" })
-  if (titleRef.value) gsap.from(titleRef.value, { scale: 0.92, opacity: 0, duration: 1.1, ease: "power3.out" })
-  if (subtitleRef.value) gsap.from(subtitleRef.value, { y: 12, opacity: 0, delay: 0.15, duration: 0.7, ease: "power2.out" })
+  if (langRef.value) $gsap.from(langRef.value, { y: -24, opacity: 0, duration: 0.9, ease: "power3.out" })
+  if (titleRef.value) $gsap.from(titleRef.value, { scale: 0.92, opacity: 0, duration: 1.1, ease: "power3.out" })
+  if (subtitleRef.value) $gsap.from(subtitleRef.value, { y: 12, opacity: 0, delay: 0.15, duration: 0.7, ease: "power2.out" })
 
   const targets = btnRefs.value.filter(Boolean)
   if (targets.length) {
-    gsap.from(targets, {
+    $gsap.from(targets, {
       y: 18, opacity: 1, delay: 0.25, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12
     })
 

@@ -17,11 +17,13 @@
                     <div class="hidden md:flex items-center gap-1.5">
                         <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
                             Acceuille</NuxtLink>
-                       <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
+                       <NuxtLink :to="localePath('/hacks')" no-prefetch class="nav-link"
+                            active-class="!text-white !bg-white/10 !border-white/10">
                             Nos hacks</NuxtLink>
-                       <NuxtLink to="/" class="nav-link" active-class="!text-white !bg-white/10 !border-white/10">
+                       <NuxtLink :to="localePath('/about')" class="nav-link"
+                            active-class="!text-white !bg-white/10 !border-white/10">
                             À propos</NuxtLink>
-                       <NuxtLink to="/" class="nav-link"
+                       <NuxtLink :to="localePath('/contact')" class="nav-link"
                             active-class="!text-white !bg-white/10 !border-white/10">Contact</NuxtLink>
                     </div>
 
@@ -60,11 +62,11 @@
                     <div v-if="navOpen" class="md:hidden mt-2 grid grid-cols-2 gap-2">
                        <NuxtLink to="/" class="nav-pill" @click="navOpen = false"> Acceuille
                         </NuxtLink>
-                       <NuxtLink to="hacks" class="nav-pill" @click="navOpen = false">Nos hacks
+                       <NuxtLink :to="localePath('/hacks')" class="nav-pill" @click="navOpen = false">Nos hacks
                         </NuxtLink>
-                       <NuxtLink to="about" class="nav-pill" @click="navOpen = false">À propos
+                       <NuxtLink :to="localePath('/about')" class="nav-pill" @click="navOpen = false">À propos
                         </NuxtLink>
-                       <NuxtLink to="contact" class="nav-pill" @click="navOpen = false">Contact
+                       <NuxtLink :to="localePath('/contact')" class="nav-pill" @click="navOpen = false">Contact
                         </NuxtLink>
                     </div>
                 </transition>
