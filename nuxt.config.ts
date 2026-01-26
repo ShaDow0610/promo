@@ -105,8 +105,9 @@ export default defineNuxtConfig({
 
   /* -------------------- SITEMAP -------------------- */
   sitemap:{
-
-   site: 'https://ultimatepronos.com',
+    generate: true , // <-- génère les fichiers XML dans dist/
+    
+    site: 'https://ultimatepronos.com',
     urls: [
         '/', '/404.html', '/200.html', // routes par défaut
         '/fr', '/fr/about', '/fr/contact', '/fr/hacks',
