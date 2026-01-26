@@ -6,7 +6,10 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    '~/assets/css/tailwind.css',
+    '@fortawesome/fontawesome-free/css/all.css' // ← ajoute ça
+  ],
 
   modules: [
     '@nuxt/icon',

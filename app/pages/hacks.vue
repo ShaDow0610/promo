@@ -58,7 +58,7 @@
                     <!-- cover -->
                     <div class="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                         <div class="absolute inset-0 skeleton" v-if="!loaded.has(g.id)"></div>
-                        <img :src="g.image" :alt="g.name"
+                       <NuxtImage format="webp" lazy :src="g.image" :alt="g.name"
                             class="w-full h-full object-contain transition duration-500 group-hover:scale-[1.06]"
                             loading="lazy" decoding="async" @load="onImgLoad(g.id)" />
                         <!-- subtle gradient -->

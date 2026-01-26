@@ -177,7 +177,8 @@
           <!-- Illustration GIF -->
           <div class="bg-black">
             <div class="h-[38vh] sm:h-[46vh] md:h-[52vh] flex items-center justify-center">
-              <img v-if="modalContent.gifSrc" :src="modalContent.gifSrc" :alt="t('heroSection.modal.part1.title')"
+              <NuxtImage format="webp" lazy v-if="modalContent.gifSrc" :src="modalContent.gifSrc"
+                :alt="t('heroSection.modal.part1.title')"
                 class="w-full h-full object-contain select-none" loading="eager" decoding="async" />
               <div v-else class="text-white/80 text-sm p-4">Aucun GIF fourni</div>
             </div>

@@ -46,7 +46,7 @@
               @touchstart.passive="hoverIndex = index" @click.stop="openModal(index)">
               <!-- Capture (TOP) -->
               <div class="relative w-full h-56 sm:h-64 md:h-72 rounded-xl overflow-hidden border border-white/15">
-                <img :src="r.screenshot" :alt="`Capture du pari de ${r.name}`"
+               <NuxtImage format="webp" lazy :src="r.screenshot" :alt="`Capture du pari de ${r.name}`"
                   class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <!-- léger voile doré en hover -->
                 <div
@@ -56,7 +56,7 @@
 
               <!-- Infos (BOTTOM) -->
               <div class="mt-4 flex items-center gap-3">
-                <img :src="r.avatar" :alt="`Avatar de ${r.name}`"
+               <NuxtImage format="webp" lazy :src="r.avatar" :alt="`Avatar de ${r.name}`"
                   class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-yellow-400 object-cover flex-shrink-0"
                   loading="lazy" />
                 <div class="flex-1">
@@ -97,7 +97,7 @@
         <!-- image -->
         <div class="relative">
           <div class="overflow-hidden h-[55vh] sm:h-[65vh] flex items-center justify-center">
-            <img :src="results[activeIndex].screenshot" class="w-full h-full object-contain"
+           <NuxtImage format="webp" lazy :src="results[activeIndex].screenshot" class="w-full h-full object-contain"
               :alt="`Capture du pari de ${results[activeIndex].name}`" />
           </div>
 
@@ -119,7 +119,8 @@
 
         <!-- infos -->
         <div class="p-4 sm:p-6 flex items-center gap-3">
-          <img :src="results[activeIndex].avatar" :alt="`Avatar de ${results[activeIndex].name}`"
+         <NuxtImage format="webp" lazy :src="results[activeIndex].avatar"
+            :alt="`Avatar de ${results[activeIndex].name}`"
             class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-yellow-400 object-cover" />
           <div class="flex-1">
             <p class="font-semibold">{{ results[activeIndex].name }}</p>
