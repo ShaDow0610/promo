@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     cache: {
       driver: 'memory'
     }
-  }
+  },
 
   /* -------------------- I18N -------------------- */
   i18n: {
