@@ -1,0 +1,8 @@
+const CallToAction_vue_vue_type_style_index_0_scoped_80c4fb53_lang = "@keyframes bgShift-80c4fb53{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}.animate-bgShift[data-v-80c4fb53]{animation:bgShift-80c4fb53 1s linear infinite;background:linear-gradient(120deg,#050505,#0b0b0c 40%,#020202);background-size:200% 200%}.touche[data-v-80c4fb53]{height:-webkit-fill-available}.tile .apple[data-v-80c4fb53],.tile .cover[data-v-80c4fb53]{transition:transform .28s ease,opacity .28s ease}.dispp[data-v-80c4fb53]{height:26.4rem}.tile .apple[data-v-80c4fb53]{opacity:0;transform:scale(.7)}.tile[data-v-80c4fb53]{height:4.7rem}.tile.revealed .cover[data-v-80c4fb53]{opacity:0;transform:scale(.2) rotate(25deg)}.tile.revealed .apple[data-v-80c4fb53]{opacity:1;transform:scale(1)}.wood[data-v-80c4fb53]{background:radial-gradient(60% 45% at 50% 30%,hsla(0,0%,100%,.1),transparent 60%),repeating-conic-gradient(from 0deg,#6b4429 0 14deg,#5a3a22 14deg 28deg);filter:saturate(.9) brightness(.95)}.tg-cta[data-v-80c4fb53]{animation:tgPulse-80c4fb53 2.6s ease-in-out infinite;background:#229ed9}@keyframes tgPulse-80c4fb53{0%,92%,to{box-shadow:0 8px 24px #229ed959;transform:translateZ(0) scale(1) rotate(0)}94%{box-shadow:0 10px 28px #229ed973;transform:scale(1.15) rotate(-.7deg)}96%{box-shadow:0 12px 32px #229ed980;transform:scale(1.2) rotate(.6deg)}98%{box-shadow:0 10px 28px #229ed973;transform:scale(1.12) rotate(-.2deg)}}";
+
+const CallToActionStyles_B3LwYVns = [
+  CallToAction_vue_vue_type_style_index_0_scoped_80c4fb53_lang
+];
+
+export { CallToActionStyles_B3LwYVns as default };
+//# sourceMappingURL=CallToAction-styles.B3LwYVns.mjs.map
