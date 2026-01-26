@@ -59,14 +59,20 @@ export default defineNuxtConfig({
 
   /* -------------------- NITRO / STATIC -------------------- */
   nitro: {
-    crawLinks:true,
+    preset: 'netlify',
     prerender: {
+    crawLinks:true,
      routes: ['/', '/404.html', '/200.html', ...prerenderRoutes],
       failOnError: false
     },
 
     compressPublicAssets: true
   },
+  storage: {
+    cache: {
+      driver: 'memory'
+    }
+  }
 
   /* -------------------- I18N -------------------- */
   i18n: {

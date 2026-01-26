@@ -6,10 +6,16 @@
       "langSelect": "Escolher idioma"
     },
     "lang": {
-      "fr": "Francês",
-      "en": "Inglês",
-      "es": "Espanhol",
-      "ru": "Russo"
+      "fr": "Français",
+      "en": "English",
+      "es": "Español",
+      "ru": "Русский",
+      "pt": "Português",
+      "ar": "العربية",
+      "tr": "Türkçe",
+      "az": "Azərbaycan dili",
+      "so": "Soomaaliga",
+      "hi": "हिन्दी"
     },
     "hero": {
       "marker": "PREMIUM • PROGNÓSTICOS • BÓNUS",
