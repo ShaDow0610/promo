@@ -106,10 +106,7 @@ export default defineNuxtConfig({
   /* -------------------- SITEMAP -------------------- */
   sitemap:{
 
-    site:{
-
-      url: 'https://ultimatepronos.com'
-    },
+   site: 'https://ultimatepronos.com',
     urls: [
         '/', '/404.html', '/200.html', // routes par défaut
         '/fr', '/fr/about', '/fr/contact', '/fr/hacks',
