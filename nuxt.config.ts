@@ -110,6 +110,19 @@ export default defineNuxtConfig({
 
       url: 'https://ultimatepronos.com'
     },
+    urls: [
+        '/', '/404.html', '/200.html', // routes par défaut
+        '/fr', '/fr/about', '/fr/contact', '/fr/hacks',
+        '/en', '/en/about', '/en/contact', '/en/hacks',
+        '/es', '/es/about', '/es/contact', '/es/hacks',
+        '/hi', '/hi/about', '/hi/contact', '/hi/hacks',
+        '/az', '/az/about', '/az/contact', '/az/hacks',
+        '/ar', '/ar/about', '/ar/contact', '/ar/hacks',
+        '/pt', '/pt/about', '/pt/contact', '/pt/hacks',
+        '/ru', '/ru/about', '/ru/contact', '/ru/hacks',
+        '/tr', '/tr/about', '/tr/contact', '/tr/hacks',
+        '/so', '/so/about', '/so/contact', '/so/hacks',
+    ],
     i18n: true,
     autoLastmod: true,
     gzip: true
