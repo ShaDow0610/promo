@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  ssr: true,
+  ssr: false,
 
   css: ['~/assets/css/tailwind.css'],
 
@@ -49,7 +49,6 @@ export default defineNuxtConfig({
   /* -------------------- NITRO / STATIC -------------------- */
   nitro: {
     preset: 'static',
-
     prerender: {
       routes: ['/about', '/contact', '/hacks'],
       failOnError: false
