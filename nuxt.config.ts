@@ -8,8 +8,6 @@ const prerenderRoutes = locales.flatMap(l =>
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
-  targe:static,
-
   ssr: true, // IMPORTANT pour SEO
 
   devtools: { enabled: true },
