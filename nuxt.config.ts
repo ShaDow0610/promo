@@ -8,6 +8,8 @@ const prerenderRoutes = locales.flatMap(l =>
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
+  ssr: true, // IMPORTANT pour SEO
+
   devtools: { enabled: true },
 
 
@@ -57,7 +59,7 @@ export default defineNuxtConfig({
 
   /* -------------------- NITRO / STATIC -------------------- */
   nitro: {
-    preset: 'netlify',
+    crawLinks:true,
     prerender: {
      routes: ['/', '/404.html', '/200.html', ...prerenderRoutes],
       failOnError: false
