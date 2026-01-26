@@ -90,6 +90,12 @@ export default defineNuxtConfig({
 
   /* -------------------- SITEMAP -------------------- */
   sitemap: {
+    hostname:'https://ultimatepronos.com',
+    routes: async () => {
+      // Pour les pages dynamiques
+      const routes = await fetch('https://ultimatepronos.com')
+      return routes.map(page => `/page/${page.slug}`)
+    },
     i18n: true,
     autoLastmod: true,
     gzip: true

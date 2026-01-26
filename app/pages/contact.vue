@@ -201,6 +201,12 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Titre de la page',
+  meta: [
+    { name: 'description', content: 'Description claire pour Google' }
+  ]
+})
 import { ref, onMounted, nextTick, computed } from 'vue'
 import { gsap } from 'gsap'
 import { useI18n } from 'vue-i18n'

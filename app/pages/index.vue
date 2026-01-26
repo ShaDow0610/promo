@@ -5,7 +5,12 @@ const BookmakersSection = defineAsyncComponent(() => import('@/components/Bookma
 const howItWorksSection = defineAsyncComponent(() => import('@/components/howItWorksSection.vue'))
 const ClientResults = defineAsyncComponent(() => import('@/components/ClientResults.vue'))
 const CallToAction = defineAsyncComponent(() => import('@/components/CallToAction.vue'))
-
+useHead({
+    title: 'Titre de la page',
+    meta: [
+        { name: 'description', content: 'Description claire pour Google' }
+    ]
+})
 </script>
 <template>
     <div>
