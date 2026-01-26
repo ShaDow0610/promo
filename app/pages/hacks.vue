@@ -195,10 +195,97 @@
 </template>
 
 <script setup>
+const siteUrl = 'https://ultimatepronos.com'
+
 useHead({
-    title: 'Titre de la page',
+    title: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent',
     meta: [
-        { name: 'description', content: 'Description claire pour Google' }
+        {
+            name: 'description',
+            content: 'Découvrez nos algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Rejoignez notre canal Telegram pour recevoir les signaux gagnants !'
+        },
+        {
+            name: 'keywords',
+            content: 'pronostics, hacks, Apple of Fortune, Aviator, Mines, Plinko, Crash, JetX, Dice, Goal, Burning hot, Limbo, Keno, Roulette, Blackjack, Baccarat, Poker, Wheel, Slots, Zeppelin, Space XY, Minesweeper, Tower, Stairs, Lucky Jet, Jet Lucky 2, Crazy Time, Monopoly Live, Dream Catcher, Coin Flip, Penalty Shootout, Andar Bahar, Teen Patti, Lightning Roulette, Mega Ball, Razor Shark, Sugar Rush, Fruit Party, Book of Dead, The Dog House, Gates of Olympus, XBET, 1WIN, MELBET, BetWinner, code promo, algorithme de prédiction'
+        },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'Shadow' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+
+        // Open Graph
+        { property: 'og:title', content: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent' },
+        { property: 'og:description', content: 'Nos algorithmes prédisent Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Suivez nos signaux gagnants sur Telegram !' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: siteUrl + '/hacks' },
+        { property: 'og:image', content: siteUrl + '/logo.png' },
+        { property: 'og:locale', content: 'fr_FR' },
+
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent' },
+        { name: 'twitter:description', content: 'Algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus. Signaux gagnants et code promo sur notre canal Telegram.' },
+        { name: 'twitter:image', content: siteUrl + '/logo.png' }
+    ],
+    link: [
+        { rel: 'canonical', href: siteUrl + '/hacks' },
+
+        // hreflang
+        { rel: 'alternate', hreflang: 'fr', href: siteUrl + '/fr/hacks' },
+        { rel: 'alternate', hreflang: 'en', href: siteUrl + '/en/hacks' },
+        { rel: 'alternate', hreflang: 'es', href: siteUrl + '/es/hacks' },
+        { rel: 'alternate', hreflang: 'hi', href: siteUrl + '/hi/hacks' },
+        { rel: 'alternate', hreflang: 'ar', href: siteUrl + '/ar/hacks' },
+        { rel: 'alternate', hreflang: 'az', href: siteUrl + '/az/hacks' },
+        { rel: 'alternate', hreflang: 'pt', href: siteUrl + '/pt/hacks' },
+        { rel: 'alternate', hreflang: 'ru', href: siteUrl + '/ru/hacks' },
+        { rel: 'alternate', hreflang: 'so', href: siteUrl + '/so/hacks' },
+        { rel: 'alternate', hreflang: 'tr', href: siteUrl + '/tr/hacks' },
+        { rel: 'alternate', hreflang: 'x-default', href: siteUrl + '/hacks' }
+    ],
+    script: [
+        // JSON-LD pour site + organisation
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "UltimatePronos Hacks",
+                "url": siteUrl + '/hacks',
+                "description": "Algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Signaux gagnants et codes promo sur Telegram.",
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Accueil",
+                            "item": siteUrl
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hacks",
+                            "item": siteUrl + '/hacks'
+                        }
+                    ]
+                }
+            })
+        },
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "UltimatePronos",
+                "url": siteUrl,
+                "logo": siteUrl + '/logo.png',
+                "sameAs": [
+                    "https://t.me/+09RmIt4oNn41ZWVk",
+                    "https://www.facebook.com/ultimatepronos",
+                    "https://www.twitter.com/ultimatepronos"
+                ]
+            })
+        }
     ]
 })
 import { ref, computed, onMounted, nextTick } from 'vue'

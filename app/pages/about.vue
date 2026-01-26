@@ -222,10 +222,75 @@
 </template>
 
 <script setup>
+
+const siteUrl = 'https://ultimatepronos.com'
+
 useHead({
-    title: 'Titre de la page',
+    title: 'UltimatePronos – À propos de nos pronostics et hacks',
     meta: [
-        { name: 'description', content: 'Description claire pour Google' }
+        {
+            name: 'description',
+            content: 'UltimatePronos est votre source fiable de pronostics sportifs et algorithmes pour Apple of Fortune, Aviator et plus. Découvrez notre équipe et notre méthodologie.'
+        },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'UltimatePronos' },
+
+        // Open Graph
+        { property: 'og:title', content: 'UltimatePronos – À propos de nos pronostics et hacks' },
+        { property: 'og:description', content: 'Découvrez l’équipe derrière UltimatePronos et notre méthodologie pour prédire Apple of Fortune, Aviator et autres jeux.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: siteUrl + '/about' },
+        { property: 'og:image', content: siteUrl + '/logo.png' },
+        { property: 'og:locale', content: 'fr_FR' },
+
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'UltimatePronos – À propos de nos pronostics et hacks' },
+        { name: 'twitter:description', content: 'Découvrez l’équipe et la méthodologie UltimatePronos pour prédire Apple of Fortune, Aviator et plus.' },
+        { name: 'twitter:image', content: siteUrl + '/logo.png' }
+    ],
+    link: [
+        { rel: 'canonical', href: siteUrl + '/about' },
+
+        // hreflang
+        { rel: 'alternate', hreflang: 'fr', href: siteUrl + '/fr/about' },
+        { rel: 'alternate', hreflang: 'en', href: siteUrl + '/en/about' },
+        { rel: 'alternate', hreflang: 'es', href: siteUrl + '/es/about' },
+        { rel: 'alternate', hreflang: 'hi', href: siteUrl + '/hi/about' },
+        { rel: 'alternate', hreflang: 'ar', href: siteUrl + '/ar/about' },
+        { rel: 'alternate', hreflang: 'az', href: siteUrl + '/az/about' },
+        { rel: 'alternate', hreflang: 'pt', href: siteUrl + '/pt/about' },
+        { rel: 'alternate', hreflang: 'ru', href: siteUrl + '/ru/about' },
+        { rel: 'alternate', hreflang: 'so', href: siteUrl + '/so/about' },
+        { rel: 'alternate', hreflang: 'tr', href: siteUrl + '/tr/about' },
+        { rel: 'alternate', hreflang: 'x-default', href: siteUrl + '/about' }
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "AboutPage",
+                "name": "À propos – UltimatePronos",
+                "url": siteUrl + '/about',
+                "description": "Découvrez l’équipe et la méthodologie derrière UltimatePronos, experts en pronostics et hacks pour Apple of Fortune, Aviator et plus."
+            })
+        },
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "UltimatePronos",
+                "url": siteUrl,
+                "logo": siteUrl + '/images/logo.png',
+                "sameAs": [
+                    "https://t.me/+09RmIt4oNn41ZWVk",
+                    "https://www.facebook.com/ultimatepronos",
+                    "https://www.twitter.com/ultimatepronos"
+                ]
+            })
+        }
     ]
 })
 import { ref, onMounted, onBeforeUnmount, nextTick, getCurrentInstance } from 'vue'

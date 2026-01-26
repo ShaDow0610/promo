@@ -201,12 +201,77 @@
 </template>
 
 <script setup>
+const siteUrl = 'https://ultimatepronos.com'
+
 useHead({
-  title: 'Titre de la page',
+  title: 'UltimatePronos – Contactez-nous pour codes promo et hacks',
   meta: [
-    { name: 'description', content: 'Description claire pour Google' }
+    {
+      name: 'description',
+      content: 'Contactez UltimatePronos pour questions, assistance, ou recevoir nos signaux gagnants pour Apple of Fortune, Aviator et autres jeux de pronostics.'
+    },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'author', content: 'UltimatePronos' },
+
+    // Open Graph
+    { property: 'og:title', content: 'UltimatePronos – Contactez-nous pour codes promo et hacks' },
+    { property: 'og:description', content: 'Posez vos questions et recevez des conseils et signaux pour Apple of Fortune, Aviator et autres jeux sur UltimatePronos.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: siteUrl + '/contact' },
+    { property: 'og:image', content: siteUrl + '/logo.png' },
+    { property: 'og:locale', content: 'fr_FR' },
+
+    // Twitter Card
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'UltimatePronos – Contactez-nous pour codes promo et hacks' },
+    { name: 'twitter:description', content: 'Contactez UltimatePronos pour assistance, conseils et signaux gagnants pour Apple of Fortune, Aviator et plus.' },
+    { name: 'twitter:image', content: siteUrl + '/logo.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: siteUrl + '/contact' },
+
+    // hreflang
+    { rel: 'alternate', hreflang: 'fr', href: siteUrl + '/fr/contact' },
+    { rel: 'alternate', hreflang: 'en', href: siteUrl + '/en/contact' },
+    { rel: 'alternate', hreflang: 'es', href: siteUrl + '/es/contact' },
+    { rel: 'alternate', hreflang: 'hi', href: siteUrl + '/hi/contact' },
+    { rel: 'alternate', hreflang: 'ar', href: siteUrl + '/ar/contact' },
+    { rel: 'alternate', hreflang: 'az', href: siteUrl + '/az/contact' },
+    { rel: 'alternate', hreflang: 'pt', href: siteUrl + '/pt/contact' },
+    { rel: 'alternate', hreflang: 'ru', href: siteUrl + '/ru/contact' },
+    { rel: 'alternate', hreflang: 'so', href: siteUrl + '/so/contact' },
+    { rel: 'alternate', hreflang: 'tr', href: siteUrl + '/tr/contact' },
+    { rel: 'alternate', hreflang: 'x-default', href: siteUrl + '/contact' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact – UltimatePronos",
+        "url": siteUrl + '/contact',
+        "description": "Contactez UltimatePronos pour questions, assistance, ou recevoir nos signaux gagnants pour Apple of Fortune, Aviator et autres jeux."
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UltimatePronos",
+        "url": siteUrl,
+        "logo": siteUrl + '/images/logo.png',
+        "sameAs": [
+          "https://t.me/+09RmIt4oNn41ZWVk",
+          "https://www.facebook.com/ultimatepronos",
+          "https://www.twitter.com/ultimatepronos"
+        ]
+      })
+    }
   ]
 })
+
 import { ref, onMounted, nextTick, computed } from 'vue'
 import { gsap } from 'gsap'
 import { useI18n } from 'vue-i18n'
