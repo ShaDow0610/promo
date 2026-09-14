@@ -1,4 +1,55 @@
 {
+  "faqSection": {
+    "badge": "QUESTIONS FRÉQUENTES",
+    "title": "Tout savoir sur nos pronostics et codes promo",
+    "subtitle": "Paris sportifs, codes promo 1xBet/1win/Melbet/Betwinner, algorithmes de prédiction pour jeux d'argent : les réponses aux questions les plus posées.",
+    "items": {
+      "q1": {
+        "question": "Qu'est-ce qu'un code promo de paris sportifs et comment l'utiliser ?",
+        "answer": "Un code promo de paris sportifs (comme GLE44) est un identifiant à saisir lors de votre inscription sur un bookmaker (1xBet, Melbet, 1win, Betwinner) pour débloquer un bonus de bienvenue, des cotes boostées ou un accès prioritaire à nos pronostics. Il suffit de l'indiquer dans le champ dédié au moment de la création de votre compte officiel."
+      },
+      "q2": {
+        "question": "Comment fonctionne un pronostic sportif fiable ?",
+        "answer": "Un pronostic sportif fiable combine analyse statistique, forme des équipes, contexte du match et gestion rigoureuse de la bankroll. Notre méthode s'appuie sur des données réelles plutôt que sur l'intuition, pour maximiser la valeur de chaque sélection sur le football et les autres sports."
+      },
+      "q3": {
+        "question": "Les algorithmes de prédiction pour les jeux d'argent (Aviator, Apple of Fortune, Crash) sont-ils fiables ?",
+        "answer": "Nos algorithmes analysent les patterns et la volatilité des jeux comme Aviator, Apple of Fortune ou Crash pour proposer des repères de décision. Ils ne garantissent aucun gain : les jeux d'argent comportent toujours une part de hasard, et nos outils servent à mieux gérer le risque, pas à l'éliminer."
+      },
+      "q4": {
+        "question": "Comment obtenir le code promo GLE44 sur 1xBet, Melbet, 1win et Betwinner ?",
+        "answer": "Cliquez sur le lien d'inscription du bookmaker de votre choix depuis notre site, créez votre compte officiel et renseignez le code GLE44 dans le champ code promo. Cela permet de lier votre compte à nos signaux et à notre canal Telegram."
+      },
+      "q5": {
+        "question": "Les paris sportifs et les jeux d'argent comportent-ils des risques ?",
+        "answer": "Oui. Les paris sportifs et les jeux d'argent en ligne comportent un risque réel de perte financière. Fixez-vous un budget, ne misez que ce que vous pouvez vous permettre de perdre et jouez de manière responsable."
+      },
+      "q6": {
+        "question": "Comment rejoindre le canal Telegram pour recevoir les pronostics gratuits ?",
+        "answer": "Cliquez sur le bouton « Rejoindre le canal Telegram » présent sur chaque page du site. Vous y recevrez des pronostics quotidiens, des alertes en temps réel et des codes promo exclusifs pour les principaux bookmakers."
+      }
+    },
+    "seo": {
+      "jsonLdName": "FAQ – Pronostics sportifs, codes promo et jeux d'argent"
+    }
+  },
+  "siteFooter": {
+    "tagline": "Pronostics sportifs, codes promo et algorithmes de prédiction pour jeux d'argent — foot, Aviator, Apple of Fortune et plus.",
+    "columns": {
+      "navigation": "Navigation",
+      "bookmakers": "Bookmakers",
+      "legal": "Informations"
+    },
+    "links": {
+      "home": "Accueil",
+      "hacks": "Hacks & pronostics jeux",
+      "about": "À propos",
+      "contact": "Contact",
+      "telegram": "Canal Telegram"
+    },
+    "responsibleGambling": "Jeu responsable : les paris sportifs et jeux d'argent comportent des risques. Interdit aux mineurs. Ne misez que ce que vous pouvez vous permettre de perdre.",
+    "copyright": "© {year} UltimatePronos. Tous droits réservés."
+  },
   "heroSection": {
     "brand": "ULTIMATE PRONOS",
     "aria": {
@@ -186,22 +237,26 @@
           "subText": "Pour toute question, assistance technique ou dernières mises à jour du hack, contactez-nous via nos canaux officiels :💬",
           "li1": "https://t.me/+09RmIt4oNn41ZWVk",
           "NB": "Nous améliorons en continu l’algorithme pour garantir les meilleurs résultats."
-        }
+        },
+        "mediaAlt": "Grille du jeu Apple of Fortune avec la position de la pomme"
       },
       "two": {
         "title": "Inscription avec code promo",
         "text": "Entre notre code et débloque tes bonus.",
-        "details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas et conditions claires."
+        "details": "Crée ton compte en quelques minutes, saisis le code promo et active les offres réservées. Guide pas à pas et conditions claires.",
+        "mediaAlt": "Inscription avec le code promo GLE44 sur un bookmaker"
       },
       "three": {
         "title": "Pronostics de matchs et autres sports",
         "text": "Analyses quotidiennes et sélections à valeur.",
-        "details": "Forme, statistiques, contexte, gestion de bankroll : parie avec méthode plutôt qu’au feeling."
+        "details": "Forme, statistiques, contexte, gestion de bankroll : parie avec méthode plutôt qu’au feeling.",
+        "mediaAlt": "Interface du jeu Apple of Fortune pour les pronostics"
       },
       "four": {
         "title": "Joue & gagne",
         "text": "Parie intelligemment et encaisse sereinement.",
-        "details": "Discipline, gestion du risque et retraits réguliers pour faire progresser ta bankroll dans le temps."
+        "details": "Discipline, gestion du risque et retraits réguliers pour faire progresser ta bankroll dans le temps.",
+        "mediaAlt": "Historique de gains et retraits réussis"
       }
     }
   },
@@ -287,6 +342,256 @@
         "ctaJoin": "Rejoindre le canal"
       },
       "footnote": "Apple of Fortune — Ultimate Hack."
+    }
+  },
+  "homePage": {
+    "seo": {
+      "title": "Pronostics Sportifs, Codes Promo & Jeux d'Argent – UltimatePronos",
+      "description": "Pronostics sportifs fiables, codes promo XBET, MELBET, 1WIN, BetWinner et conseils experts en jeux d'argent (Apple of Fortune, Aviator). Rejoignez notre canal Telegram pour des pronostics gagnants et des coupons exclusifs !",
+      "ogTitle": "Pronostics Sportifs, Codes Promo & Jeux d'Argent – UltimatePronos",
+      "ogDescription": "Pari sportif, pronostic foot, codes promo XBET, MELBET, 1WIN, BetWinner et conseils pour jeux d'argent comme Apple of Fortune et Aviator. Algorithme de pronostics fiable, coupons gagnants et cadeaux exclusifs sur notre canal Telegram.",
+      "twitterTitle": "Pronostics Sportifs, Codes Promo & Jeux d'Argent – UltimatePronos",
+      "twitterDescription": "Pari sportif, pronostic foot, codes promo XBET, MELBET, 1WIN, BetWinner et conseils pour jeux d'argent comme Apple of Fortune et Aviator. Algorithme de pronostics fiable, coupons gagnants et cadeaux exclusifs sur notre canal Telegram.",
+      "jsonLdDescription": "Pronostics sportifs, pari sportif, codes promo XBET, MELBET, 1WIN, BetWinner et conseils pour jeux d'argent (Apple of Fortune, Aviator et plus). Algorithme exclusif et coupons gagnants."
+    }
+  },
+  "aboutPage": {
+    "badge": "À PROPOS",
+    "title1": "Notre vision du",
+    "titleHighlight": "prono sportif",
+    "subtitleBefore": "Chez ",
+    "brand": "PronostikerX",
+    "subtitleMiddle": ", nous allions données, discipline et pédagogie pour aider les parieurs à ",
+    "subtitleHighlight": "mieux décider",
+    "subtitleAfter": ". Notre approche : simple, premium, efficace — partout dans le monde.",
+    "telegramCta": "Rejoindre le canal Telegram",
+    "stats": {
+      "countries": "PAYS COUVERTS",
+      "deposits": "DÉPÔTS BOOSTÉS",
+      "players": "JOUEURS ACTIFS",
+      "success": "TAUX DE SUCCÈS"
+    },
+    "statsNote": "* Indicateurs agrégés et évolutifs — ils ne constituent pas une garantie de gains.",
+    "method": {
+      "title": "Notre méthode",
+      "textBefore": "Nous combinons analyses de forme, statistiques avancées, gestion de bankroll et retours terrain. Chaque sélection est conçue pour une ",
+      "textHighlight": "valeur réelle",
+      "textAfter": " plutôt qu’un simple feeling.",
+      "li1": "Modèles de probabilité & contextes de match",
+      "li2": "Bankroll management clair & progressif",
+      "li3": "Alertes Telegram en temps réel",
+      "li4": "Pédagogie & discipline avant tout"
+    },
+    "spirit": {
+      "title": "L’esprit PronostikerX",
+      "textBefore": "Une marque ",
+      "textHighlight": "premium & minimaliste",
+      "textAfter": " : design soigné, messages clairs, résultats mesurables. Notre ambition : vous donner un cadre pour progresser durablement.",
+      "tag1": "Simplicité",
+      "tag2": "Efficacité",
+      "tag3": "Méthode",
+      "tag4": "International"
+    },
+    "roadmap": {
+      "title": "Feuille de route",
+      "step1Title": "Fondations",
+      "step1Text": "Structure claire, design sobre, base de contenus solides.",
+      "step2Title": "Analyses & canaux",
+      "step2Text": "Sélections quotidiennes, notifications, pédagogie sur Telegram.",
+      "step3Title": "Expériences démo",
+      "step3Text": "Démonstrations guidées pour comprendre la logique et éviter les erreurs.",
+      "step4Title": "Améliorations continues",
+      "step4Text": "Itérations basées sur données, retours de la communauté et résultats."
+    },
+    "team": {
+      "title": "Équipe & éthique",
+      "text": "Nous défendons un jeu responsable. Fixez des objectifs réalistes, sachez faire une pause, et ne misez que ce que vous pouvez vous permettre de perdre.",
+      "li1": "Transparence & pédagogie",
+      "li2": "Pas de promesse irréaliste",
+      "li3": "Focus long terme"
+    },
+    "contactBlock": {
+      "title": "Contact",
+      "text": "Une question, une suggestion, un partenariat ? Écrivez-nous ou rejoignez le canal.",
+      "telegram": "Telegram",
+      "responseTime": "Temps de réponse indicatif : 24–48h ouvrées."
+    },
+    "seo": {
+      "title": "Notre méthode de pronostic sportif & conseils jeux d'argent – UltimatePronos",
+      "description": "UltimatePronos est votre source fiable de pronostics sportifs, de conseils pour paris sportifs et d'algorithmes pour jeux d'argent (Apple of Fortune, Aviator). Découvrez notre équipe et notre méthodologie.",
+      "ogTitle": "Notre méthode de pronostic sportif & conseils jeux d'argent – UltimatePronos",
+      "ogDescription": "Découvrez l’équipe derrière UltimatePronos, nos conseils pour paris sportifs et notre méthodologie pour prédire Apple of Fortune, Aviator et autres jeux d'argent.",
+      "twitterTitle": "Notre méthode de pronostic sportif & conseils jeux d'argent – UltimatePronos",
+      "twitterDescription": "Découvrez l’équipe et la méthodologie UltimatePronos : pronostics sportifs, conseils paris sportifs et prédictions pour Apple of Fortune, Aviator et plus.",
+      "jsonLdName": "À propos – UltimatePronos",
+      "jsonLdDescription": "Découvrez l’équipe et la méthodologie derrière UltimatePronos, experts en pronostics et hacks pour Apple of Fortune, Aviator et plus."
+    }
+  },
+  "contactPage": {
+    "titlePrefix": "Contact — ",
+    "subtitle": "Besoin d’aide, d’un partenariat ou d’un retour ? Écrivez-nous. Réponse rapide via Telegram.",
+    "cards": {
+      "telegram": {
+        "title": "Canal Telegram",
+        "text": "Reçois pronos, actus et accès aux démos.",
+        "cta": "Rejoindre le canal"
+      },
+      "support": {
+        "title": "Support technique",
+        "text": "Questions sur la démo ou l’accès premium.",
+        "ariaLabel": "Contacter le support sur Telegram"
+      },
+      "email": {
+        "title": "Email",
+        "text": "Partenariats, presse, demandes spécifiques.",
+        "ariaLabel": "Envoyer un email à {email}"
+      }
+    },
+    "promo": {
+      "title": "Code promo",
+      "text": "Utilise ce code lors de l’inscription.",
+      "note": "NB : le code relie votre compte pour un fonctionnement optimal de la démo.",
+      "copied": "Copié ✓",
+      "ariaLabel": "Copier le code promo {code}"
+    },
+    "location": {
+      "title": "Localisation",
+      "text": "Douala (Cameroun) · Équipe distribuée, support international.",
+      "mapPlaceholder": "Carte à venir"
+    },
+    "links": {
+      "title": "Liens utiles"
+    },
+    "form": {
+      "title": "Écrire un message",
+      "subtitle": "Nous répondons rapidement via email ou Telegram.",
+      "nameLabel": "Nom",
+      "emailLabel": "Email *",
+      "subjectLabel": "Sujet",
+      "subjectOptions": {
+        "support": "Support",
+        "partnership": "Partenariat",
+        "press": "Presse",
+        "other": "Autre"
+      },
+      "useridLabel": "ID utilisateur (optionnel)",
+      "useridPlaceholder": "ID lié au code GLE44",
+      "messageLabel": "Message *",
+      "submit": "Envoyer",
+      "sending": "Préparation…",
+      "telegramCta": "Écrire sur Telegram",
+      "errors": {
+        "invalidEmail": "Veuillez renseigner un email valide.",
+        "messageRequired": "Votre message est requis."
+      },
+      "mail": {
+        "greeting": "Bonjour,",
+        "closing": "Merci.",
+        "emailLabel": "Email",
+        "useridLabel": "ID utilisateur",
+        "promoLabel": "Code promo",
+        "notProvided": "N/A",
+        "defaultName": "Utilisateur"
+      }
+    },
+    "copyFallbackAlert": "Copie impossible automatiquement. Code : {code}",
+    "seo": {
+      "title": "Contact – Codes promo paris sportifs & conseils jeux d'argent – UltimatePronos",
+      "description": "Contactez UltimatePronos pour vos questions sur les paris sportifs, nos codes promo (1xBet, Melbet, 1win, Betwinner) ou pour recevoir nos conseils et signaux gagnants pour Apple of Fortune, Aviator et autres jeux d'argent.",
+      "ogTitle": "Contact – Codes promo paris sportifs & conseils jeux d'argent – UltimatePronos",
+      "ogDescription": "Posez vos questions et recevez des conseils et signaux pour vos paris sportifs, Apple of Fortune, Aviator et autres jeux d'argent sur UltimatePronos.",
+      "twitterTitle": "Contact – Codes promo paris sportifs & conseils jeux d'argent – UltimatePronos",
+      "twitterDescription": "Contactez UltimatePronos pour assistance, conseils paris sportifs et signaux gagnants pour Apple of Fortune, Aviator et plus.",
+      "jsonLdName": "Contact – UltimatePronos",
+      "jsonLdDescription": "Contactez UltimatePronos pour questions, assistance, ou recevoir nos signaux gagnants pour Apple of Fortune, Aviator et autres jeux."
+    }
+  },
+  "hacksPage": {
+    "badge": "PREMIUM • HACKS • DEMOS",
+    "title": "Hacks jeux — sélection multi-plateformes",
+    "subtitleBefore": "Découvrez 40 jeux parmi les plus joués sur 1xBet, 1win, Melbet et Betwinner. Accès rapide, code promo ",
+    "subtitleAfter": ", et démo guidée.",
+    "searchPlaceholder": "Rechercher un jeu ou une plateforme…",
+    "resetFilters": "Réinitialiser",
+    "emptyState": "Aucun jeu trouvé. Essayez un autre terme ou filtre.",
+    "openPlatform": "Ouvrir la plateforme",
+    "useHack": "Utiliser le hack",
+    "promoLabel": "Code promo",
+    "imageAlt": "{name} — hack, pronostic et code promo {platform}",
+    "modal": {
+      "startTitle": "Démarrer le hack — {name}",
+      "subtitle": "Vérification de compatibilité du compte",
+      "instructionsBefore": "Saisissez l’ID de votre compte créé avec le code ",
+      "instructionsMiddle": " sur ",
+      "instructionsAfter": ". Nous vérifions que le hack fonctionne correctement avec votre profil.",
+      "idLabel": "ID utilisateur",
+      "idPlaceholder": "Ex. 1X-1234-ABCD",
+      "send": "Envoyer",
+      "noAccountBefore": "Pas de compte sur ",
+      "noAccountMiddle": " ? ",
+      "createAccount": "Créer un compte",
+      "noAccountWithCode": " avec le code ",
+      "nb": "NB : l’identifiant permet d’assurer la liaison technique entre le hack et votre compte pour une expérience fiable.",
+      "telegramCta": "Rejoindre le canal Telegram",
+      "telegramNote": "Plus d’infos, guides et support en direct.",
+      "closeAria": "Fermer",
+      "idRequiredAlert": "Merci de renseigner votre ID utilisateur pour continuer.",
+      "idReceivedAlert": "ID {id} reçu pour {name} — plateforme {platform}."
+    },
+    "copyFallbackAlert": "Copie impossible automatiquement. Code : {code}",
+    "games": {
+      "g1": { "description": "Révélez la bonne case à chaque ligne grâce à nos signaux." },
+      "g2": { "description": "Partez avant le crash. Indices de volatilité en temps réel." },
+      "g3": { "description": "Évitez les mines, sécurisez vos paliers de gain." },
+      "g4": { "description": "Trajectoires optimisées et niveaux de risque ajustés." },
+      "g5": { "description": "Courbes, momentum, sorties ciblées pour limiter le risque." },
+      "g6": { "description": "Stratégies de décollage et d’éjection progressive." },
+      "g7": { "description": "Probabilités dynamiques, gestion des séries perdantes." },
+      "g8": { "description": "Avancez vers le but en minimisant les risques par palier." },
+      "g9": { "description": "Lectures de séquences pour mieux anticiper les tours." },
+      "g10": { "description": "Cibles de multiplicateurs et mises progressives." },
+      "g11": { "description": "Sélection optimisée des grilles à espérance positive." },
+      "g12": { "description": "Progression contrôlée et cibles de sortie claires." },
+      "g13": { "description": "Charts, comptage soft et limites de pertes strictes." },
+      "g14": { "description": "Gestion des runs banker/player, stop-win discipliné." },
+      "g15": { "description": "Ranges de départ simples et lignes à faible variance." },
+      "g16": { "description": "Répartition des segments et couverture intelligente." },
+      "g17": { "description": "Sessions courtes, features ciblées, retraits réguliers." },
+      "g18": { "description": "Sorties progressives, séquence de sécurité intégrée." },
+      "g19": { "description": "Stratégie multi-objectifs selon la volatilité." },
+      "g20": { "description": "Pattern sécurisés et stop-loss stricts." },
+      "g21": { "description": "Montée par niveaux avec paliers de prise de gain." },
+      "g22": { "description": "Choix de marches à meilleur ratio risque/rendement." },
+      "g23": { "description": "Double sortie et couverture des pics volatils." },
+      "g24": { "description": "Variantes de sortie en deux temps, gestion des runs." },
+      "g25": { "description": "Allocation intelligente sur bonus et rouleau." },
+      "g26": { "description": "Couverture des cases clés, risques modulés." },
+      "g27": { "description": "Répartition de mise sur segments majoritaires." },
+      "g28": { "description": "Gestion des flips consécutifs et stop-win clair." },
+      "g29": { "description": "Sélection de côtés avec probas contextuelles." },
+      "g30": { "description": "Objectifs courts, sortie rapide, risque maîtrisé." },
+      "g31": { "description": "Gestion des séquences et tailles de mise." },
+      "g32": { "description": "Sélection de spots favorables, variance contenue." },
+      "g33": { "description": "Ciblage des éclairs et couverture de base." },
+      "g34": { "description": "Nombre de cartes optimal et gestion du budget." },
+      "g35": { "description": "Fenêtres d’opportunités et sortie disciplinée." },
+      "g36": { "description": "Sessions courtes, focus sur bonus majorés." },
+      "g37": { "description": "Ciblage de volatilité moyenne, bankroll stable." },
+      "g38": { "description": "Cycles de spins et limites strictes de pertes." },
+      "g39": { "description": "Entrées prudentes, prise de bénéfices graduelle." },
+      "g40": { "description": "Exposition maîtrisée sur multiplicateurs élevés." }
+    },
+    "seo": {
+      "title": "Hacks, Conseils & Codes Promo Jeux d’Argent – Pronostics UltimatePronos",
+      "description": "Découvrez nos algorithmes de pronostics et conseils pour jeux d'argent : Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Codes promo et signaux gagnants sur notre canal Telegram !",
+      "ogTitle": "Hacks, Conseils & Codes Promo Jeux d’Argent – Pronostics UltimatePronos",
+      "ogDescription": "Nos algorithmes et conseils prédisent Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Suivez nos signaux gagnants et codes promo sur Telegram !",
+      "twitterTitle": "Hacks, Conseils & Codes Promo Jeux d’Argent – Pronostics UltimatePronos",
+      "twitterDescription": "Algorithmes et conseils de pronostics pour Apple of Fortune, Aviator, Mines et plus. Signaux gagnants et code promo sur notre canal Telegram.",
+      "jsonLdName": "UltimatePronos Hacks",
+      "jsonLdDescription": "Algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Signaux gagnants et codes promo sur Telegram.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbHacks": "Hacks"
     }
   }
 }

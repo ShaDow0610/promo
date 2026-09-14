@@ -52,7 +52,6 @@
         "nb": "(Keçid açılmırsa, İsveç seçilmiş VPN ilə daxil olun. Play Store/App Store-da Vpnify, Planet VPN, Hotspot VPN və s. kimi pulsuz seçimlər var.)"
       }
     },
-
     "stats": {
       "countries": {
         "label": "ƏHATƏ OLUNAN ÖLKƏLƏR",
@@ -186,22 +185,26 @@
           "subText": "Sual, texniki dəstək və ən son yeniləmələr üçün rəsmi kanallarımıza yazın:💬",
           "li1": "https://t.me/+09RmIt4oNn41ZWVk",
           "NB": "Ən yaxşı nəticə üçün alqoritm daim təkmilləşdirilir."
-        }
+        },
+        "mediaAlt": "Alma mövqeyi ilə Apple of Fortune oyun şəbəkəsi"
       },
       "two": {
         "title": "Promo kodla qeydiyyat",
         "text": "Kodumuzu daxil et və bonuslarını aç.",
-        "details": "Bir neçə dəqiqəyə hesab yarat, promo kodu tətbiq et və ayrılmış təklifləri aktivləşdir. Addım-addım bələdçi və şəffaf şərtlər."
+        "details": "Bir neçə dəqiqəyə hesab yarat, promo kodu tətbiq et və ayrılmış təklifləri aktivləşdir. Addım-addım bələdçi və şəffaf şərtlər.",
+        "mediaAlt": "Bukmeker kontorunda GLE44 promo kodu ilə qeydiyyat"
       },
       "three": {
         "title": "Matç və digər idman proqnozları",
         "text": "Gündəlik analizlər və dəyərli seçimlər.",
-        "details": "Formaya, statistikalara, kontekstə və bankroll idarəsinə əsaslan: impulsla deyil, metodla mərc et."
+        "details": "Formaya, statistikalara, kontekstə və bankroll idarəsinə əsaslan: impulsla deyil, metodla mərc et.",
+        "mediaAlt": "Proqnozlar üçün Apple of Fortune oyun interfeysi"
       },
       "four": {
         "title": "Oyna və qazan",
         "text": "Ağılla mərc et, qazancı etibarlı çıxar.",
-        "details": "Nizam-intizam, riskin idarəsi və müntəzəm çıxarışlarla bankrollu zamanla artır."
+        "details": "Nizam-intizam, riskin idarəsi və müntəzəm çıxarışlarla bankrollu zamanla artır.",
+        "mediaAlt": "Uğurlu qazanc və pul çıxarma tarixçəsi"
       }
     }
   },
@@ -288,5 +291,386 @@
       },
       "footnote": "Apple of Fortune — Ultimate Hack."
     }
+  },
+  "homePage": {
+    "seo": {
+      "title": "İdman Proqnozları, Promo Kodlar və Pul Oyunları – UltimatePronos",
+      "description": "Etibarlı idman proqnozları, XBET, MELBET, 1WIN, BetWinner promo kodları və pul oyunları (Apple of Fortune, Aviator) üzrə ekspert məsləhətləri. Qalib proqnozlar və eksklüziv kuponlar üçün Telegram kanalımıza qoşulun!",
+      "ogTitle": "İdman Proqnozları, Promo Kodlar və Pul Oyunları – UltimatePronos",
+      "ogDescription": "İdman mərcləri, futbol proqnozu, XBET, MELBET, 1WIN, BetWinner promo kodları və Apple of Fortune, Aviator kimi pul oyunları üçün məsləhətlər. Etibarlı proqnoz alqoritmi, qalib kuponlar və Telegram kanalımızda eksklüziv hədiyyələr.",
+      "twitterTitle": "İdman Proqnozları, Promo Kodlar və Pul Oyunları – UltimatePronos",
+      "twitterDescription": "İdman mərcləri, futbol proqnozu, XBET, MELBET, 1WIN, BetWinner promo kodları və Apple of Fortune, Aviator kimi pul oyunları üçün məsləhətlər. Etibarlı proqnoz alqoritmi, qalib kuponlar və Telegram kanalımızda eksklüziv hədiyyələr.",
+      "jsonLdDescription": "İdman proqnozları, idman mərcləri, XBET, MELBET, 1WIN, BetWinner promo kodları və pul oyunları (Apple of Fortune, Aviator və daha çoxu) üçün məsləhətlər. Eksklüziv alqoritm və qalib kuponlar."
+    }
+  },
+  "aboutPage": {
+    "badge": "HAQQIMIZDA",
+    "title1": "Bizim baxışımız",
+    "titleHighlight": "idman proqnozuna",
+    "subtitleBefore": "",
+    "brand": "PronostikerX",
+    "subtitleMiddle": "-də biz mərcçilərə daha yaxşı qərar verməyə kömək etmək üçün məlumatı, intizamı və təhsili birləşdiririk: ",
+    "subtitleHighlight": "daha yaxşı qərar vermək",
+    "subtitleAfter": ". Yanaşmamız: sadə, premium, effektiv — dünyanın hər yerində.",
+    "telegramCta": "Telegram kanalına qoşul",
+    "stats": {
+      "countries": "ƏHATƏ OLUNAN ÖLKƏLƏR",
+      "deposits": "ARTIRILMIŞ DEPOZİTLƏR",
+      "players": "AKTİV OYUNÇULAR",
+      "success": "UĞUR FAİZİ"
+    },
+    "statsNote": "* Toplu və dinamik göstəricilər — qazanc təminatı deyil.",
+    "method": {
+      "title": "Bizim metodumuz",
+      "textBefore": "Biz forma analizini, qabaqcıl statistikanı, bankroll idarəçiliyini və sahə təcrübəsini birləşdiririk. Hər seçim sadə hissiyyatdan deyil, ",
+      "textHighlight": "real dəyərdən",
+      "textAfter": " çıxış edərək hazırlanır.",
+      "li1": "Ehtimal modelləri və oyun konteksti",
+      "li2": "Aydın və mütərəqqi bankroll idarəçiliyi",
+      "li3": "Real vaxt rejimində Telegram xəbərdarlıqları",
+      "li4": "Hər şeydən əvvəl təhsil və intizam"
+    },
+    "spirit": {
+      "title": "PronostikerX ruhu",
+      "textBefore": "",
+      "textHighlight": "Premium və minimalist",
+      "textAfter": " bir marka: səliqəli dizayn, aydın mesajlar, ölçülə bilən nəticələr. Məqsədimiz: davamlı inkişaf üçün sizə bir çərçivə təqdim etmək.",
+      "tag1": "Sadəlik",
+      "tag2": "Effektivlik",
+      "tag3": "Metod",
+      "tag4": "Beynəlxalq"
+    },
+    "roadmap": {
+      "title": "Yol xəritəsi",
+      "step1Title": "Təməllər",
+      "step1Text": "Aydın struktur, yığcam dizayn, möhkəm məzmun bazası.",
+      "step2Title": "Analizlər və kanallar",
+      "step2Text": "Gündəlik seçimlər, bildirişlər, Telegramda təhsil.",
+      "step3Title": "Demo təcrübələri",
+      "step3Text": "Məntiqi anlamaq və səhvlərdən qaçmaq üçün istiqamətləndirilmiş nümayişlər.",
+      "step4Title": "Davamlı təkmilləşdirmələr",
+      "step4Text": "Məlumatlara, icma rəylərinə və nəticələrə əsaslanan təkrarlar."
+    },
+    "team": {
+      "title": "Komanda və etika",
+      "text": "Biz məsuliyyətli oyunu müdafiə edirik. Real hədəflər qoyun, ara verməyi bacarın və yalnız itirməyə hazır olduğunuz məbləği mərc edin.",
+      "li1": "Şəffaflıq və təhsil",
+      "li2": "Qeyri-real vədlər yoxdur",
+      "li3": "Uzunmüddətli fokus"
+    },
+    "contactBlock": {
+      "title": "Əlaqə",
+      "text": "Sualınız, təklifiniz və ya tərəfdaşlıq istəyiniz var? Bizə yazın və ya kanala qoşulun.",
+      "telegram": "Telegram",
+      "responseTime": "Təxmini cavab müddəti: iş günləri ərzində 24–48 saat."
+    },
+    "seo": {
+      "title": "İdman Proqnozu Metodumuz və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "description": "UltimatePronos idman proqnozları, idman mərcləri üzrə məsləhətlər və pul oyunları (Apple of Fortune, Aviator) üçün alqoritmlər sahəsində etibarlı mənbənizdir. Komandamız və metodologiyamızla tanış olun.",
+      "ogTitle": "İdman Proqnozu Metodumuz və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "ogDescription": "UltimatePronos arxasında dayanan komanda ilə tanış olun, idman mərcləri üzrə məsləhətlərimizi və Apple of Fortune, Aviator və digər pul oyunlarını proqnozlaşdırma metodologiyamızı kəşf edin.",
+      "twitterTitle": "İdman Proqnozu Metodumuz və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "twitterDescription": "UltimatePronos komandası və metodologiyası ilə tanış olun: idman proqnozları, idman mərcləri üzrə məsləhətlər və Apple of Fortune, Aviator və digərləri üçün proqnozlar.",
+      "jsonLdName": "Haqqımızda – UltimatePronos",
+      "jsonLdDescription": "UltimatePronos arxasında dayanan komanda və metodologiya ilə tanış olun — Apple of Fortune, Aviator və digərləri üzrə proqnoz və hack ekspertləri."
+    }
+  },
+  "contactPage": {
+    "titlePrefix": "Əlaqə — ",
+    "subtitle": "Kömək, tərəfdaşlıq və ya rəyə ehtiyacınız var? Bizə yazın. Telegram vasitəsilə sürətli cavab.",
+    "cards": {
+      "telegram": {
+        "title": "Telegram kanalı",
+        "text": "Proqnozlar, xəbərlər və demolara giriş əldə edin.",
+        "cta": "Kanala qoşul"
+      },
+      "support": {
+        "title": "Texniki dəstək",
+        "text": "Demo və ya premium giriş ilə bağlı suallar.",
+        "ariaLabel": "Telegramda dəstəklə əlaqə saxla"
+      },
+      "email": {
+        "title": "Email",
+        "text": "Tərəfdaşlıq, mətbuat, xüsusi sorğular.",
+        "ariaLabel": "{email} ünvanına email göndər"
+      }
+    },
+    "promo": {
+      "title": "Promo kod",
+      "text": "Qeydiyyat zamanı bu kodu istifadə edin.",
+      "note": "QEYD: kod demonun optimal işləməsi üçün hesabınızı bağlayır.",
+      "copied": "Kopyalandı ✓",
+      "ariaLabel": "{code} promo kodunu kopyala"
+    },
+    "location": {
+      "title": "Yerləşmə",
+      "text": "Duala (Kamerun) · Bölünmüş komanda, beynəlxalq dəstək.",
+      "mapPlaceholder": "Xəritə tezliklə"
+    },
+    "links": {
+      "title": "Faydalı linklər"
+    },
+    "form": {
+      "title": "Mesaj yaz",
+      "subtitle": "Email və ya Telegram vasitəsilə tez cavab veririk.",
+      "nameLabel": "Ad",
+      "emailLabel": "Email *",
+      "subjectLabel": "Mövzu",
+      "subjectOptions": {
+        "support": "Dəstək",
+        "partnership": "Tərəfdaşlıq",
+        "press": "Mətbuat",
+        "other": "Digər"
+      },
+      "useridLabel": "İstifadəçi ID (istəyə görə)",
+      "useridPlaceholder": "GLE44 koduna bağlı ID",
+      "messageLabel": "Mesaj *",
+      "submit": "Göndər",
+      "sending": "Hazırlanır…",
+      "telegramCta": "Telegramda yaz",
+      "errors": {
+        "invalidEmail": "Zəhmət olmasa etibarlı email daxil edin.",
+        "messageRequired": "Mesajınız tələb olunur."
+      },
+      "mail": {
+        "greeting": "Salam,",
+        "closing": "Təşəkkürlər.",
+        "emailLabel": "Email",
+        "useridLabel": "İstifadəçi ID",
+        "promoLabel": "Promo kod",
+        "notProvided": "N/A",
+        "defaultName": "İstifadəçi"
+      }
+    },
+    "copyFallbackAlert": "Avtomatik kopyalama mümkün olmadı. Kod: {code}",
+    "seo": {
+      "title": "Əlaqə – İdman Mərcləri Promo Kodları və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "description": "İdman mərcləri, promo kodlarımız (1xBet, Melbet, 1win, Betwinner) haqqında suallarınız üçün və ya Apple of Fortune, Aviator və digər pul oyunları üçün qalib məsləhət və siqnallarımızı almaq üçün UltimatePronos ilə əlaqə saxlayın.",
+      "ogTitle": "Əlaqə – İdman Mərcləri Promo Kodları və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "ogDescription": "UltimatePronos-da idman mərcləri, Apple of Fortune, Aviator və digər pul oyunları üçün suallarınızı verin və məsləhət, siqnal alın.",
+      "twitterTitle": "Əlaqə – İdman Mərcləri Promo Kodları və Pul Oyunları Məsləhətləri – UltimatePronos",
+      "twitterDescription": "Dəstək, idman mərcləri üzrə məsləhət və Apple of Fortune, Aviator və digərləri üçün qalib siqnallar üçün UltimatePronos ilə əlaqə saxlayın.",
+      "jsonLdName": "Əlaqə – UltimatePronos",
+      "jsonLdDescription": "Suallar, dəstək üçün və ya Apple of Fortune, Aviator və digər oyunlar üçün qalib siqnallarımızı almaq üçün UltimatePronos ilə əlaqə saxlayın."
+    }
+  },
+  "hacksPage": {
+    "badge": "PREMIUM • HACKLƏR • DEMOLAR",
+    "title": "Oyun hackləri — çoxplatformalı seçim",
+    "subtitleBefore": "1xBet, 1win, Melbet və Betwinner platformalarında ən çox oynanan 40 oyunu kəşf edin. Sürətli giriş, promo kod ",
+    "subtitleAfter": " və istiqamətləndirilmiş demo.",
+    "searchPlaceholder": "Oyun və ya platforma axtar…",
+    "resetFilters": "Sıfırla",
+    "emptyState": "Heç bir oyun tapılmadı. Başqa söz və ya filtr sınayın.",
+    "openPlatform": "Platformanı aç",
+    "useHack": "Hacki istifadə et",
+    "promoLabel": "Promo kod",
+    "modal": {
+      "startTitle": "Hacki başlat — {name}",
+      "subtitle": "Hesab uyğunluğunun yoxlanılması",
+      "instructionsBefore": "",
+      "instructionsMiddle": " kodu ilə yaratdığınız hesabın ID-sini ",
+      "instructionsAfter": " platformasında daxil edin. Hackin profilinizlə düzgün işlədiyini yoxlayırıq.",
+      "idLabel": "İstifadəçi ID",
+      "idPlaceholder": "Məs. 1X-1234-ABCD",
+      "send": "Göndər",
+      "noAccountBefore": "",
+      "noAccountMiddle": "-da hesabınız yoxdur? ",
+      "createAccount": "Hesab yarat",
+      "noAccountWithCode": " kodu ilə",
+      "nb": "QEYD: identifikator hack ilə hesabınız arasında etibarlı təcrübə üçün texniki əlaqəni təmin edir.",
+      "telegramCta": "Telegram kanalına qoşul",
+      "telegramNote": "Daha çox məlumat, təlimatlar və canlı dəstək.",
+      "closeAria": "Bağla",
+      "idRequiredAlert": "Davam etmək üçün istifadəçi ID-nizi daxil edin.",
+      "idReceivedAlert": "{name} üçün {id} ID-si qəbul edildi — platforma: {platform}."
+    },
+    "copyFallbackAlert": "Avtomatik kopyalama mümkün olmadı. Kod: {code}",
+    "games": {
+      "g1": {
+        "description": "Siqnallarımızla hər sətirdə doğru xananı üzə çıxarın."
+      },
+      "g2": {
+        "description": "Uçuşdan əvvəl çıxın. Real vaxt rejimində volatillik göstəriciləri."
+      },
+      "g3": {
+        "description": "Minalardan qaçın, qazanc pilləkənlərinizi qoruyun."
+      },
+      "g4": {
+        "description": "Optimallaşdırılmış trayektoriyalar və tənzimlənmiş risk səviyyələri."
+      },
+      "g5": {
+        "description": "Riski məhdudlaşdırmaq üçün əyrilər, impuls, hədəflənmiş çıxışlar."
+      },
+      "g6": {
+        "description": "Qalxma strategiyaları və tədricən çıxış."
+      },
+      "g7": {
+        "description": "Dinamik ehtimallar, uğursuz seriyaların idarə edilməsi."
+      },
+      "g8": {
+        "description": "Riski pillə-pillə minimuma endirərək qapıya doğru irəliləyin."
+      },
+      "g9": {
+        "description": "Növbəni daha yaxşı proqnozlaşdırmaq üçün ardıcıllıq oxunuşları."
+      },
+      "g10": {
+        "description": "Multiplikator hədəfləri və tədricən artan mərclər."
+      },
+      "g11": {
+        "description": "Müsbət ehtimallı şəbəkələrin optimal seçimi."
+      },
+      "g12": {
+        "description": "Nəzarətli irəliləyiş və aydın çıxış hədəfləri."
+      },
+      "g13": {
+        "description": "Diaqramlar, yumşaq sayım və sərt itki limitləri."
+      },
+      "g14": {
+        "description": "Banker/oyunçu seriyalarının idarə edilməsi, intizamlı stop-win."
+      },
+      "g15": {
+        "description": "Sadə başlanğıc aralıqları və aşağı dəyişkənlikli xətlər."
+      },
+      "g16": {
+        "description": "Seqmentlərin bölüşdürülməsi və ağıllı əhatə."
+      },
+      "g17": {
+        "description": "Qısa sessiyalar, hədəflənmiş xüsusiyyətlər, mütəmadi çıxarışlar."
+      },
+      "g18": {
+        "description": "Tədricən çıxış, daxili təhlükəsizlik ardıcıllığı."
+      },
+      "g19": {
+        "description": "Volatillikdən asılı çoxmərhələli strategiya."
+      },
+      "g20": {
+        "description": "Təhlükəsiz naxışlar və sərt stop-loss."
+      },
+      "g21": {
+        "description": "Qazanc götürmə pillələri ilə səviyyə-səviyyə yüksəliş."
+      },
+      "g22": {
+        "description": "Ən yaxşı risk/gəlir nisbətinə malik pillələrin seçimi."
+      },
+      "g23": {
+        "description": "İkiqat çıxış və dəyişkən zirvələrin əhatəsi."
+      },
+      "g24": {
+        "description": "İki mərhələli çıxış variantları, seriyaların idarə edilməsi."
+      },
+      "g25": {
+        "description": "Bonus və barabanda ağıllı bölüşdürmə."
+      },
+      "g26": {
+        "description": "Əsas xanaların əhatəsi, tənzimlənmiş risklər."
+      },
+      "g27": {
+        "description": "Mərcin əksəriyyət seqmentlərinə bölüşdürülməsi."
+      },
+      "g28": {
+        "description": "Ardıcıl fliplərin idarə edilməsi və aydın stop-win."
+      },
+      "g29": {
+        "description": "Kontekstual ehtimallarla tərəf seçimi."
+      },
+      "g30": {
+        "description": "Qısa hədəflər, sürətli çıxış, idarə olunan risk."
+      },
+      "g31": {
+        "description": "Ardıcıllıqların və mərc ölçülərinin idarə edilməsi."
+      },
+      "g32": {
+        "description": "Əlverişli nöqtələrin seçimi, məhdud dəyişkənlik."
+      },
+      "g33": {
+        "description": "İldırımların hədəflənməsi və baza əhatəsi."
+      },
+      "g34": {
+        "description": "Optimal kart sayı və büdcə idarəçiliyi."
+      },
+      "g35": {
+        "description": "Fürsət pəncərələri və intizamlı çıxış."
+      },
+      "g36": {
+        "description": "Qısa sessiyalar, artırılmış bonuslara fokus."
+      },
+      "g37": {
+        "description": "Orta volatilliyin hədəflənməsi, sabit bankroll."
+      },
+      "g38": {
+        "description": "Spin dövrləri və sərt itki limitləri."
+      },
+      "g39": {
+        "description": "Ehtiyatlı giriş, tədricən qazanc götürmə."
+      },
+      "g40": {
+        "description": "Yüksək multiplikatorlarda idarə olunan risk."
+      }
+    },
+    "seo": {
+      "title": "Hacklər, Məsləhətlər və Pul Oyunları Promo Kodları – UltimatePronos Proqnozları",
+      "description": "XBET, 1WIN, MELBET, BetWinner-də Apple of Fortune, Aviator, Mines və digərləri üçün proqnoz alqoritmlərimiz və pul oyunları məsləhətlərimizlə tanış olun. Telegram kanalımızda promo kodlar və qalib siqnallar!",
+      "ogTitle": "Hacklər, Məsləhətlər və Pul Oyunları Promo Kodları – UltimatePronos Proqnozları",
+      "ogDescription": "Alqoritmlərimiz və məsləhətlərimiz XBET, 1WIN, MELBET, BetWinner-də Apple of Fortune, Aviator, Mines və digərlərini proqnozlaşdırır. Telegram-da qalib siqnallarımızı və promo kodlarımızı izləyin!",
+      "twitterTitle": "Hacklər, Məsləhətlər və Pul Oyunları Promo Kodları – UltimatePronos Proqnozları",
+      "twitterDescription": "Apple of Fortune, Aviator, Mines və digərləri üçün proqnoz alqoritmləri və məsləhətlər. Telegram kanalımızda qalib siqnallar və promo kod.",
+      "jsonLdName": "UltimatePronos Hackləri",
+      "jsonLdDescription": "XBET, 1WIN, MELBET, BetWinner-də Apple of Fortune, Aviator, Mines və digərləri üçün proqnoz alqoritmləri. Telegram-da qalib siqnallar və promo kodlar.",
+      "breadcrumbHome": "Ana səhifə",
+      "breadcrumbHacks": "Hacklər"
+    },
+    "imageAlt": "{name} — hack, proqnoz və {platform} promo kodu"
+  },
+  "faqSection": {
+    "badge": "TEZ-TEZ VERİLƏN SUALLAR",
+    "title": "Proqnozlarımız və promo kodlarımız haqqında hər şey",
+    "subtitle": "İdman mərcləri, 1xBet/1win/Melbet/Betwinner promo kodları, pul oyunları üçün proqnozlaşdırma alqoritmləri: ən çox verilən suallara cavablar.",
+    "items": {
+      "q1": {
+        "question": "İdman mərcləri promo kodu nədir və necə istifadə olunur?",
+        "answer": "İdman mərcləri promo kodu (məsələn, GLE44) bukmeker kontorunda (1xBet, Melbet, 1win, Betwinner) qeydiyyatdan keçərkən daxil edilən identifikatordur və xoş gəldin bonusu, artırılmış əmsallar və ya proqnozlarımıza prioritet giriş açır. Rəsmi hesabınızı yaratdığınız zaman bu kodu müvafiq sahəyə daxil etmək kifayətdir."
+      },
+      "q2": {
+        "question": "Etibarlı idman proqnozu necə işləyir?",
+        "answer": "Etibarlı idman proqnozu statistik təhlili, komandaların formasını, matçın kontekstini və ciddi bankroll idarəçiliyini birləşdirir. Metodumuz intuisiya deyil, real məlumatlara əsaslanır ki, futbol və digər idman növləri üzrə hər seçimin dəyərini maksimuma çatdıra bilək."
+      },
+      "q3": {
+        "question": "Pul oyunları üçün proqnozlaşdırma alqoritmləri (Aviator, Apple of Fortune, Crash) etibarlıdırmı?",
+        "answer": "Alqoritmlərimiz Aviator, Apple of Fortune və ya Crash kimi oyunların davranış modellərini və dəyişkənliyini təhlil edərək qərar vermək üçün istinad nöqtələri təklif edir. Onlar heç bir qazanc zəmanət etmir: pul oyunlarında hər zaman təsadüf payı olur, alətlərimiz isə riski aradan qaldırmaq üçün deyil, onu daha yaxşı idarə etmək üçün nəzərdə tutulub."
+      },
+      "q4": {
+        "question": "1xBet, Melbet, 1win və Betwinner-də GLE44 promo kodunu necə əldə etmək olar?",
+        "answer": "Saytımızdan seçdiyiniz bukmeker kontorunun qeydiyyat linkinə keçin, rəsmi hesabınızı yaradın və promo kod sahəsinə GLE44 kodunu daxil edin. Bu, hesabınızı siqnallarımıza və Telegram kanalımıza bağlamağa imkan verir."
+      },
+      "q5": {
+        "question": "İdman mərcləri və pul oyunları risk daşıyırmı?",
+        "answer": "Bəli. Onlayn idman mərcləri və pul oyunları real maliyyə itkisi riski daşıyır. Özünüzə büdcə təyin edin, yalnız itirməyə hazır olduğunuz məbləği mərc edin və məsuliyyətlə oynayın."
+      },
+      "q6": {
+        "question": "Pulsuz proqnozlar almaq üçün Telegram kanalına necə qoşulmaq olar?",
+        "answer": "Saytın hər səhifəsində olan «Telegram kanalına qoşul» düyməsinə klikləyin. Orada gündəlik proqnozlar, real vaxt bildirişləri və əsas bukmeker kontorları üçün eksklüziv promo kodlar əldə edəcəksiniz."
+      }
+    },
+    "seo": {
+      "jsonLdName": "FAQ – İdman proqnozları, promo kodlar və pul oyunları"
+    }
+  },
+  "siteFooter": {
+    "tagline": "İdman proqnozları, promo kodlar və pul oyunları üçün proqnozlaşdırma alqoritmləri — futbol, Aviator, Apple of Fortune və daha çoxu.",
+    "columns": {
+      "navigation": "Naviqasiya",
+      "bookmakers": "Bukmeker kontorları",
+      "legal": "Məlumat"
+    },
+    "links": {
+      "home": "Ana səhifə",
+      "hacks": "Hacklər və oyun proqnozları",
+      "about": "Haqqımızda",
+      "contact": "Əlaqə",
+      "telegram": "Telegram kanalı"
+    },
+    "responsibleGambling": "Məsuliyyətli oyun: idman mərcləri və pul oyunları risk daşıyır. Yetkinlik yaşına çatmayanlara qadağandır. Yalnız itirməyə hazır olduğunuz məbləği mərc edin.",
+    "copyright": "© {year} UltimatePronos. Bütün hüquqlar qorunur."
   }
 }

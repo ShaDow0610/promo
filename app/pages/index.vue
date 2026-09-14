@@ -1,39 +1,45 @@
 <script setup>
 import { defineAsyncComponent } from 'vue';
+import { useI18n } from 'vue-i18n'
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
 const BookmakersSection = defineAsyncComponent(() => import('@/components/BookmakersSection.vue'))
 const howItWorksSection = defineAsyncComponent(() => import('@/components/howItWorksSection.vue'))
 const ClientResults = defineAsyncComponent(() => import('@/components/ClientResults.vue'))
 const CallToAction = defineAsyncComponent(() => import('@/components/CallToAction.vue'))
+const FaqSection = defineAsyncComponent(() => import('@/components/FaqSection.vue'))
+const { t, locale } = useI18n()
 const siteUrl = 'https://ultimatepronos.com'
+const ogLocaleMap = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', hi: 'hi_IN', ar: 'ar_AR', az: 'az_AZ', pt: 'pt_PT', ru: 'ru_RU', so: 'so_SO', tr: 'tr_TR' }
+const ogLocale = ogLocaleMap[locale.value] || 'fr_FR'
 
 useHead({
-    title: 'UltimatePronos – Codes Promo & Pronostics Foot Fiables',
+    title: t('homePage.seo.title'),
     meta: [
         {
             name: 'description',
-            content: 'Profitez des meilleurs codes promo XBET, MELBET, 1WIN, BetWinner et top jeux (Apple of Fortune, Aviator). Rejoignez notre canal Telegram pour coupons gagnants !'
+            content: t('homePage.seo.description')
         },
         {
             name: 'keywords',
-            content: 'pronostics, paris sportifs, foot, xbet, melbet, 1win, betwinner, apple of fortune, aviator, code promo, coupons gagnants, algorithme de pronostics'
+            content: 'pronostics sportifs, pari sportif, pronostic foot, code promo paris sportifs, xbet, melbet, 1win, betwinner, jeux d\'argent, apple of fortune, aviator, conseils paris sportifs, algorithme de pronostics, coupons gagnants'
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Shadow' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
 
         // Open Graph
-        { property: 'og:title', content: 'UltimatePronos – Codes Promo et Pronostics Sportifs Fiables' },
-        { property: 'og:description', content: 'Découvrez les meilleurs codes promo pour XBET, MELBET, 1WIN, BetWinner et top jeux comme Apple of Fortune, Aviator. Algorithme de pronostics fiable, coupons gagnants et cadeaux exclusifs sur notre canal Telegram.' },
+        { property: 'og:title', content: t('homePage.seo.ogTitle') },
+        { property: 'og:description', content: t('homePage.seo.ogDescription') },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'UltimatePronos' },
         { property: 'og:url', content: siteUrl },
         { property: 'og:image', content: siteUrl + '/logo.png' },
-        { property: 'og:locale', content: 'fr_FR' },
+        { property: 'og:locale', content: ogLocale },
 
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'UltimatePronos – Codes Promo et Pronostics Sportifs Fiables' },
-        { name: 'twitter:description', content: 'Découvrez les meilleurs codes promo pour XBET, MELBET, 1WIN, BetWinner et top jeux comme Apple of Fortune, Aviator. Algorithme de pronostics fiable, coupons gagnants et cadeaux exclusifs sur notre canal Telegram.' },
+        { name: 'twitter:title', content: t('homePage.seo.twitterTitle') },
+        { name: 'twitter:description', content: t('homePage.seo.twitterDescription') },
         { name: 'twitter:image', content: siteUrl + '/logo.png' }
     ],
     link: [
@@ -65,7 +71,7 @@ useHead({
                     "@type": "Organization",
                     "name": "UltimatePronos"
                 },
-                "description": "Codes promo et pronostics sportifs fiables pour XBET, MELBET, 1WIN, BetWinner, Apple of Fortune, Aviator et plus. Algorithme exclusif et coupons gagnants.",
+                "description": t('homePage.seo.jsonLdDescription'),
                 "potentialAction": {
                     "@type": "SearchAction",
                     "target": siteUrl + '/search?query={search_term_string}',
@@ -80,12 +86,27 @@ useHead({
                 "@type": "Organization",
                 "name": "UltimatePronos",
                 "url": siteUrl,
-                "logo": siteUrl + '/images/logo.png',
+                "logo": siteUrl + '/logo.png',
                 "sameAs": [
                     "https://t.me/+09RmIt4oNn41ZWVk",
                     "https://www.facebook.com/ultimatepronos",
                     "https://www.twitter.com/ultimatepronos"
                 ]
+            })
+        },
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].map(key => ({
+                    "@type": "Question",
+                    "name": t(`faqSection.items.${key}.question`),
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": t(`faqSection.items.${key}.answer`)
+                    }
+                }))
             })
         }
     ]
@@ -137,6 +158,15 @@ useHead({
             </template>
             <template #fallback>
                 <section class="h-[40vh] flex items-center justify-center text-white/60">Loading predictions...</section>
+            </template>
+        </Suspense>
+        <!-- FAQ -->
+        <Suspense>
+            <template #default>
+                <FaqSection />
+            </template>
+            <template #fallback>
+                <section class="h-[40vh] flex items-center justify-center text-white/60">Loading FAQ...</section>
             </template>
         </Suspense>
     </div>

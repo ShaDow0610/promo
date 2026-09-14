@@ -22,17 +22,17 @@
       <label class="sr-only" for="lang">{{ t('heroSection.aria.langSelect') }}</label>
       <select id="lang"
         class="bg-black/30 backdrop-blur border border-gray-700/70 text-xs sm:text-sm rounded-lg px-2 py-1 focus:outline-none focus:border-yellow-400/80"
-        aria-label="Choix de langue" :value="locale" @change="change($event.target.value)">
-        <option value="fr">{{ t('heroSection.lang.fr') }}</option>
-        <option value="en">{{ t('heroSection.lang.en') }}</option>
-        <option value="es">{{ t('heroSection.lang.es') }}</option>
-        <option value="ru">{{ t('heroSection.lang.ru') }}</option>
-        <option value="ar">{{ t('heroSection.lang.ar') }}</option>
-        <option value="az">{{ t('heroSection.lang.az') }}</option>
-        <option value="hi">{{ t('heroSection.lang.hi') }}</option>
-        <option value="so">{{ t('heroSection.lang.so') }}</option>
-        <option value="tr">{{ t('heroSection.lang.tr') }}</option>
-        <option value="pt">{{ t('heroSection.lang.pt') }}</option>
+        aria-label="Choix de langue" v-model="locale">
+        <option value="fr" :selected="locale === 'fr'">{{ t('heroSection.lang.fr') }}</option>
+        <option value="en" :selected="locale === 'en'">{{ t('heroSection.lang.en') }}</option>
+        <option value="es" :selected="locale === 'es'">{{ t('heroSection.lang.es') }}</option>
+        <option value="ru" :selected="locale === 'ru'">{{ t('heroSection.lang.ru') }}</option>
+        <option value="ar" :selected="locale === 'ar'">{{ t('heroSection.lang.ar') }}</option>
+        <option value="az" :selected="locale === 'az'">{{ t('heroSection.lang.az') }}</option>
+        <option value="hi" :selected="locale === 'hi'">{{ t('heroSection.lang.hi') }}</option>
+        <option value="so" :selected="locale === 'so'">{{ t('heroSection.lang.so') }}</option>
+        <option value="tr" :selected="locale === 'tr'">{{ t('heroSection.lang.tr') }}</option>
+        <option value="pt" :selected="locale === 'pt'">{{ t('heroSection.lang.pt') }}</option>
       </select>
     </div>
 
@@ -47,7 +47,7 @@
       <!-- Titre -->
       <h1 ref="titleRef"
         class="font-display text-[34px] leading-[1.05] sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] drop-shadow-[0_6px_18px_rgba(255,215,100,.18)]">
-        {{ t('heroSection.aria.heroLabel') }} <span class="whitespace-nowrap">{{ t('heroSection.brand') }}</span>
+        {{ t('heroSection.aria.heroLabel') }} <span class="whitespace-normal sm:whitespace-nowrap">{{ t('heroSection.brand') }}</span>
       </h1>
 
       <!-- Sous-texte -->
@@ -259,18 +259,27 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick, onBeforeUnmount } from "vue"
+import { ref, computed, onMounted, nextTick, onBeforeUnmount } from "vue"
 const { $gsap } = useNuxtApp()
 import { useI18n } from "vue-i18n"
 import VanillaTilt from "vanilla-tilt"
 const localePath = useLocalePath()
+const route = useRoute()
 
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 const langRef = ref(null)
 const btnRefs = ref([])
 
-const { t, locale, setLocale } = useI18n({ useScope: 'global' })
+const { t, setLocale } = useI18n({ useScope: 'global' })
+const knownLocales = ['fr', 'en', 'es', 'hi', 'ar', 'az', 'pt', 'ru', 'so', 'tr']
+const locale = computed({
+  get() {
+    const seg = route.path.split('/')[1]
+    return knownLocales.includes(seg) ? seg : 'fr'
+  },
+  set(next) { setLocale(next) }
+})
 const copied = ref(false)
 
 // Côté client uniquement
@@ -300,7 +309,6 @@ async function copyPromo(code) {
 }
 
 // ===== Langues =====
-function change(next) { setLocale(next) }
 function setBtnRef(el, i) { if (el) btnRefs.value[i] = el }
 function scrollTo(id) {
   if (typeof document !== "undefined") {

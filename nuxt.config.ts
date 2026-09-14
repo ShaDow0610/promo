@@ -5,6 +5,16 @@ const pages = ['','/about','/contact','/hacks']
 const prerenderRoutes = locales.flatMap(l =>
   pages.map(p => `/${l}${p}`)
 )
+
+const pagePriority = { '': 1.0, '/hacks': 0.9, '/about': 0.7, '/contact': 0.6 }
+const pageChangefreq = { '': 'daily', '/hacks': 'daily', '/about': 'monthly', '/contact': 'monthly' }
+const sitemapUrls = locales.flatMap(l =>
+  pages.map(p => ({
+    loc: `/${l}${p}`,
+    priority: pagePriority[p],
+    changefreq: pageChangefreq[p]
+  }))
+)
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
@@ -30,7 +40,6 @@ export default defineNuxtConfig({
   /* -------------------- APP / SEO -------------------- */
   app: {
     head: {
-      htmlAttrs: { lang: 'fr' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
 
@@ -114,17 +123,8 @@ export default defineNuxtConfig({
     generate: true , // <-- génère les fichiers XML dans dist/
 
     urls: [
-        '/', '/404.html', '/200.html', // routes par défaut
-        '/fr', '/fr/about', '/fr/contact', '/fr/hacks',
-        '/en', '/en/about', '/en/contact', '/en/hacks',
-        '/es', '/es/about', '/es/contact', '/es/hacks',
-        '/hi', '/hi/about', '/hi/contact', '/hi/hacks',
-        '/az', '/az/about', '/az/contact', '/az/hacks',
-        '/ar', '/ar/about', '/ar/contact', '/ar/hacks',
-        '/pt', '/pt/about', '/pt/contact', '/pt/hacks',
-        '/ru', '/ru/about', '/ru/contact', '/ru/hacks',
-        '/tr', '/tr/about', '/tr/contact', '/tr/hacks',
-        '/so', '/so/about', '/so/contact', '/so/hacks',
+        { loc: '/', priority: 1.0, changefreq: 'daily' },
+        ...sitemapUrls
     ],
     i18n: true,
     autoLastmod: true,

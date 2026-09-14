@@ -21,10 +21,10 @@
         </div>
         <h1 id="contact-title"
           class="font-display text-[34px] leading-[1.05] sm:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] drop-shadow-[0_6px_18px_rgba(255,215,100,.18)]">
-          Contact — <span class="whitespace-nowrap">{{ t('heroSection.brand') }}</span>
+          {{ t('contactPage.titlePrefix') }}<span class="whitespace-normal sm:whitespace-nowrap">{{ t('heroSection.brand') }}</span>
         </h1>
         <p class="mt-3 sm:mt-4 max-w-3xl mx-auto text-gray-300 text-[13px] sm:text-base">
-          Besoin d’aide, d’un partenariat ou d’un retour ? Écrivez-nous. Réponse rapide via Telegram.
+          {{ t('contactPage.subtitle') }}
         </p>
       </header>
 
@@ -39,15 +39,15 @@
               <i class="fa-brands fa-telegram" aria-hidden="true"></i>
             </div>
             <div>
-              <h3 class="text-xl font-bold">Canal Telegram</h3>
-              <p class="text-sm text-gray-300">Reçois pronos, actus et accès aux démos.</p>
+              <h3 class="text-xl font-bold">{{ t('contactPage.cards.telegram.title') }}</h3>
+              <p class="text-sm text-gray-300">{{ t('contactPage.cards.telegram.text') }}</p>
             </div>
           </div>
           <a :href="telegramUrl" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center w-full rounded-xl px-4 py-3 font-bold
                    bg-[#229ED9] text-white ring-1 ring-white/10 hover:brightness-110
                    shadow-[0_10px_30px_rgba(34,158,217,.25)] transition telegram-wiggle" @mouseenter="pulseOnce">
             <i class="fa-brands fa-telegram mr-2" aria-hidden="true"></i>
-            <span>Rejoindre le canal</span>
+            <span>{{ t('contactPage.cards.telegram.cta') }}</span>
           </a>
         </article>
 
@@ -59,13 +59,13 @@
               <i class="fa-regular fa-life-ring" aria-hidden="true"></i>
             </div>
             <div>
-              <h3 class="text-xl font-bold">Support technique</h3>
-              <p class="text-sm text-gray-300">Questions sur la démo ou l’accès premium.</p>
+              <h3 class="text-xl font-bold">{{ t('contactPage.cards.support.title') }}</h3>
+              <p class="text-sm text-gray-300">{{ t('contactPage.cards.support.text') }}</p>
             </div>
           </div>
           <a :href="supportTelegram" target="_blank" rel="noopener noreferrer"
             class="mt-4 inline-flex items-center justify-center w-full rounded-xl px-4 py-3 font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
-            aria-label="Contacter le support sur Telegram">
+            :aria-label="t('contactPage.cards.support.ariaLabel')">
             @king_of_apple_hack_support
           </a>
         </article>
@@ -78,13 +78,13 @@
               <i class="fa-regular fa-envelope" aria-hidden="true"></i>
             </div>
             <div>
-              <h3 class="text-xl font-bold">Email</h3>
-              <p class="text-sm text-gray-300">Partenariats, presse, demandes spécifiques.</p>
+              <h3 class="text-xl font-bold">{{ t('contactPage.cards.email.title') }}</h3>
+              <p class="text-sm text-gray-300">{{ t('contactPage.cards.email.text') }}</p>
             </div>
           </div>
           <a :href="`mailto:${supportEmail}`"
             class="mt-4 inline-flex items-center justify-center w-full rounded-xl px-4 py-3 font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
-            :aria-label="`Envoyer un email à ${supportEmail}`">
+            :aria-label="t('contactPage.cards.email.ariaLabel', { email: supportEmail })">
             {{ supportEmail }}
           </a>
         </article>
@@ -94,38 +94,38 @@
       <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
         <!-- Promo copy -->
         <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
-          <h4 class="text-lg font-semibold">Code promo</h4>
-          <p class="text-sm text-gray-300">Utilise ce code lors de l’inscription.</p>
+          <h4 class="text-lg font-semibold">{{ t('contactPage.promo.title') }}</h4>
+          <p class="text-sm text-gray-300">{{ t('contactPage.promo.text') }}</p>
           <button type="button" :disabled="copied" @click="copyPromo(promoCode)"
             @touchend.prevent="copyPromo(promoCode)"
             class="mt-3 relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/15 text-yellow-200 border border-yellow-500/30 text-base font-semibold hover:brightness-110 active:scale-[.98] transition disabled:opacity-60 disabled:cursor-not-allowed"
-            :aria-label="`Copier le code promo ${promoCode}`">
+            :aria-label="t('contactPage.promo.ariaLabel', { code: promoCode })">
             <i class="fa-regular fa-copy" aria-hidden="true"></i>
             <span aria-live="polite">{{ promoCode }}</span>
             <span v-if="copied"
               class="absolute -top-7 right-0 text-xs px-2 py-0.5 rounded bg-black/80 text-white shadow"
-              aria-live="assertive">Copié ✓</span>
+              aria-live="assertive">{{ t('contactPage.promo.copied') }}</span>
           </button>
           <p class="mt-3 text-xs text-gray-400 italic">
-            NB : le code relie votre compte pour un fonctionnement optimal de la démo.
+            {{ t('contactPage.promo.note') }}
           </p>
         </div>
 
         <!-- Office / Localisation -->
         <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
-          <h4 class="text-lg font-semibold">Localisation</h4>
-          <p class="text-sm text-gray-300">Douala (Cameroun) · Équipe distribuée, support international.</p>
-          <div class="mt-3 rounded-xl overflow-hidden border border-white/10" role="img" aria-label="Carte à venir">
+          <h4 class="text-lg font-semibold">{{ t('contactPage.location.title') }}</h4>
+          <p class="text-sm text-gray-300">{{ t('contactPage.location.text') }}</p>
+          <div class="mt-3 rounded-xl overflow-hidden border border-white/10" role="img" :aria-label="t('contactPage.location.mapPlaceholder')">
             <div
               class="h-40 bg-[radial-gradient(80%_60%_at_50%_30%,#202328,#0f1115)] flex items-center justify-center text-white/50 text-sm">
-              Carte à venir
+              {{ t('contactPage.location.mapPlaceholder') }}
             </div>
           </div>
         </div>
 
         <!-- Quick links (bookmakers) -->
         <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
-          <h4 class="text-lg font-semibold">Liens utiles</h4>
+          <h4 class="text-lg font-semibold">{{ t('contactPage.links.title') }}</h4>
           <ul class="mt-3 space-y-2 text-sm">
             <li v-for="(href, key) in safeBookmakers" :key="key">
               <a :href="href" target="_blank" rel="noopener noreferrer"
@@ -141,39 +141,39 @@
       <!-- Contact form -->
       <form class="mt-10 rounded-2xl p-5 sm:p-6 bg-white/5 border border-white/10" @submit.prevent="submitForm"
         novalidate>
-        <h3 class="text-2xl font-bold mb-1">Écrire un message</h3>
-        <p class="text-sm text-gray-300 mb-4">Nous répondons rapidement via email ou Telegram.</p>
+        <h3 class="text-2xl font-bold mb-1">{{ t('contactPage.form.title') }}</h3>
+        <p class="text-sm text-gray-300 mb-4">{{ t('contactPage.form.subtitle') }}</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
-            <label class="block text-xs text-gray-400 mb-1" for="name">Nom</label>
+            <label class="block text-xs text-gray-400 mb-1" for="name">{{ t('contactPage.form.nameLabel') }}</label>
             <input id="name" v-model.trim="form.name" name="name" type="text" autocomplete="name"
               class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
           </div>
           <div>
-            <label class="block text-xs text-gray-400 mb-1" for="email">Email *</label>
+            <label class="block text-xs text-gray-400 mb-1" for="email">{{ t('contactPage.form.emailLabel') }}</label>
             <input id="email" v-model.trim="form.email" name="email" required type="email" autocomplete="email"
               inputmode="email"
               class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
           </div>
           <div>
-            <label class="block text-xs text-gray-400 mb-1" for="subject">Sujet</label>
+            <label class="block text-xs text-gray-400 mb-1" for="subject">{{ t('contactPage.form.subjectLabel') }}</label>
             <select id="subject" v-model="form.subject" name="subject"
               class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40">
-              <option value="Support">Support</option>
-              <option value="Partenariat">Partenariat</option>
-              <option value="Presse">Presse</option>
-              <option value="Autre">Autre</option>
+              <option value="Support">{{ t('contactPage.form.subjectOptions.support') }}</option>
+              <option value="Partenariat">{{ t('contactPage.form.subjectOptions.partnership') }}</option>
+              <option value="Presse">{{ t('contactPage.form.subjectOptions.press') }}</option>
+              <option value="Autre">{{ t('contactPage.form.subjectOptions.other') }}</option>
             </select>
           </div>
           <div>
-            <label class="block text-xs text-gray-400 mb-1" for="userid">ID utilisateur (optionnel)</label>
-            <input id="userid" v-model.trim="form.userId" name="userId" type="text" placeholder="ID lié au code GLE44"
+            <label class="block text-xs text-gray-400 mb-1" for="userid">{{ t('contactPage.form.useridLabel') }}</label>
+            <input id="userid" v-model.trim="form.userId" name="userId" type="text" :placeholder="t('contactPage.form.useridPlaceholder')"
               autocomplete="off"
               class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
           </div>
           <div class="sm:col-span-2">
-            <label class="block text-xs text-gray-400 mb-1" for="message">Message *</label>
+            <label class="block text-xs text-gray-400 mb-1" for="message">{{ t('contactPage.form.messageLabel') }}</label>
             <textarea id="message" v-model.trim="form.message" name="message" required rows="5"
               class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40"></textarea>
           </div>
@@ -186,12 +186,12 @@
                    shadow-[0_8px_24px_rgba(255,210,90,0.25)] ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed"
             :aria-busy="sending ? 'true' : 'false'">
             <i class="fa-regular fa-paper-plane mr-2" aria-hidden="true"></i>
-            <span v-if="!sending">Envoyer</span>
-            <span v-else>Préparation…</span>
+            <span v-if="!sending">{{ t('contactPage.form.submit') }}</span>
+            <span v-else>{{ t('contactPage.form.sending') }}</span>
           </button>
           <a :href="telegramUrl" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold bg-[#229ED9] text-white ring-1 ring-white/10 hover:brightness-110 telegram-pulse">
-            <i class="fa-brands fa-telegram mr-2" aria-hidden="true"></i> Écrire sur Telegram
+            <i class="fa-brands fa-telegram mr-2" aria-hidden="true"></i> {{ t('contactPage.form.telegramCta') }}
           </a>
         </div>
         <p v-if="formError" class="mt-3 text-sm text-red-300" role="alert">{{ formError }}</p>
@@ -201,30 +201,37 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
+
 const siteUrl = 'https://ultimatepronos.com'
+const ogLocaleMap = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', hi: 'hi_IN', ar: 'ar_AR', az: 'az_AZ', pt: 'pt_PT', ru: 'ru_RU', so: 'so_SO', tr: 'tr_TR' }
+const ogLocale = ogLocaleMap[locale.value] || 'fr_FR'
 
 useHead({
-  title: 'UltimatePronos – Contactez-nous pour codes promo et hacks',
+  title: t('contactPage.seo.title'),
   meta: [
     {
       name: 'description',
-      content: 'Contactez UltimatePronos pour questions, assistance, ou recevoir nos signaux gagnants pour Apple of Fortune, Aviator et autres jeux de pronostics.'
+      content: t('contactPage.seo.description')
     },
     { name: 'robots', content: 'index, follow' },
     { name: 'author', content: 'UltimatePronos' },
+    { name: 'keywords', content: 'contact paris sportifs, code promo, conseils jeux d\'argent, xbet, melbet, 1win, betwinner, support pronostics' },
 
     // Open Graph
-    { property: 'og:title', content: 'UltimatePronos – Contactez-nous pour codes promo et hacks' },
-    { property: 'og:description', content: 'Posez vos questions et recevez des conseils et signaux pour Apple of Fortune, Aviator et autres jeux sur UltimatePronos.' },
+    { property: 'og:title', content: t('contactPage.seo.ogTitle') },
+    { property: 'og:description', content: t('contactPage.seo.ogDescription') },
     { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'UltimatePronos' },
     { property: 'og:url', content: siteUrl + '/contact' },
     { property: 'og:image', content: siteUrl + '/logo.png' },
-    { property: 'og:locale', content: 'fr_FR' },
+    { property: 'og:locale', content: ogLocale },
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'UltimatePronos – Contactez-nous pour codes promo et hacks' },
-    { name: 'twitter:description', content: 'Contactez UltimatePronos pour assistance, conseils et signaux gagnants pour Apple of Fortune, Aviator et plus.' },
+    { name: 'twitter:title', content: t('contactPage.seo.twitterTitle') },
+    { name: 'twitter:description', content: t('contactPage.seo.twitterDescription') },
     { name: 'twitter:image', content: siteUrl + '/logo.png' }
   ],
   link: [
@@ -249,9 +256,16 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact – UltimatePronos",
+        "name": t('contactPage.seo.jsonLdName'),
         "url": siteUrl + '/contact',
-        "description": "Contactez UltimatePronos pour questions, assistance, ou recevoir nos signaux gagnants pour Apple of Fortune, Aviator et autres jeux."
+        "description": t('contactPage.seo.jsonLdDescription'),
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": t('hacksPage.seo.breadcrumbHome'), "item": siteUrl },
+                { "@type": "ListItem", "position": 2, "name": t('siteFooter.links.contact'), "item": siteUrl + '/contact' }
+            ]
+        }
       })
     },
     {
@@ -261,7 +275,7 @@ useHead({
         "@type": "Organization",
         "name": "UltimatePronos",
         "url": siteUrl,
-        "logo": siteUrl + '/images/logo.png',
+        "logo": siteUrl + '/logo.png',
         "sameAs": [
           "https://t.me/+09RmIt4oNn41ZWVk",
           "https://www.facebook.com/ultimatepronos",
@@ -274,9 +288,6 @@ useHead({
 
 import { ref, onMounted, nextTick, computed } from 'vue'
 import { gsap } from 'gsap'
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 /** Constantes (passe-les idéalement via env) */
 const telegramUrl = 'https://t.me/+09RmIt4oNn41ZWVk'
@@ -339,7 +350,7 @@ async function copyPromo(code) {
     clearTimeout(copyTimer)
     copyTimer = setTimeout(() => (copied.value = false), 1200)
   } catch {
-    alert('Copie impossible automatiquement. Code : ' + code)
+    alert(t('contactPage.copyFallbackAlert', { code }))
   }
 }
 
@@ -362,11 +373,11 @@ function validEmail(v) {
 function submitForm() {
   formError.value = ''
   if (!form.value.email || !validEmail(form.value.email)) {
-    formError.value = 'Veuillez renseigner un email valide.'
+    formError.value = t('contactPage.form.errors.invalidEmail')
     return
   }
   if (!form.value.message?.trim()) {
-    formError.value = 'Votre message est requis.'
+    formError.value = t('contactPage.form.errors.messageRequired')
     return
   }
 
@@ -375,18 +386,18 @@ function submitForm() {
 
     const to = supportEmail
     const subject = encodeURIComponent(
-      `${form.value.subject} ${form.value.name || 'Utilisateur'} — ${t('heroSection.brand')}`
+      `${form.value.subject} ${form.value.name || t('contactPage.form.mail.defaultName')} — ${t('heroSection.brand')}`
     )
     const body = encodeURIComponent(
-      `Bonjour,
+      `${t('contactPage.form.mail.greeting')}
 
 ${form.value.message}
 
-— Email : ${form.value.email}
-— ID utilisateur : ${form.value.userId || 'N/A'}
-— Code promo : ${promoCode}
+— ${t('contactPage.form.mail.emailLabel')} : ${form.value.email}
+— ${t('contactPage.form.mail.useridLabel')} : ${form.value.userId || t('contactPage.form.mail.notProvided')}
+— ${t('contactPage.form.mail.promoLabel')} : ${promoCode}
 
-Merci.`
+${t('contactPage.form.mail.closing')}`
     )
 
     // Redirection mailto (aucun espace parasite)

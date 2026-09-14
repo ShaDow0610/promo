@@ -34,18 +34,18 @@
                             <label class="sr-only" for="lang">{{ t('heroSection.aria.langSelect') }}</label>
                             <select id="lang"
                                 class=" sm:block bg-black/30 backdrop-blur border border-gray-700/70 text-xs sm:text-sm rounded-lg px-2 py-1 focus:outline-none focus:border-yellow-400/80 text-gray-200"
-                                :value="locale" @change="change($event.target.value)"
+                                v-model="locale"
                                 :aria-label="t('heroSection.aria.langSelect')">
-                                <option value="fr">{{ t('heroSection.lang.fr') }}</option>
-                                <option value="en">{{ t('heroSection.lang.en') }}</option>
-                                <option value="es">{{ t('heroSection.lang.es') }}</option>
-                                <option value="ru">{{ t('heroSection.lang.ru') }}</option>
-                               <option value="ar">{{ t('heroSection.lang.ar') }}</option>
-                                <option value="az">{{ t('heroSection.lang.az') }}</option>
-                               <option value="hi">{{ t('heroSection.lang.hi') }}</option>
-                                <option value="so">{{ t('heroSection.lang.so') }}</option>
-                                <option value="tr">{{ t('heroSection.lang.tr') }}</option>
-                                <option value="pt">{{ t('heroSection.lang.pt') }}</option>
+                                <option value="fr" :selected="locale === 'fr'">{{ t('heroSection.lang.fr') }}</option>
+                                <option value="en" :selected="locale === 'en'">{{ t('heroSection.lang.en') }}</option>
+                                <option value="es" :selected="locale === 'es'">{{ t('heroSection.lang.es') }}</option>
+                                <option value="ru" :selected="locale === 'ru'">{{ t('heroSection.lang.ru') }}</option>
+                               <option value="ar" :selected="locale === 'ar'">{{ t('heroSection.lang.ar') }}</option>
+                                <option value="az" :selected="locale === 'az'">{{ t('heroSection.lang.az') }}</option>
+                               <option value="hi" :selected="locale === 'hi'">{{ t('heroSection.lang.hi') }}</option>
+                                <option value="so" :selected="locale === 'so'">{{ t('heroSection.lang.so') }}</option>
+                                <option value="tr" :selected="locale === 'tr'">{{ t('heroSection.lang.tr') }}</option>
+                                <option value="pt" :selected="locale === 'pt'">{{ t('heroSection.lang.pt') }}</option>
                             </select>
                         </div>
                         <!-- Mobile toggle -->
@@ -76,18 +76,26 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
-const { t, locale, setLocale } = useI18n()
+const { t, setLocale } = useI18n({ useScope: 'global' })
 const localePath = useLocalePath()
+const route = useRoute()
+
+const knownLocales = ['fr', 'en', 'es', 'hi', 'ar', 'az', 'pt', 'ru', 'so', 'tr']
+const locale = computed({
+    get() {
+        const seg = route.path.split('/')[1]
+        return knownLocales.includes(seg) ? seg : 'fr'
+    },
+    set(next) { setLocale(next) }
+})
 
 const navRef = ref(null)
 const navOpen = ref(false)
 const hideNav = ref(false)
 let lastY = 0
 const SCROLL_DELTA = 8
-
-function change(next) { setLocale(next) }
 
 function handleScroll() {
     const y = window.scrollY || 0

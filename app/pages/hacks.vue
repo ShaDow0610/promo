@@ -17,15 +17,14 @@
             <header class="text-center">
                 <div
                     class="mx-auto mb-4 w-max px-3 py-1 rounded-full border border-yellow-400/20 bg-yellow-400/5 text-[10px] sm:text-xs tracking-widest text-yellow-300/90">
-                    PREMIUM • HACKS • DEMOS
+                    {{ t('hacksPage.badge') }}
                 </div>
                 <h1
                     class="font-display text-[34px] leading-[1.05] sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] drop-shadow-[0_6px_18px_rgba(255,215,100,.18)]">
-                    Hacks jeux — sélection multi-plateformes
+                    {{ t('hacksPage.title') }}
                 </h1>
                 <p class="mt-3 sm:mt-4 max-w-3xl mx-auto text-gray-300 text-[13px] sm:text-base">
-                    Découvrez 40 jeux parmi les plus joués sur 1xBet, 1win, Melbet et Betwinner. Accès rapide, code
-                    promo <span class="text-yellow-300 font-semibold">{{ promoCode }}</span>, et démo guidée.
+                    {{ t('hacksPage.subtitleBefore') }}<span class="text-yellow-300 font-semibold">{{ promoCode }}</span>{{ t('hacksPage.subtitleAfter') }}
                 </p>
             </header>
 
@@ -33,7 +32,7 @@
             <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-between">
                 <div class="flex-1 flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-3 py-2.5">
                     <i class="fa-solid fa-magnifying-glass text-white/70"></i>
-                    <input v-model.trim="q" type="search" placeholder="Rechercher un jeu ou une plateforme…"
+                    <input v-model.trim="q" type="search" :placeholder="t('hacksPage.searchPlaceholder')"
                         class="w-full bg-transparent outline-none text-sm placeholder:text-white/40" />
                 </div>
                 <div class="flex items-center gap-2">
@@ -45,7 +44,7 @@
                     </button>
                     <button v-if="activePlatforms.size" @click="clearPlatforms"
                         class="px-3 py-2 rounded-lg text-sm bg-black/30 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition">
-                        Réinitialiser
+                        {{ t('hacksPage.resetFilters') }}
                     </button>
                 </div>
             </div>
@@ -58,7 +57,7 @@
                     <!-- cover -->
                     <div class="relative h-40 sm:h-44 md:h-48 overflow-hidden">
                         <div class="absolute inset-0 skeleton" v-if="!loaded.has(g.id)"></div>
-                       <img :src="g.image" :alt="g.name"
+                       <img :src="g.image" :alt="t('hacksPage.imageAlt', { name: g.name, platform: g.platform.name })"
                             class="w-full h-full object-contain transition duration-500 group-hover:scale-[1.06]"
                             loading="lazy" decoding="async" @load="onImgLoad(g.id)" />
                         <!-- subtle gradient -->
@@ -84,18 +83,18 @@
                         <div class="mt-3 flex items-center justify-between">
                             <a :href="g.platform.url" target="_blank" rel="noopener"
                                 class="inline-flex items-center gap-1 text-xs text-white/80 hover:text-white underline underline-offset-2">
-                                Ouvrir la plateforme <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                                {{ t('hacksPage.openPlatform') }} <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
                             </a>
                             <button type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[13px] font-semibold
                        bg-emerald-500/20 text-emerald-200 border border-emerald-500/30
                        hover:brightness-110 active:scale-[.99] transition" @click="openHack(g)">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i> Utiliser le hack
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> {{ t('hacksPage.useHack') }}
                             </button>
                         </div>
 
                         <!-- promo -->
                         <div class="mt-3 flex items-center justify-between">
-                            <span class="text-xs text-white/60">Code promo</span>
+                            <span class="text-xs text-white/60">{{ t('hacksPage.promoLabel') }}</span>
                             <button
                                 class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-yellow-500/15 text-yellow-200 border border-yellow-500/30 text-sm font-semibold hover:brightness-110 active:scale-[.98] transition"
                                 @click="copyPromo(g.platform.promo)">
@@ -115,7 +114,7 @@
 
             <!-- Empty state -->
             <div v-if="!filteredGames.length" class="mt-12 text-center text-white/70">
-                Aucun jeu trouvé. Essayez un autre terme ou filtre.
+                {{ t('hacksPage.emptyState') }}
             </div>
         </div>
 
@@ -132,26 +131,24 @@
                             <i class="fa-solid fa-user-check"></i>
                         </div>
                         <div>
-                            <p class="font-semibold leading-tight">Démarrer le hack — {{ current?.name }}</p>
-                            <p class="text-xs text-gray-400">Vérification de compatibilité du compte</p>
+                            <p class="font-semibold leading-tight">{{ t('hacksPage.modal.startTitle', { name: current?.name }) }}</p>
+                            <p class="text-xs text-gray-400">{{ t('hacksPage.modal.subtitle') }}</p>
                         </div>
                     </div>
-                    <button @click="close" class="p-2 text-gray-300 hover:text-white" aria-label="Fermer">✕</button>
+                    <button @click="close" class="p-2 text-gray-300 hover:text-white" :aria-label="t('hacksPage.modal.closeAria')">✕</button>
                 </div>
 
                 <!-- body -->
                 <div class="p-5 space-y-4">
                     <p class="text-sm text-gray-300">
-                        Saisissez l’ID de votre compte créé avec le code <span class="text-yellow-300 font-semibold">{{
-                            promoCode }}</span>
-                        sur <span class="font-semibold">{{ current?.platform.name }}</span>. Nous vérifions que le hack
-                        fonctionne correctement avec votre profil.
+                        {{ t('hacksPage.modal.instructionsBefore') }}<span class="text-yellow-300 font-semibold">{{
+                            promoCode }}</span>{{ t('hacksPage.modal.instructionsMiddle') }}<span class="font-semibold">{{ current?.platform.name }}</span>{{ t('hacksPage.modal.instructionsAfter') }}
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <div class="sm:col-span-2">
-                            <label class="block text-xs text-white/60 mb-1">ID utilisateur</label>
-                            <input v-model.trim="userId" type="text" placeholder="Ex. 1X-1234-ABCD"
+                            <label class="block text-xs text-white/60 mb-1">{{ t('hacksPage.modal.idLabel') }}</label>
+                            <input v-model.trim="userId" type="text" :placeholder="t('hacksPage.modal.idPlaceholder')"
                                 class="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
                         </div>
                         <div class="flex items-end">
@@ -159,7 +156,7 @@
                                 class="w-full inline-flex items-center justify-center rounded-lg px-4 py-3 font-bold
                        bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] text-black
                        shadow-[0_8px_24px_rgba(255,210,90,0.25)] ring-1 ring-yellow-500/40 hover:brightness-105 active:brightness-95 transition">
-                                Envoyer
+                                {{ t('hacksPage.modal.send') }}
                             </button>
                         </div>
                     </div>
@@ -167,26 +164,25 @@
                     <!-- no account -->
                     <div class="mt-2 p-3 rounded-xl bg-white/5 border border-white/10">
                         <p class="text-sm">
-                            Pas de compte sur <span class="font-semibold">{{ current?.platform.name }}</span> ?
+                            {{ t('hacksPage.modal.noAccountBefore') }}<span class="font-semibold">{{ current?.platform.name }}</span>{{ t('hacksPage.modal.noAccountMiddle') }}
                             <a :href="current?.platform.url" target="_blank"
-                                class="text-yellow-300 underline underline-offset-2">Créer un compte</a>
-                            avec le code <button @click="copyPromo(current?.platform.promo)"
+                                class="text-yellow-300 underline underline-offset-2">{{ t('hacksPage.modal.createAccount') }}</a>
+                            {{ t('hacksPage.modal.noAccountWithCode') }}<button @click="copyPromo(current?.platform.promo)"
                                 class="text-yellow-200 font-semibold hover:underline"> {{ current?.platform.promo }}
                             </button>.
                         </p>
                     </div>
 
                     <p class="text-xs text-gray-400 italic">
-                        NB : l’identifiant permet d’assurer la liaison technique entre le hack et votre compte pour une
-                        expérience fiable.
+                        {{ t('hacksPage.modal.nb') }}
                     </p>
 
                     <div class="flex items-center justify-between gap-2 pt-2">
                         <a :href="telegramUrl" target="_blank" rel="noopener"
                             class="inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold bg-[#229ED9] text-white ring-1 ring-white/10 hover:brightness-110 telegram-pulse">
-                            <i class="fa-brands fa-telegram mr-2"></i> Rejoindre le canal Telegram
+                            <i class="fa-brands fa-telegram mr-2"></i> {{ t('hacksPage.modal.telegramCta') }}
                         </a>
-                        <span class="text-xs text-white/70">Plus d’infos, guides et support en direct.</span>
+                        <span class="text-xs text-white/70">{{ t('hacksPage.modal.telegramNote') }}</span>
                     </div>
                 </div>
             </div>
@@ -195,14 +191,19 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
+
 const siteUrl = 'https://ultimatepronos.com'
+const ogLocaleMap = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', hi: 'hi_IN', ar: 'ar_AR', az: 'az_AZ', pt: 'pt_PT', ru: 'ru_RU', so: 'so_SO', tr: 'tr_TR' }
+const ogLocale = ogLocaleMap[locale.value] || 'fr_FR'
 
 useHead({
-    title: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent',
+    title: t('hacksPage.seo.title'),
     meta: [
         {
             name: 'description',
-            content: 'Découvrez nos algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Rejoignez notre canal Telegram pour recevoir les signaux gagnants !'
+            content: t('hacksPage.seo.description')
         },
         {
             name: 'keywords',
@@ -213,17 +214,18 @@ useHead({
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
 
         // Open Graph
-        { property: 'og:title', content: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent' },
-        { property: 'og:description', content: 'Nos algorithmes prédisent Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Suivez nos signaux gagnants sur Telegram !' },
+        { property: 'og:title', content: t('hacksPage.seo.ogTitle') },
+        { property: 'og:description', content: t('hacksPage.seo.ogDescription') },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'UltimatePronos' },
         { property: 'og:url', content: siteUrl + '/hacks' },
         { property: 'og:image', content: siteUrl + '/logo.png' },
-        { property: 'og:locale', content: 'fr_FR' },
+        { property: 'og:locale', content: ogLocale },
 
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'UltimatePronos – Hacks & Algorithmes de Pronostics Jeux d’Argent' },
-        { name: 'twitter:description', content: 'Algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus. Signaux gagnants et code promo sur notre canal Telegram.' },
+        { name: 'twitter:title', content: t('hacksPage.seo.twitterTitle') },
+        { name: 'twitter:description', content: t('hacksPage.seo.twitterDescription') },
         { name: 'twitter:image', content: siteUrl + '/logo.png' }
     ],
     link: [
@@ -249,22 +251,22 @@ useHead({
             children: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                "name": "UltimatePronos Hacks",
+                "name": t('hacksPage.seo.jsonLdName'),
                 "url": siteUrl + '/hacks',
-                "description": "Algorithmes de pronostics pour Apple of Fortune, Aviator, Mines et plus sur XBET, 1WIN, MELBET, BetWinner. Signaux gagnants et codes promo sur Telegram.",
+                "description": t('hacksPage.seo.jsonLdDescription'),
                 "breadcrumb": {
                     "@type": "BreadcrumbList",
                     "itemListElement": [
                         {
                             "@type": "ListItem",
                             "position": 1,
-                            "name": "Accueil",
+                            "name": t('hacksPage.seo.breadcrumbHome'),
                             "item": siteUrl
                         },
                         {
                             "@type": "ListItem",
                             "position": 2,
-                            "name": "Hacks",
+                            "name": t('hacksPage.seo.breadcrumbHacks'),
                             "item": siteUrl + '/hacks'
                         }
                     ]
@@ -305,46 +307,46 @@ const platforms = {
 
 /* 40 games (images à placer dans /public/games/...) */
 const games = ref([
-    { id: 1, name: 'Apple of Fortune', platform: platforms['1xbet'], image: '/apple.webp', description: 'Révélez la bonne case à chaque ligne grâce à nos signaux.' },
-    { id: 2, name: 'Aviator', platform: platforms['1win'], image: '/aviator 1win.jpg', description: 'Partez avant le crash. Indices de volatilité en temps réel.' },
-    { id: 3, name: 'Mines', platform: platforms['melbet'], image: '/mines.jpg', description: 'Évitez les mines, sécurisez vos paliers de gain.' },
-    { id: 4, name: 'Plinko', platform: platforms['betwinner'], image: '/plinko.jpg', description: 'Trajectoires optimisées et niveaux de risque ajustés.' },
-    { id: 5, name: 'Crash', platform: platforms['1xbet'], image: '/crash.jpg', description: 'Courbes, momentum, sorties ciblées pour limiter le risque.' },
-    { id: 6, name: 'JetX', platform: platforms['1win'], image: '/jetx.jpg', description: 'Stratégies de décollage et d’éjection progressive.' },
-    { id: 7, name: 'Dice', platform: platforms['melbet'], image: '/dice.jpg', description: 'Probabilités dynamiques, gestion des séries perdantes.' },
-    { id: 8, name: 'Goal', platform: platforms['betwinner'], image: '/goal.jpg', description: 'Avancez vers le but en minimisant les risques par palier.' },
-    { id: 9, name: 'Burning hot', platform: platforms['1xbet'], image: '/burnung hot.jpg', description: 'Lectures de séquences pour mieux anticiper les tours.' },
-    { id: 10, name: 'Limbo', platform: platforms['1win'], image: '/limbo.jpg', description: 'Cibles de multiplicateurs et mises progressives.' },
-    { id: 11, name: 'Keno', platform: platforms['melbet'], image: '/keno.jpg', description: 'Sélection optimisée des grilles à espérance positive.' },
-    { id: 12, name: 'Roulette', platform: platforms['betwinner'], image: '/roulette.jpg', description: 'Progression contrôlée et cibles de sortie claires.' },
-    { id: 13, name: 'Blackjack', platform: platforms['1xbet'], image: '/blackjack.jpg', description: 'Charts, comptage soft et limites de pertes strictes.' },
-    { id: 14, name: 'Baccarat', platform: platforms['1win'], image: '/baccarat.jpg', description: 'Gestion des runs banker/player, stop-win discipliné.' },
-    { id: 15, name: 'Poker', platform: platforms['melbet'], image: '/pocker.jpg', description: 'Ranges de départ simples et lignes à faible variance.' },
-    { id: 16, name: 'Wheel', platform: platforms['betwinner'], image: '/wheel.jpg', description: 'Répartition des segments et couverture intelligente.' },
-    { id: 17, name: 'Slots', platform: platforms['1xbet'], image: '/slot.jpg', description: 'Sessions courtes, features ciblées, retraits réguliers.' },
-    { id: 18, name: 'Zeppelin', platform: platforms['1win'], image: '/zipeline.jpg', description: 'Sorties progressives, séquence de sécurité intégrée.' },
-    { id: 19, name: 'Space XY', platform: platforms['melbet'], image: '/spacexy.jpg', description: 'Stratégie multi-objectifs selon la volatilité.' },
-    { id: 20, name: 'Minesweeper', platform: platforms['betwinner'], image: '/minesweeper.jpg', description: 'Pattern sécurisés et stop-loss stricts.' },
-    { id: 21, name: 'Tower', platform: platforms['1xbet'], image: '/tower.jpg', description: 'Montée par niveaux avec paliers de prise de gain.' },
-    { id: 22, name: 'Stairs', platform: platforms['1win'], image: '/stairs.jpg', description: 'Choix de marches à meilleur ratio risque/rendement.' },
-    { id: 23, name: 'Lucky Jet', platform: platforms['melbet'], image: '/luckyjey.jpg', description: 'Double sortie et couverture des pics volatils.' },
-    { id: 24, name: 'Jet Lucky 2', platform: platforms['betwinner'], image: '/luckyjet2.jpg', description: 'Variantes de sortie en deux temps, gestion des runs.' },
-    { id: 25, name: 'Crazy Time', platform: platforms['1xbet'], image: '/Crazy-Time-.jpg', description: 'Allocation intelligente sur bonus et rouleau.' },
-    { id: 26, name: 'Monopoly Live', platform: platforms['1win'], image: '/monopolylive.jpg', description: 'Couverture des cases clés, risques modulés.' },
-    { id: 27, name: 'Dream Catcher', platform: platforms['melbet'], image: '/dream catcher.jpg', description: 'Répartition de mise sur segments majoritaires.' },
-    { id: 28, name: 'Coin Flip', platform: platforms['betwinner'], image: '/coinflip.jpg', description: 'Gestion des flips consécutifs et stop-win clair.' },
-    { id: 29, name: 'Penalty Shootout', platform: platforms['1xbet'], image: '/penalty shootout.jpg', description: 'Sélection de côtés avec probas contextuelles.' },
-    { id: 30, name: 'Goal Crash', platform: platforms['1win'], image: '/goal crash.jpg', description: 'Objectifs courts, sortie rapide, risque maîtrisé.' },
-    { id: 31, name: 'Andar Bahar', platform: platforms['melbet'], image: '/andar bahar.jpg', description: 'Gestion des séquences et tailles de mise.' },
-    { id: 32, name: 'Teen Patti', platform: platforms['betwinner'], image: '/teen patty.jpg', description: 'Sélection de spots favorables, variance contenue.' },
-    { id: 33, name: 'Lightning Roulette', platform: platforms['1xbet'], image: '/ligthning roulette.jpg', description: 'Ciblage des éclairs et couverture de base.' },
-    { id: 34, name: 'Mega Ball', platform: platforms['1win'], image: '/megaball.jpg', description: 'Nombre de cartes optimal et gestion du budget.' },
-    { id: 35, name: 'Razor Shark', platform: platforms['melbet'], image: '/razor shark.jpg', description: 'Fenêtres d’opportunités et sortie disciplinée.' },
-    { id: 36, name: 'Sugar Rush', platform: platforms['betwinner'], image: '/suger rush.jpg', description: 'Sessions courtes, focus sur bonus majorés.' },
-    { id: 37, name: 'Fruit Party', platform: platforms['1xbet'], image: '/fruit party.jpg', description: 'Ciblage de volatilité moyenne, bankroll stable.' },
-    { id: 38, name: 'Book of Dead', platform: platforms['1win'], image: '/book of death.jpg', description: 'Cycles de spins et limites strictes de pertes.' },
-    { id: 39, name: 'The Dog House', platform: platforms['melbet'], image: '/dog house.jpg', description: 'Entrées prudentes, prise de bénéfices graduelle.' },
-    { id: 40, name: 'Gates of Olympus', platform: platforms['betwinner'], image: '/gate of olympus.jpg', description: 'Exposition maîtrisée sur multiplicateurs élevés.' },
+    { id: 1, name: 'Apple of Fortune', platform: platforms['1xbet'], image: '/apple.webp', description: t('hacksPage.games.g1.description') },
+    { id: 2, name: 'Aviator', platform: platforms['1win'], image: '/aviator 1win.jpg', description: t('hacksPage.games.g2.description') },
+    { id: 3, name: 'Mines', platform: platforms['melbet'], image: '/mines.jpg', description: t('hacksPage.games.g3.description') },
+    { id: 4, name: 'Plinko', platform: platforms['betwinner'], image: '/plinko.jpg', description: t('hacksPage.games.g4.description') },
+    { id: 5, name: 'Crash', platform: platforms['1xbet'], image: '/crash.jpg', description: t('hacksPage.games.g5.description') },
+    { id: 6, name: 'JetX', platform: platforms['1win'], image: '/jetx.jpg', description: t('hacksPage.games.g6.description') },
+    { id: 7, name: 'Dice', platform: platforms['melbet'], image: '/dice.jpg', description: t('hacksPage.games.g7.description') },
+    { id: 8, name: 'Goal', platform: platforms['betwinner'], image: '/goal.jpg', description: t('hacksPage.games.g8.description') },
+    { id: 9, name: 'Burning hot', platform: platforms['1xbet'], image: '/burnung hot.jpg', description: t('hacksPage.games.g9.description') },
+    { id: 10, name: 'Limbo', platform: platforms['1win'], image: '/limbo.jpg', description: t('hacksPage.games.g10.description') },
+    { id: 11, name: 'Keno', platform: platforms['melbet'], image: '/keno.jpg', description: t('hacksPage.games.g11.description') },
+    { id: 12, name: 'Roulette', platform: platforms['betwinner'], image: '/roulette.jpg', description: t('hacksPage.games.g12.description') },
+    { id: 13, name: 'Blackjack', platform: platforms['1xbet'], image: '/blackjack.jpg', description: t('hacksPage.games.g13.description') },
+    { id: 14, name: 'Baccarat', platform: platforms['1win'], image: '/baccarat.jpg', description: t('hacksPage.games.g14.description') },
+    { id: 15, name: 'Poker', platform: platforms['melbet'], image: '/pocker.jpg', description: t('hacksPage.games.g15.description') },
+    { id: 16, name: 'Wheel', platform: platforms['betwinner'], image: '/wheel.jpg', description: t('hacksPage.games.g16.description') },
+    { id: 17, name: 'Slots', platform: platforms['1xbet'], image: '/slot.jpg', description: t('hacksPage.games.g17.description') },
+    { id: 18, name: 'Zeppelin', platform: platforms['1win'], image: '/zipeline.jpg', description: t('hacksPage.games.g18.description') },
+    { id: 19, name: 'Space XY', platform: platforms['melbet'], image: '/spacexy.jpg', description: t('hacksPage.games.g19.description') },
+    { id: 20, name: 'Minesweeper', platform: platforms['betwinner'], image: '/minesweeper.jpg', description: t('hacksPage.games.g20.description') },
+    { id: 21, name: 'Tower', platform: platforms['1xbet'], image: '/tower.jpg', description: t('hacksPage.games.g21.description') },
+    { id: 22, name: 'Stairs', platform: platforms['1win'], image: '/stairs.jpg', description: t('hacksPage.games.g22.description') },
+    { id: 23, name: 'Lucky Jet', platform: platforms['melbet'], image: '/luckyjey.jpg', description: t('hacksPage.games.g23.description') },
+    { id: 24, name: 'Jet Lucky 2', platform: platforms['betwinner'], image: '/luckyjet2.jpg', description: t('hacksPage.games.g24.description') },
+    { id: 25, name: 'Crazy Time', platform: platforms['1xbet'], image: '/Crazy-Time-.jpg', description: t('hacksPage.games.g25.description') },
+    { id: 26, name: 'Monopoly Live', platform: platforms['1win'], image: '/monopolylive.jpg', description: t('hacksPage.games.g26.description') },
+    { id: 27, name: 'Dream Catcher', platform: platforms['melbet'], image: '/dream catcher.jpg', description: t('hacksPage.games.g27.description') },
+    { id: 28, name: 'Coin Flip', platform: platforms['betwinner'], image: '/coinflip.jpg', description: t('hacksPage.games.g28.description') },
+    { id: 29, name: 'Penalty Shootout', platform: platforms['1xbet'], image: '/penalty shootout.jpg', description: t('hacksPage.games.g29.description') },
+    { id: 30, name: 'Goal Crash', platform: platforms['1win'], image: '/goal crash.jpg', description: t('hacksPage.games.g30.description') },
+    { id: 31, name: 'Andar Bahar', platform: platforms['melbet'], image: '/andar bahar.jpg', description: t('hacksPage.games.g31.description') },
+    { id: 32, name: 'Teen Patti', platform: platforms['betwinner'], image: '/teen patty.jpg', description: t('hacksPage.games.g32.description') },
+    { id: 33, name: 'Lightning Roulette', platform: platforms['1xbet'], image: '/ligthning roulette.jpg', description: t('hacksPage.games.g33.description') },
+    { id: 34, name: 'Mega Ball', platform: platforms['1win'], image: '/megaball.jpg', description: t('hacksPage.games.g34.description') },
+    { id: 35, name: 'Razor Shark', platform: platforms['melbet'], image: '/razor shark.jpg', description: t('hacksPage.games.g35.description') },
+    { id: 36, name: 'Sugar Rush', platform: platforms['betwinner'], image: '/suger rush.jpg', description: t('hacksPage.games.g36.description') },
+    { id: 37, name: 'Fruit Party', platform: platforms['1xbet'], image: '/fruit party.jpg', description: t('hacksPage.games.g37.description') },
+    { id: 38, name: 'Book of Dead', platform: platforms['1win'], image: '/book of death.jpg', description: t('hacksPage.games.g38.description') },
+    { id: 39, name: 'The Dog House', platform: platforms['melbet'], image: '/dog house.jpg', description: t('hacksPage.games.g39.description') },
+    { id: 40, name: 'Gates of Olympus', platform: platforms['betwinner'], image: '/gate of olympus.jpg', description: t('hacksPage.games.g40.description') },
 ])
 
 /* filters */
@@ -395,7 +397,7 @@ async function copyPromo(code) {
             document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta)
         }
         copied.value = true; setTimeout(() => copied.value = false, 1400)
-    } catch (e) { alert('Copie impossible automatiquement. Code : ' + code) }
+    } catch (e) { alert(t('hacksPage.copyFallbackAlert', { code })) }
 }
 
 /* modal state */
@@ -420,12 +422,12 @@ function close() {
 }
 function submitId() {
     if (!userId.value) {
-        alert('Merci de renseigner votre ID utilisateur pour continuer.')
+        alert(t('hacksPage.modal.idRequiredAlert'))
         return
     }
     // Ici, tu pourrais lancer ta logique de vérification/connexion au hack.
     close()
-    alert(`ID ${userId.value} reçu pour ${current.value.name} — plateforme ${current.value.platform.name}.`)
+    alert(t('hacksPage.modal.idReceivedAlert', { id: userId.value, name: current.value.name, platform: current.value.platform.name }))
 }
 
 /* entry animations */

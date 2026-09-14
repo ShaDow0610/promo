@@ -52,7 +52,6 @@
         "nb": "(Haddii xiriirku furmi waayo, isticmaaal VPN lagu dejiyey Sweden. Play Store/App Store waxa ku jira adeegyo bilaash ah sida Vpnify, Planet VPN, Hotspot VPN, iwm.)"
       }
     },
-
     "stats": {
       "countries": {
         "label": "DALAL LA GAARAY",
@@ -186,22 +185,26 @@
           "subText": "Su’aalo, taageero farsamo ama wararkii u dambeeyay, nala soo xiriir marinnada rasmiga ah:💬",
           "li1": "https://t.me/+09RmIt4oNn41ZWVk",
           "NB": "Algorithamka si joogto ah ayaan u hagaajinnaa si natiijooyinka ugu fiican loo hubiyo."
-        }
+        },
+        "mediaAlt": "Shabaqa ciyaarta Apple of Fortune oo leh goobta tufaaxa"
       },
       "two": {
         "title": "Isdiiwaan gelin iyadoo la adeegsanayo koodh promo",
         "text": "Geli koodhkeenna oo fur gunnadaada.",
-        "details": "Abaalmarinno si dhakhso leh: samee akoon, geli koodhka, oo dhaqaaji dalabyada gaarka ah. Hagitaan cad oo tallaabo-tallaabo ah."
+        "details": "Abaalmarinno si dhakhso leh: samee akoon, geli koodhka, oo dhaqaaji dalabyada gaarka ah. Hagitaan cad oo tallaabo-tallaabo ah.",
+        "mediaAlt": "Isdiiwaangelinta koodhka gorgortanka GLE44 ee ganacsade sharad"
       },
       "three": {
         "title": "Saadaasha kulamada iyo ciyaaraha kale",
         "text": "Falanqayn maalinle ah iyo xulashooyin qiimo leh.",
-        "details": "Ku saley falanqaynta qaabka, tirakoobka, macnaha guud, iyo maaraynta bankroll-ka: ku sharad si nidaamsan, ma aha dareen keliya."
+        "details": "Ku saley falanqaynta qaabka, tirakoobka, macnaha guud, iyo maaraynta bankroll-ka: ku sharad si nidaamsan, ma aha dareen keliya.",
+        "mediaAlt": "Interfaska ciyaarta Apple of Fortune ee saadaalinta"
       },
       "four": {
         "title": "Ciyaar & guul",
         "text": "U sharad si caqli ah, si nabad ah u soo saar.",
-        "details": "Nidaam, maaraynta khatarta, iyo bixino joogto ah si aad u kobciso bankroll-ka wakhti ka dib."
+        "details": "Nidaam, maaraynta khatarta, iyo bixino joogto ah si aad u kobciso bankroll-ka wakhti ka dib.",
+        "mediaAlt": "Taariikhda faa'iidooyinka iyo lacag-bixinta guusha leh"
       }
     }
   },
@@ -288,5 +291,386 @@
       },
       "footnote": "Apple of Fortune — Ultimate Hack."
     }
+  },
+  "homePage": {
+    "seo": {
+      "title": "Saadaalinta Sharadyada Ciyaaraha, Koodhadhka Gorgortanka & Ciyaaraha Lacagta ah – UltimatePronos",
+      "description": "Saadaalinta sharadyada ciyaaraha oo la isku halayn karo, koodhadhka gorgortanka XBET, MELBET, 1WIN, BetWinner iyo talooyin khubaro ku saabsan ciyaaraha lacagta ah (Apple of Fortune, Aviator). Ku biir kanaalkeenna Telegram si aad u hesho saadaalinno guuleysta iyo koodhadh gaar ah!",
+      "ogTitle": "Saadaalinta Sharadyada Ciyaaraha, Koodhadhka Gorgortanka & Ciyaaraha Lacagta ah – UltimatePronos",
+      "ogDescription": "Sharad ciyaareed, saadaalinta kubbadda cagta, koodhadhka gorgortanka XBET, MELBET, 1WIN, BetWinner iyo talooyin ku saabsan ciyaaraha lacagta ah sida Apple of Fortune iyo Aviator. Algorithm saadaalin oo la isku halayn karo, koodhadh guuleysta iyo hadiyado gaar ah oo ku yaal kanaalkeenna Telegram.",
+      "twitterTitle": "Saadaalinta Sharadyada Ciyaaraha, Koodhadhka Gorgortanka & Ciyaaraha Lacagta ah – UltimatePronos",
+      "twitterDescription": "Sharad ciyaareed, saadaalinta kubbadda cagta, koodhadhka gorgortanka XBET, MELBET, 1WIN, BetWinner iyo talooyin ku saabsan ciyaaraha lacagta ah sida Apple of Fortune iyo Aviator. Algorithm saadaalin oo la isku halayn karo, koodhadh guuleysta iyo hadiyado gaar ah oo ku yaal kanaalkeenna Telegram.",
+      "jsonLdDescription": "Saadaalinta sharadyada ciyaaraha, sharad ciyaareed, koodhadhka gorgortanka XBET, MELBET, 1WIN, BetWinner iyo talooyin ku saabsan ciyaaraha lacagta ah (Apple of Fortune, Aviator iyo wax badan oo kale). Algorithm gaar ah iyo koodhadh guuleysta."
+    }
+  },
+  "aboutPage": {
+    "badge": "NAGA WARBIXI",
+    "title1": "Aragtidayada ku saabsan",
+    "titleHighlight": "saadaalinta isboortiga",
+    "subtitleBefore": "Halkan ",
+    "brand": "PronostikerX",
+    "subtitleMiddle": ", waxaan isku darnaa xogta, anshaxa iyo waxbarashada si aan ugu caawino sharrucdayaasha ",
+    "subtitleHighlight": "go’aan wanaagsan qaadashada",
+    "subtitleAfter": ". Habkayagu waa: fudud, heer sare, waxtar leh — meel kasta oo dunida ah.",
+    "telegramCta": "Ku biir Kanaalka Telegram",
+    "stats": {
+      "countries": "WADAMADA LAGA HELO",
+      "deposits": "KHARASHYADA LA KORDHIYAY",
+      "players": "CIYAARTOYDA FIRFIRCOON",
+      "success": "HEERKA GUULAYSTA"
+    },
+    "statsNote": "* Tirakoobyada waa isku-darkooda kobcaya — kuma dhicin dammaanad guul ah.",
+    "method": {
+      "title": "Habkayaga",
+      "textBefore": "Waxaan isku darnaa falanqaynta xaaladda ciyaaryahannada, tirakoob horumarsan, maaraynta lacagta (bankroll) iyo warbixinno goobta ka yimid. Doorasho kastaa waxaa loogu talagalay ",
+      "textHighlight": "qiimo dhab ah",
+      "textAfter": " halkii ay ka ahaan lahayd dareen kaliya.",
+      "li1": "Qaabab suurtagalnimo & xaaladaha ciyaaraha",
+      "li2": "Maaraynta lacagta oo cad oo horumarsan",
+      "li3": "Digniinno Telegram oo waqtiga dhabta ah",
+      "li4": "Waxbarasho & anshax marka hore"
+    },
+    "spirit": {
+      "title": "Ruuxa PronostikerX",
+      "textBefore": "Calaamad ",
+      "textHighlight": "heer sare oo fudud",
+      "textAfter": ": naqshad la feejignaaday, fariimo cad, natiijooyin la qiyaasi karo. Hadafkayagu waa inaan ku siino qaab aad ku horumarto si joogto ah.",
+      "tag1": "Fudaydnimo",
+      "tag2": "Waxtarnimo",
+      "tag3": "Hab",
+      "tag4": "Caalami ah"
+    },
+    "roadmap": {
+      "title": "Khariidadda Waddada",
+      "step1Title": "Aasaaska",
+      "step1Text": "Qaab cad, naqshad fudud, aasaas waxa ku jira oo adag.",
+      "step2Title": "Falanqaynta & Kanaalada",
+      "step2Text": "Doorashooyin maalinle ah, ogeysiisyo, waxbarasho ku saabsan Telegram.",
+      "step3Title": "Tijaabooyinka Demo-ga",
+      "step3Text": "Tusaalooyin hagid leh si loo fahmo caqli-galnimada loona iska ilaaliyo khaladaadka.",
+      "step4Title": "Horumarin Joogto ah",
+      "step4Text": "Horumarin ku salaysan xogta, jawaabaha bulshada iyo natiijooyinka."
+    },
+    "team": {
+      "title": "Kooxda & Anshaxa",
+      "text": "Waxaan taageernaa ciyaar mas'uuliyad leh. Yeel hadaf macquul ah, garo goorta aad nasato, oo kaliya sharrooc waxa aad awoodo inaad lumiso.",
+      "li1": "Daahfurnaanta & waxbarashada",
+      "li2": "Ma jiraan balan aan macquul ahayn",
+      "li3": "Diirado waqti-dheer"
+    },
+    "contactBlock": {
+      "title": "Nala Soo Xiriir",
+      "text": "Su'aal, soo jeedin, ama iskaashi? Nooo qor ama ku biir kanaalka.",
+      "telegram": "Telegram",
+      "responseTime": "Waqtiga jawaabta guud ahaan: 24–48 saacadood oo shaqo ah."
+    },
+    "seo": {
+      "title": "Habkeenna saadaalinta sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "description": "UltimatePronos waa ilaha aad ku kalsoonaan karto ee saadaalinta sharadyada ciyaaraha, talooyinka sharadyada ciyaaraha iyo algorithm-yada ciyaaraha lacagta ah (Apple of Fortune, Aviator). Baro kooxdeenna iyo habkeenna shaqada.",
+      "ogTitle": "Habkeenna saadaalinta sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "ogDescription": "Baro kooxda ka dambeysa UltimatePronos, talooyinkeenna sharadyada ciyaaraha iyo habkeenna saadaalinta Apple of Fortune, Aviator iyo ciyaaraha kale ee lacagta ah.",
+      "twitterTitle": "Habkeenna saadaalinta sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "twitterDescription": "Baro kooxda iyo habka shaqada ee UltimatePronos: saadaalinta sharadyada ciyaaraha, talooyinka sharadyada ciyaaraha iyo saadaalinta Apple of Fortune, Aviator iyo wax badan oo kale.",
+      "jsonLdName": "Nagu saabsan – UltimatePronos",
+      "jsonLdDescription": "Baro kooxda iyo habka shaqada ee ka dambeeya UltimatePronos, khubarada saadaalinta iyo hacks-ka Apple of Fortune, Aviator iyo wax badan oo kale."
+    }
+  },
+  "contactPage": {
+    "titlePrefix": "Nala Soo Xiriir — ",
+    "subtitle": "Ma u baahan tahay caawimaad, iskaashi ama jawaab celin? Nooo qor. Jawaab degdeg ah oo Telegram ah.",
+    "cards": {
+      "telegram": {
+        "title": "Kanaalka Telegram",
+        "text": "Hel saadaal, wararka ugu dambeeyay iyo gelitaanka demo-yada.",
+        "cta": "Ku Biir Kanaalka"
+      },
+      "support": {
+        "title": "Taageero Farsamo",
+        "text": "Su'aalo ku saabsan demo-ga ama gelitaanka premium.",
+        "ariaLabel": "La xiriir taageerada Telegram"
+      },
+      "email": {
+        "title": "Email",
+        "text": "Iskaashi, saxaafad, codsiyo gaar ah.",
+        "ariaLabel": "U dir email {email}"
+      }
+    },
+    "promo": {
+      "title": "Koodhka Promo",
+      "text": "Isticmaal koodhkan marka aad iskudiiwaan gelinayso.",
+      "note": "Fiiro gaar ah: koodhku wuxuu ku xidhaa akoonkaaga si demo-gu si fiican u shaqeeyo.",
+      "copied": "La koobiyeeyay ✓",
+      "ariaLabel": "Koobiyi koodhka promo {code}"
+    },
+    "location": {
+      "title": "Goobta",
+      "text": "Douala (Kaameroon) · Kooxdu way kala firdhisan tahay, taageero caalami ah.",
+      "mapPlaceholder": "Khariidad soo socota"
+    },
+    "links": {
+      "title": "Xiriirinno Waxtar leh"
+    },
+    "form": {
+      "title": "Qor Fariin",
+      "subtitle": "Waxaan si degdeg ah ugu jawaabnaa email ama Telegram.",
+      "nameLabel": "Magaca",
+      "emailLabel": "Email *",
+      "subjectLabel": "Mowduuca",
+      "subjectOptions": {
+        "support": "Taageero",
+        "partnership": "Iskaashi",
+        "press": "Saxaafad",
+        "other": "Kale"
+      },
+      "useridLabel": "ID isticmaale (ikhtiyaari)",
+      "useridPlaceholder": "ID ku xidhan koodhka GLE44",
+      "messageLabel": "Fariin *",
+      "submit": "Dir",
+      "sending": "Diyaarinta…",
+      "telegramCta": "Nagu Qor Telegram",
+      "errors": {
+        "invalidEmail": "Fadlan geli email sax ah.",
+        "messageRequired": "Fariintaadu waa lagama maarmaan."
+      },
+      "mail": {
+        "greeting": "Salaan,",
+        "closing": "Waad ku mahadsan tahay.",
+        "emailLabel": "Email",
+        "useridLabel": "ID isticmaale",
+        "promoLabel": "Koodhka Promo",
+        "notProvided": "N/A",
+        "defaultName": "Isticmaale"
+      }
+    },
+    "copyFallbackAlert": "Koobiyaynta si toos ah looma samayn karin. Koodhka: {code}",
+    "seo": {
+      "title": "Nala soo xiriir – Koodhadhka gorgortanka sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "description": "La xiriir UltimatePronos su'aalahaaga ku saabsan sharadyada ciyaaraha, koodhadhkeenna gorgortanka (1xBet, Melbet, 1win, Betwinner) ama si aad u hesho talooyinkeenna iyo calaamadaha guusha leh ee Apple of Fortune, Aviator iyo ciyaaraha kale ee lacagta ah.",
+      "ogTitle": "Nala soo xiriir – Koodhadhka gorgortanka sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "ogDescription": "Weydii su'aalahaaga oo hel talooyin iyo calaamado ku saabsan sharadyadaada ciyaaraha, Apple of Fortune, Aviator iyo ciyaaraha kale ee lacagta ah ee UltimatePronos.",
+      "twitterTitle": "Nala soo xiriir – Koodhadhka gorgortanka sharadyada ciyaaraha & talooyinka ciyaaraha lacagta ah – UltimatePronos",
+      "twitterDescription": "La xiriir UltimatePronos si aad u hesho caawimaad, talooyin sharadyada ciyaaraha iyo calaamado guuleysta ee Apple of Fortune, Aviator iyo wax badan oo kale.",
+      "jsonLdName": "Nala soo xiriir – UltimatePronos",
+      "jsonLdDescription": "La xiriir UltimatePronos su'aalo, caawimaad, ama si aad u hesho calaamadahayaga guuleysta ee Apple of Fortune, Aviator iyo ciyaaraha kale."
+    }
+  },
+  "hacksPage": {
+    "badge": "HEER SARE • HACKS • DEMOS",
+    "title": "Hacks Ciyaareed — doorasho ka socota dhowr madal",
+    "subtitleBefore": "Baaro 40 ciyaareed oo ka mid ah kuwa ugu badan la ciyaaro 1xBet, 1win, Melbet iyo Betwinner. Gelitaan degdeg ah, koodhka promo ",
+    "subtitleAfter": ", iyo demo hagid leh.",
+    "searchPlaceholder": "Raadi ciyaar ama madal…",
+    "resetFilters": "Dib u deji",
+    "emptyState": "Ciyaar lama helin. Isku day ereyk kale ama shaandhayn kale.",
+    "openPlatform": "Fur Madalka",
+    "useHack": "Isticmaal Hack-ga",
+    "promoLabel": "Koodhka Promo",
+    "modal": {
+      "startTitle": "Bilaw Hack-ga — {name}",
+      "subtitle": "Xaqiijinta waafaqidda akoonka",
+      "instructionsBefore": "Geli ID-ga akoonkaaga la abuuray adigoo isticmaalaya koodhka ",
+      "instructionsMiddle": " ee ",
+      "instructionsAfter": ". Waxaan xaqiijinaynaa in hack-gu si sax ah ula shaqeeyo profile-kaaga.",
+      "idLabel": "ID Isticmaale",
+      "idPlaceholder": "Tusaale. 1X-1234-ABCD",
+      "send": "Dir",
+      "noAccountBefore": "Akoon kuma lihid ",
+      "noAccountMiddle": " ? ",
+      "createAccount": "Abuur Akoon",
+      "noAccountWithCode": " adigoo isticmaalaya koodhka ",
+      "nb": "Fiiro gaar ah: aqoonsigu wuxuu hubinayaa xidhiidhka farsamo ee u dhexeeya hack-ga iyo akoonkaaga si loo hubiyo waxqabad la isku halayn karo.",
+      "telegramCta": "Ku Biir Kanaalka Telegram",
+      "telegramNote": "Macluumaad dheeraad ah, hage iyo taageero toos ah.",
+      "closeAria": "Xir",
+      "idRequiredAlert": "Fadlan geli ID-ga isticmaalahaaga si aad u sii wadato.",
+      "idReceivedAlert": "ID {id} waa la helay {name} — madalka {platform}."
+    },
+    "copyFallbackAlert": "Koobiyaynta si toos ah looma samayn karin. Koodhka: {code}",
+    "games": {
+      "g1": {
+        "description": "Hel goobta saxda ah safka kastaba iyadoo lagu kaashanayo calaamadahayaga."
+      },
+      "g2": {
+        "description": "Bax intaan burburku dhicin. Calaamado shaqaynaya oo waqtiga dhabta ah."
+      },
+      "g3": {
+        "description": "Ka fogow miinooyinka, xaqiiji heerarka guusha."
+      },
+      "g4": {
+        "description": "Waddooyin la hagaajiyay iyo heerar khatar oo la habeeyay."
+      },
+      "g5": {
+        "description": "Curves, socodka, bixitaanno la beegsaday si khatarta loo yareeyo."
+      },
+      "g6": {
+        "description": "Xeeladaha duulista iyo ka baxa tallaabo tallaabo ah."
+      },
+      "g7": {
+        "description": "Suurtagalnimo isbeddelaya, maaraynta taxanaha guuldarada."
+      },
+      "g8": {
+        "description": "U soco hadafka adigoo yareynaya khatarta heer kasta."
+      },
+      "g9": {
+        "description": "Akhrinta taxanaha si loo saadaaliyo wareegyada."
+      },
+      "g10": {
+        "description": "Bartilmaameedka isku-dhufashada iyo sharrooc horumarsan."
+      },
+      "g11": {
+        "description": "Doorashada shabakadaha ee leh rajo togan la hagaajiyay."
+      },
+      "g12": {
+        "description": "Horumar la xakameeyay iyo bartilmaameedyo bixitaan oo cad."
+      },
+      "g13": {
+        "description": "Jaantusyo, tirinta fudud iyo xaddidaadyo adag oo khasaare ah."
+      },
+      "g14": {
+        "description": "Maaraynta wareegyada banker/player, joojin-guul oo anshax leh."
+      },
+      "g15": {
+        "description": "Xudduudaha bilowga oo fudud iyo saflo kala duwaan yar leh."
+      },
+      "g16": {
+        "description": "Qaybinta qaybaha iyo daboolid caqli ah."
+      },
+      "g17": {
+        "description": "Fadhiyo gaagaaban, sifooyin la beegsaday, bixitaan joogto ah."
+      },
+      "g18": {
+        "description": "Bixitaan horumarsan, taxane amni ah oo lagu daray."
+      },
+      "g19": {
+        "description": "Xeelad hadaf-badan oo ku salaysan kala duwaanka."
+      },
+      "g20": {
+        "description": "Qaabab amaan ah iyo stop-loss adag."
+      },
+      "g21": {
+        "description": "Kor u kaca heerar heerar ah oo leh marxaladaha guusha qaadashada."
+      },
+      "g22": {
+        "description": "Doorashada tallaabooyinka leh saameynta khatar/faa'iido ugu fiican."
+      },
+      "g23": {
+        "description": "Laba bixitaan iyo daboolid heerarka sarreeya ee kala duwan."
+      },
+      "g24": {
+        "description": "Noocyada bixitaanka labada mid ah, maaraynta wareegyada."
+      },
+      "g25": {
+        "description": "Qaybinta caqliga leh ee bonus-ka iyo rogitaanka."
+      },
+      "g26": {
+        "description": "Daboolidda goobaha muhiimka ah, khatar la habeeyay."
+      },
+      "g27": {
+        "description": "Qaybinta sharrooca qaybaha aqlabiyadda ah."
+      },
+      "g28": {
+        "description": "Maaraynta rogitaanada isku xigxiga iyo joojin-guul cad."
+      },
+      "g29": {
+        "description": "Doorashada dhinacyada leh suurtagalnimo xaaladeed."
+      },
+      "g30": {
+        "description": "Hadafyo gaagaaban, bixitaan degdeg ah, khatar la xakameeyay."
+      },
+      "g31": {
+        "description": "Maaraynta taxanaha iyo cabbirka sharrooca."
+      },
+      "g32": {
+        "description": "Doorashada goobaha wanaagsan, kala duwaanka la xakameeyay."
+      },
+      "g33": {
+        "description": "Bartilmaameedka hillaacyada iyo daboolidda saldhigga."
+      },
+      "g34": {
+        "description": "Tirada kaararka ugu habboon iyo maaraynta miisaaniyadda."
+      },
+      "g35": {
+        "description": "Daaqadaha fursadaha iyo bixitaan anshax leh."
+      },
+      "g36": {
+        "description": "Fadhiyo gaagaaban, diiradda saarista bonus-yada kordhay."
+      },
+      "g37": {
+        "description": "Bartilmaameedka kala duwaanka dhexdhexaadka ah, lacag deggan."
+      },
+      "g38": {
+        "description": "Wareegyada spins-ka iyo xaddidaadyo adag oo khasaare ah."
+      },
+      "g39": {
+        "description": "Gelitaan taxaddar leh, faa'iido qaadasho tallaabo tallaabo ah."
+      },
+      "g40": {
+        "description": "Saameyn la xakameeyay oo ku saabsan isku-dhufashooyinka sarreeya."
+      }
+    },
+    "seo": {
+      "title": "Hacks, Talooyin & Koodhadh Gorgortan Ciyaaraha Lacagta ah – Saadaalinta UltimatePronos",
+      "description": "Baro algorithm-yadeenna saadaalinta iyo talooyinka ciyaaraha lacagta ah: Apple of Fortune, Aviator, Mines iyo wax badan oo kale ee XBET, 1WIN, MELBET, BetWinner. Koodhadh gorgortan iyo calaamado guuleysta oo ku yaal kanaalkeenna Telegram!",
+      "ogTitle": "Hacks, Talooyin & Koodhadh Gorgortan Ciyaaraha Lacagta ah – Saadaalinta UltimatePronos",
+      "ogDescription": "Algorithm-yadeenna iyo talooyinkeenu waxay saadaaliyaan Apple of Fortune, Aviator, Mines iyo wax badan oo kale ee XBET, 1WIN, MELBET, BetWinner. Raac calaamadahayaga guuleysta iyo koodhadhka gorgortanka ee Telegram!",
+      "twitterTitle": "Hacks, Talooyin & Koodhadh Gorgortan Ciyaaraha Lacagta ah – Saadaalinta UltimatePronos",
+      "twitterDescription": "Algorithm-yo iyo talooyin saadaalin ah oo loogu talagalay Apple of Fortune, Aviator, Mines iyo wax badan oo kale. Calaamado guuleysta iyo koodh gorgortan oo ku yaal kanaalkeenna Telegram.",
+      "jsonLdName": "UltimatePronos Hacks",
+      "jsonLdDescription": "Algorithm-yada saadaalinta ee Apple of Fortune, Aviator, Mines iyo wax badan oo kale ee XBET, 1WIN, MELBET, BetWinner. Calaamado guuleysta iyo koodhadh gorgortan oo ku yaal Telegram.",
+      "breadcrumbHome": "Bogga hore",
+      "breadcrumbHacks": "Hacks"
+    },
+    "imageAlt": "{name} — hack, saadaalin iyo koodh gorgortan {platform}"
+  },
+  "faqSection": {
+    "badge": "SU'AALAHA INTA BADAN LA WEYDIIYO",
+    "title": "Wax kasta oo ku saabsan saadaalinteena iyo koodhadhka gorgortanka",
+    "subtitle": "Sharadyada ciyaaraha, koodhadhka gorgortanka 1xBet/1win/Melbet/Betwinner, algorithm-yada saadaalinta ciyaaraha lacagta ah: jawaabaha su'aalaha ugu badan la weydiiyo.",
+    "items": {
+      "q1": {
+        "question": "Waa maxay koodhka gorgortanka sharadyada ciyaaraha iyo sida loo isticmaalo?",
+        "answer": "Koodhka gorgortanka sharadyada ciyaaraha (sida GLE44) waa astaan lagu geliyo markaad isdiiwaangelinayso ganacsade sharad (1xBet, Melbet, 1win, Betwinner) si aad u furto abaalmarin soo dhaweyn, cotes la kordhiyay, ama gelitaan mudnaanta leh oo aad ku hesho saadaalinteena. Waxaad u baahan tahay inaad ku qorto goobta loogu talagalay markaad samaynayso akoonkaaga rasmiga ah."
+      },
+      "q2": {
+        "question": "Sideey u shaqeysaa saadaalin sharad oo la isku halayn karo?",
+        "answer": "Saadaalin sharad oo la isku halayn karo waxay isku daraa falanqaynta tirakoobka, xaalada kooxaha, macnaha ciyaarta, iyo maaraynta taxadarka leh ee bankroll-ka. Habkeenu wuxuu ku salaysan yahay xogta dhabta ah halkii uu ka ahaan lahaa xasaasiyadda, si loo ballaariyo qiimaha xulasho kasta oo ku saabsan kubbadda cagta iyo ciyaaraha kale."
+      },
+      "q3": {
+        "question": "Algorithm-yada saadaalinta ciyaaraha lacagta ah (Aviator, Apple of Fortune, Crash) ma la isku halayn karaa?",
+        "answer": "Algorithm-yadeenu waxay falanqeeyaan qaababka iyo isbedelka ciyaaraha sida Aviator, Apple of Fortune ama Crash si loo bixiyo tilmaamo go'aan qaadasho. Ma ay dammaanad qaadayaan wax faa'iido ah: ciyaaraha lacagta ah waxay mar walba wataan qayb nasiib ah, aaladaheenuna waxay u adeegaan in khatarta si fiican loo maareeyo, ma aha in la baabi'iyo."
+      },
+      "q4": {
+        "question": "Sideed u helaysaa koodhka gorgortanka GLE44 ee 1xBet, Melbet, 1win iyo Betwinner?",
+        "answer": "Guji linkiga isdiiwaangelinta ganacsadaha sharadka ee aad dooratay boggeenaga, samee akoonkaaga rasmiga ah, kadibna geli koodhka GLE44 goobta koodhka gorgortanka. Tan waxay kuu ogolaanaysaa inaad akoonkaaga la xiraan calaamadaheenna iyo kanaalkeenna Telegram."
+      },
+      "q5": {
+        "question": "Sharadyada ciyaaraha iyo ciyaaraha lacagta ah miyay khataro leeyihiin?",
+        "answer": "Haa. Sharadyada ciyaaraha iyo ciyaaraha lacagta ah ee onlaynka ah waxay watan khatar dhab ah oo lumis dhaqaale ah. Samayso miisaaniyad, ha ku sharad garaacin wax aad awoodi kartid inaad lumiso maahan, oo ku ciyaar si mas'uuliyad leh."
+      },
+      "q6": {
+        "question": "Sideed ugu biirtaa kanaalka Telegram si aad u hesho saadaalinno bilaash ah?",
+        "answer": "Guji badhanka «Ku biir kanaalka Telegram» ee ku yaal bog kasta oo boggan. Waxaad ka heli doontaa saadaalinno maalinle ah, digniino wakhtiga dhabta ah, iyo koodhadhka gorgortanka gaarka ah ee ganacsatada sharadka ee ugu waaweyn."
+      }
+    },
+    "seo": {
+      "jsonLdName": "Su'aalaha inta badan la weydiiyo – Saadaalinta sharadyada ciyaaraha, koodhadhka gorgortanka iyo ciyaaraha lacagta ah"
+    }
+  },
+  "siteFooter": {
+    "tagline": "Saadaalinta sharadyada ciyaaraha, koodhadhka gorgortanka iyo algorithm-yada saadaalinta ciyaaraha lacagta ah — kubbadda cagta, Aviator, Apple of Fortune iyo wax badan oo kale.",
+    "columns": {
+      "navigation": "Sahaminta",
+      "bookmakers": "Ganacsatada Sharadka",
+      "legal": "Macluumaad"
+    },
+    "links": {
+      "home": "Bogga hore",
+      "hacks": "Hacks & saadaalinta ciyaaraha",
+      "about": "Nagu saabsan",
+      "contact": "Nala soo xiriir",
+      "telegram": "Kanaalka Telegram"
+    },
+    "responsibleGambling": "Ciyaar mas'uuliyad leh: sharadyada ciyaaraha iyo ciyaaraha lacagta ah waxay watan khataro. Waa mamnuuc dadka aan qaan-gaarka ahayn. Ha ku sharad garaacin wax aad awoodi kartid inaad lumiso maahan.",
+    "copyright": "© {year} UltimatePronos. Dhammaan xuquuqda way dhowran yihiin."
   }
 }

@@ -18,18 +18,16 @@
         <header class="relative container mx-auto max-w-6xl px-5 sm:px-8 pt-24 sm:pt-28 pb-14 sm:pb-16 text-center">
             <div class="mx-auto mb-4 sm:mb-6 w-max px-3 py-1 rounded-full border border-yellow-400/20 bg-yellow-400/5 text-[10px] sm:text-xs tracking-widest text-yellow-300/90"
                 v-reveal>
-                À PROPOS
+                {{ t('aboutPage.badge') }}
             </div>
 
             <h1 class="font-display text-[34px] leading-[1.05] sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7D774] via-[#FFD26A] to-[#C9971A] drop-shadow-[0_6px_18px_rgba(255,215,100,.18)]"
                 v-reveal>
-                Notre vision du <span class="whitespace-nowrap">prono sportif</span>
+                {{ t('aboutPage.title1') }} <span class="whitespace-normal sm:whitespace-nowrap">{{ t('aboutPage.titleHighlight') }}</span>
             </h1>
 
             <p class="mt-4 max-w-3xl mx-auto text-gray-300 text-[13px] sm:text-base" v-reveal delay="0.08">
-                Chez <span class="text-yellow-300/90 font-semibold">PronostikerX</span>, nous allions données,
-                discipline et pédagogie pour aider les parieurs à <span class="text-yellow-300/90">mieux décider</span>.
-                Notre approche : simple, premium, efficace — partout dans le monde.
+                {{ t('aboutPage.subtitleBefore') }}<span class="text-yellow-300/90 font-semibold">{{ t('aboutPage.brand') }}</span>{{ t('aboutPage.subtitleMiddle') }}<span class="text-yellow-300/90">{{ t('aboutPage.subtitleHighlight') }}</span>{{ t('aboutPage.subtitleAfter') }}
             </p>
 
             <!-- CTA Telegram animé -->
@@ -38,7 +36,7 @@
                  bg-[#229ED9] text-white shadow-[0_8px_24px_rgba(34,158,217,0.35)]
                  ring-1 ring-[#229ED9]/50 hover:brightness-110 active:brightness-95 transition">
                     <i class="fa-brands fa-telegram"></i>
-                    Rejoindre le canal Telegram
+                    {{ t('aboutPage.telegramCta') }}
                 </a>
             </div>
         </header>
@@ -48,31 +46,31 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                 <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                     v-reveal>
-                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">PAYS COUVERTS</div>
+                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">{{ t('aboutPage.stats.countries') }}</div>
                     <div class="mt-1 text-2xl sm:text-3xl font-extrabold text-yellow-300"><span
                             ref="cCountries">0</span>+</div>
                 </div>
                 <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                     v-reveal>
-                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">DÉPÔTS BOOSTÉS</div>
+                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">{{ t('aboutPage.stats.deposits') }}</div>
                     <div class="mt-1 text-2xl sm:text-3xl font-extrabold text-yellow-300">$<span
                             ref="cDeposits">0</span>M+</div>
                 </div>
                 <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                     v-reveal>
-                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">JOUEURS ACTIFS</div>
+                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">{{ t('aboutPage.stats.players') }}</div>
                     <div class="mt-1 text-2xl sm:text-3xl font-extrabold text-yellow-300"><span ref="cPlayers">0</span>+
                     </div>
                 </div>
                 <div class="rounded-2xl bg-[#111318]/90 border border-white/10 px-4 py-4 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                     v-reveal>
-                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">TAUX DE SUCCÈS</div>
+                    <div class="text-[10px] sm:text-xs tracking-wider text-gray-400">{{ t('aboutPage.stats.success') }}</div>
                     <div class="mt-1 text-2xl sm:text-3xl font-extrabold text-yellow-300"><span ref="cSuccess">0</span>%
                     </div>
                 </div>
             </div>
             <p class="mt-3 text-[11px] sm:text-xs text-gray-400 text-center" v-reveal delay="0.05">
-                * Indicateurs agrégés et évolutifs — ils ne constituent pas une garantie de gains.
+                {{ t('aboutPage.statsNote') }}
             </p>
         </section>
 
@@ -80,52 +78,40 @@
         <section class="container mx-auto max-w-6xl px-5 sm:px-8 pb-12 sm:pb-16">
             <div class="grid md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
                 <article class="p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5" v-reveal>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Notre méthode</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">{{ t('aboutPage.method.title') }}</h2>
                     <p class="text-gray-300 text-sm sm:text-base">
-                        Nous combinons analyses de forme, statistiques avancées, gestion de bankroll et retours terrain.
-                        Chaque sélection est conçue pour une <span class="text-yellow-300/90">valeur réelle</span>
-                        plutôt
-                        qu’un simple feeling.
+                        {{ t('aboutPage.method.textBefore') }}<span class="text-yellow-300/90">{{ t('aboutPage.method.textHighlight') }}</span>{{ t('aboutPage.method.textAfter') }}
                     </p>
                     <ul class="mt-4 space-y-2 text-sm sm:text-base text-gray-200">
-                        <li class="flex gap-2"><i class="fa-solid fa-chart-line text-emerald-300 mt-1"></i> Modèles de
-                            probabilité &
-                            contextes de match</li>
-                        <li class="flex gap-2"><i class="fa-solid fa-wallet text-yellow-300 mt-1"></i> Bankroll
-                            management clair &
-                            progressif</li>
-                        <li class="flex gap-2"><i class="fa-solid fa-bell text-sky-300 mt-1"></i> Alertes Telegram en
-                            temps réel
+                        <li class="flex gap-2"><i class="fa-solid fa-chart-line text-emerald-300 mt-1"></i> {{ t('aboutPage.method.li1') }}</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-wallet text-yellow-300 mt-1"></i> {{ t('aboutPage.method.li2') }}</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-bell text-sky-300 mt-1"></i> {{ t('aboutPage.method.li3') }}
                         </li>
-                        <li class="flex gap-2"><i class="fa-solid fa-shield-halved text-purple-300 mt-1"></i> Pédagogie
-                            & discipline
-                            avant tout</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-shield-halved text-purple-300 mt-1"></i> {{ t('aboutPage.method.li4') }}</li>
                     </ul>
                 </article>
 
                 <article class="p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5" v-reveal delay="0.05">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">L’esprit PronostikerX</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">{{ t('aboutPage.spirit.title') }}</h2>
                     <p class="text-gray-300 text-sm sm:text-base">
-                        Une marque <span class="text-yellow-300/90">premium & minimaliste</span> : design soigné,
-                        messages clairs,
-                        résultats mesurables. Notre ambition : vous donner un cadre pour progresser durablement.
+                        {{ t('aboutPage.spirit.textBefore') }}<span class="text-yellow-300/90">{{ t('aboutPage.spirit.textHighlight') }}</span>{{ t('aboutPage.spirit.textAfter') }}
                     </p>
                     <div class="mt-4 grid grid-cols-2 gap-3 text-sm sm:text-base">
                         <div
                             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/90">
-                            <i class="fa-solid fa-leaf"></i> Simplicité
+                            <i class="fa-solid fa-leaf"></i> {{ t('aboutPage.spirit.tag1') }}
                         </div>
                         <div
                             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/90">
-                            <i class="fa-solid fa-bolt"></i> Efficacité
+                            <i class="fa-solid fa-bolt"></i> {{ t('aboutPage.spirit.tag2') }}
                         </div>
                         <div
                             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/90">
-                            <i class="fa-solid fa-compass-drafting"></i> Méthode
+                            <i class="fa-solid fa-compass-drafting"></i> {{ t('aboutPage.spirit.tag3') }}
                         </div>
                         <div
                             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/90">
-                            <i class="fa-solid fa-globe"></i> International
+                            <i class="fa-solid fa-globe"></i> {{ t('aboutPage.spirit.tag4') }}
                         </div>
                     </div>
                 </article>
@@ -134,42 +120,36 @@
 
         <!-- TIMELINE -->
         <section class="container mx-auto max-w-6xl px-5 sm:px-8 pb-12 sm:pb-16">
-            <h2 class="text-center text-2xl sm:text-3xl font-extrabold mb-6" v-reveal>Feuille de route</h2>
+            <h2 class="text-center text-2xl sm:text-3xl font-extrabold mb-6" v-reveal>{{ t('aboutPage.roadmap.title') }}</h2>
             <ol class="relative border-s border-white/10 max-w-3xl mx-auto">
                 <li class="mb-8 ms-6 relative" v-reveal>
                     <span
                         class="absolute -start-3 top-1.5 w-5 h-5 rounded-full border border-yellow-400/30 bg-yellow-400/15"
                         style="box-shadow:0 0 0 4px rgba(255,210,106,.08)"></span>
-                    <h3 class="text-lg sm:text-xl font-bold">Fondations</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Structure claire, design sobre, base de contenus
-                        solides.</p>
+                    <h3 class="text-lg sm:text-xl font-bold">{{ t('aboutPage.roadmap.step1Title') }}</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">{{ t('aboutPage.roadmap.step1Text') }}</p>
                 </li>
                 <li class="mb-8 ms-6 relative" v-reveal delay="0.06">
                     <span
                         class="absolute -start-3 top-1.5 w-5 h-5 rounded-full border border-yellow-400/30 bg-yellow-400/15"
                         style="box-shadow:0 0 0 4px rgba(255,210,106,.08)"></span>
-                    <h3 class="text-lg sm:text-xl font-bold">Analyses & canaux</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Sélections quotidiennes, notifications, pédagogie sur
-                        Telegram.
+                    <h3 class="text-lg sm:text-xl font-bold">{{ t('aboutPage.roadmap.step2Title') }}</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">{{ t('aboutPage.roadmap.step2Text') }}
                     </p>
                 </li>
                 <li class="mb-8 ms-6 relative" v-reveal delay="0.12">
                     <span
                         class="absolute -start-3 top-1.5 w-5 h-5 rounded-full border border-yellow-400/30 bg-yellow-400/15"
                         style="box-shadow:0 0 0 4px rgba(255,210,106,.08)"></span>
-                    <h3 class="text-lg sm:text-xl font-bold">Expériences démo</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Démonstrations guidées pour comprendre la logique et
-                        éviter les
-                        erreurs.</p>
+                    <h3 class="text-lg sm:text-xl font-bold">{{ t('aboutPage.roadmap.step3Title') }}</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">{{ t('aboutPage.roadmap.step3Text') }}</p>
                 </li>
                 <li class="ms-6 relative" v-reveal delay="0.18">
                     <span
                         class="absolute -start-3 top-1.5 w-5 h-5 rounded-full border border-yellow-400/30 bg-yellow-400/15"
                         style="box-shadow:0 0 0 4px rgba(255,210,106,.08)"></span>
-                    <h3 class="text-lg sm:text-xl font-bold">Améliorations continues</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Itérations basées sur données, retours de la
-                        communauté et
-                        résultats.</p>
+                    <h3 class="text-lg sm:text-xl font-bold">{{ t('aboutPage.roadmap.step4Title') }}</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">{{ t('aboutPage.roadmap.step4Text') }}</p>
                 </li>
             </ol>
         </section>
@@ -178,34 +158,30 @@
         <section id="about-team" class="container mx-auto max-w-6xl px-5 sm:px-8 pb-14 sm:pb-20">
             <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
                 <div class="p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5" v-reveal>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Équipe & éthique</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">{{ t('aboutPage.team.title') }}</h2>
                     <p class="text-gray-300 text-sm sm:text-base">
-                        Nous défendons un jeu responsable. Fixez des objectifs réalistes, sachez faire une pause,
-                        et ne misez que ce que vous pouvez vous permettre de perdre.
+                        {{ t('aboutPage.team.text') }}
                     </p>
                     <ul class="mt-4 space-y-2 text-sm sm:text-base text-gray-200">
-                        <li class="flex gap-2"><i class="fa-solid fa-user-shield text-rose-300 mt-1"></i> Transparence &
-                            pédagogie
+                        <li class="flex gap-2"><i class="fa-solid fa-user-shield text-rose-300 mt-1"></i> {{ t('aboutPage.team.li1') }}
                         </li>
-                        <li class="flex gap-2"><i class="fa-solid fa-scale-balanced text-blue-300 mt-1"></i> Pas de
-                            promesse
-                            irréaliste</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-scale-balanced text-blue-300 mt-1"></i> {{ t('aboutPage.team.li2') }}</li>
                         <li class="flex gap-2"><i class="fa-solid fa-hands-holding-circle text-green-300 mt-1"></i>
-                            Focus long terme
+                            {{ t('aboutPage.team.li3') }}
                         </li>
                     </ul>
                 </div>
 
                 <div class="p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5" v-reveal delay="0.06"
                     id="contact">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Contact</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">{{ t('aboutPage.contactBlock.title') }}</h2>
                     <p class="text-gray-300 text-sm sm:text-base">
-                        Une question, une suggestion, un partenariat ? Écrivez-nous ou rejoignez le canal.
+                        {{ t('aboutPage.contactBlock.text') }}
                     </p>
                     <div class="mt-4 grid gap-3">
                         <a :href="telegramUrl" target="_blank" rel="noopener"
                             class="bg-[#229ED9] text-white ring-1 ring-[#229ED9]/50 hover:brightness-110 transition inline-flex items-center gap-2 px-4 py-2 rounded-lg">
-                            <i class="fa-brands fa-telegram text-xl"></i> Telegram
+                            <i class="fa-brands fa-telegram text-xl"></i> {{ t('aboutPage.contactBlock.telegram') }}
                         </a>
                         <a href="mailto:contact@pronostikerx.com"
                             class="bg-white/5 hover:bg-white/10 border border-white/10 text-white transition inline-flex items-center gap-2 px-4 py-2 rounded-lg">
@@ -213,7 +189,7 @@
                         </a>
                     </div>
                     <p class="mt-3 text-[11px] sm:text-xs text-gray-400">
-                        Temps de réponse indicatif : 24–48h ouvrées.
+                        {{ t('aboutPage.contactBlock.responseTime') }}
                     </p>
                 </div>
             </div>
@@ -222,31 +198,37 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 
 const siteUrl = 'https://ultimatepronos.com'
+const ogLocaleMap = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', hi: 'hi_IN', ar: 'ar_AR', az: 'az_AZ', pt: 'pt_PT', ru: 'ru_RU', so: 'so_SO', tr: 'tr_TR' }
+const ogLocale = ogLocaleMap[locale.value] || 'fr_FR'
 
 useHead({
-    title: 'UltimatePronos – À propos de nos pronostics et hacks',
+    title: t('aboutPage.seo.title'),
     meta: [
         {
             name: 'description',
-            content: 'UltimatePronos est votre source fiable de pronostics sportifs et algorithmes pour Apple of Fortune, Aviator et plus. Découvrez notre équipe et notre méthodologie.'
+            content: t('aboutPage.seo.description')
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'UltimatePronos' },
+        { name: 'keywords', content: 'pronostics sportifs, pari sportif, conseils paris sportifs, méthode de pronostic, jeux d\'argent, xbet, melbet, 1win, betwinner, code promo' },
 
         // Open Graph
-        { property: 'og:title', content: 'UltimatePronos – À propos de nos pronostics et hacks' },
-        { property: 'og:description', content: 'Découvrez l’équipe derrière UltimatePronos et notre méthodologie pour prédire Apple of Fortune, Aviator et autres jeux.' },
+        { property: 'og:title', content: t('aboutPage.seo.ogTitle') },
+        { property: 'og:description', content: t('aboutPage.seo.ogDescription') },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'UltimatePronos' },
         { property: 'og:url', content: siteUrl + '/about' },
         { property: 'og:image', content: siteUrl + '/logo.png' },
-        { property: 'og:locale', content: 'fr_FR' },
+        { property: 'og:locale', content: ogLocale },
 
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'UltimatePronos – À propos de nos pronostics et hacks' },
-        { name: 'twitter:description', content: 'Découvrez l’équipe et la méthodologie UltimatePronos pour prédire Apple of Fortune, Aviator et plus.' },
+        { name: 'twitter:title', content: t('aboutPage.seo.twitterTitle') },
+        { name: 'twitter:description', content: t('aboutPage.seo.twitterDescription') },
         { name: 'twitter:image', content: siteUrl + '/logo.png' }
     ],
     link: [
@@ -271,9 +253,16 @@ useHead({
             children: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "AboutPage",
-                "name": "À propos – UltimatePronos",
+                "name": t('aboutPage.seo.jsonLdName'),
                 "url": siteUrl + '/about',
-                "description": "Découvrez l’équipe et la méthodologie derrière UltimatePronos, experts en pronostics et hacks pour Apple of Fortune, Aviator et plus."
+                "description": t('aboutPage.seo.jsonLdDescription'),
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": t('hacksPage.seo.breadcrumbHome'), "item": siteUrl },
+                        { "@type": "ListItem", "position": 2, "name": t('aboutPage.badge'), "item": siteUrl + '/about' }
+                    ]
+                }
             })
         },
         {
@@ -283,7 +272,7 @@ useHead({
                 "@type": "Organization",
                 "name": "UltimatePronos",
                 "url": siteUrl,
-                "logo": siteUrl + '/images/logo.png',
+                "logo": siteUrl + '/logo.png',
                 "sameAs": [
                     "https://t.me/+09RmIt4oNn41ZWVk",
                     "https://www.facebook.com/ultimatepronos",

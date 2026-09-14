@@ -281,7 +281,7 @@ const steps = [
     text4_nb: t('instructionsSection.steps.one.text4.NB'),
     icon: "fa-solid fa-apple-whole",
     color: "#22c55e",
-    media: [{ type: "video", src: "/hack.webm", alt: "Grille Apple of Fortune" }]
+    media: [{ type: "video", src: "/hack.webm", alt: t('instructionsSection.steps.one.mediaAlt') }]
   },
   {
     title: t('instructionsSection.steps.two.title'),
@@ -289,7 +289,7 @@ const steps = [
     details: t('instructionsSection.steps.two.details'),
     icon: "fa-solid fa-ticket",
     color: "#facc15",
-    media: [{ type: "video", src: "/inscription.mp4", alt: "Historique de gains" }]
+    media: [{ type: "video", src: "/inscription.mp4", alt: t('instructionsSection.steps.two.mediaAlt') }]
   },
   {
     title: t('instructionsSection.steps.three.title'),
@@ -297,7 +297,7 @@ const steps = [
     details: t('instructionsSection.steps.three.details'),
     icon: "fa-solid fa-futbol",
     color: "#3b82f6",
-    media: [{ type: "image", src: "/apple-fortune.jpg", alt: "Historique de gains" }]
+    media: [{ type: "image", src: "/apple-fortune.jpg", alt: t('instructionsSection.steps.three.mediaAlt') }]
   },
   {
     title: t('instructionsSection.steps.four.title'),
@@ -305,7 +305,7 @@ const steps = [
     details: t('instructionsSection.steps.four.details'),
     icon: "fa-solid fa-trophy",
     color: "#ef4444",
-    media: [{ type: "video", src: "/wins.webm", alt: "Historique de gains" }]
+    media: [{ type: "video", src: "/wins.webm", alt: t('instructionsSection.steps.four.mediaAlt') }]
   }
 ]
 
